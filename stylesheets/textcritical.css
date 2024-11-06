@@ -1,0 +1,88 @@
+note{
+    font-size:smaller;
+    background-color:#dcdcdc;
+}
+note:before{
+    content:" "
+}
+choice > abbr{
+    color:#FF0000
+}
+choice > expan{
+    color:#A9A9A9;
+}
+choice > expan:before{
+    content:" "
+}
+abbr{
+    color:#FF0000
+}
+choice > sic{
+    color:#FF00FF
+}
+choice > corr{
+    color:#A9A9A9;
+}
+choice > corr:before{
+    content:" "
+}
+/*:not(choice) sic {content: "[sic]"}*/
+sic{
+    color:#FF00FF
+}
+sic:after{
+    content:" [sic]"
+}
+gap{
+    content:"[...] "
+}
+space{
+    content:".."
+}
+subst:before{
+    content:"*"
+}
+subst:after{
+    content:"*"
+}
+subst > del:after{
+    content:" "
+}
+damage{
+    content:"[_] ";
+    color:#008000
+}
+damage > supplied{
+    font-weight:bold
+}
+supplied:before{
+    content:"["
+}
+supplied:after{
+    content:"] "
+}
+add{
+    color:#0000FF
+}
+foreign{
+    color:#FFD700
+}
+unclear{
+    color:#008080
+}
+app{
+    color:#7B68EE;
+}
+app > rdg{
+    font-style:italic;
+}
+app > lem:after{
+    content:" "
+}
+app > rdg:after{
+    content:" "
+}
+del,
+delSpan{
+    text-decoration:line-through
+}

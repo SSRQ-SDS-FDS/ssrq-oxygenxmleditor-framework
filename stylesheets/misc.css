@@ -21,7 +21,6 @@ orig:after{
     content:"»"
 }
 
-
 head{
     font-weight:bold
 }
@@ -30,6 +29,12 @@ head:before{
 }
 head:after{
     content:"\A\A\A"
+}
+head[resp]:before{
+    content:"["
+}
+head[resp]:after{
+    content:"]"
 }
 hi[rend = "sup"]{
     vertical-align:super
