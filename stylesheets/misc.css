@@ -1,0 +1,39 @@
+signed{
+    content:"\A"
+}
+
+q:before{
+    content:"«"
+}
+q:after{
+    content:"»"
+}
+quote:before{
+    content:"«"
+}
+quote:after{
+    content:"»"
+}
+orig:before{
+    content:"«"
+}
+orig:after{
+    content:"»"
+}
+
+
+head{
+    font-weight:bold
+}
+head:before{
+    content:"\A\A"
+}
+head:after{
+    content:"\A\A\A"
+}
+hi[rend = "sup"]{
+    vertical-align:super
+}
+hi[rend = "underline"]{
+    text-decoration:underline
+}

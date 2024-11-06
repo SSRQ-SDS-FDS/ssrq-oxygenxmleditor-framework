@@ -1,0 +1,24 @@
+teiHeader{
+    display:block;
+    background-color:#FFB6C1;
+}
+titleStmt{
+    display:block
+}
+title{
+    font-size:24px
+}
+respStmt{
+    display:block
+}
+seriesStmt{
+    display:block
+}
+seal{
+    display:block;
+    border-style:solid;
+    border-width:1px;
+}
+seal:before{
+    content:attr(n) " "
+}
