@@ -15,7 +15,14 @@
 						<String>SSRQ-TEI</String>
 					</field>
 					<field name="schemaDescriptor">
-						<null/>
+						<docTypeSchema>
+							<field name="type">
+								<Integer>6</Integer>
+							</field>
+							<field name="uri">
+								<String>https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng</String>
+							</field>
+						</docTypeSchema>
 					</field>
 					<field name="classpath">
 						<String-array/>
@@ -26,7 +33,19 @@
 					<field name="authorExtensionDescriptor">
 						<authorExtension>
 							<field name="cssDescriptors">
-								<cssFile-array/>
+								<cssFile-array>
+									<cssFile>
+										<field name="href">
+											<String>${framework}/stylesheets/main.css</String>
+										</field>
+										<field name="title">
+											<String></String>
+										</field>
+										<field name="alternate">
+											<Boolean>false</Boolean>
+										</field>
+									</cssFile>
+								</cssFile-array>
 							</field>
 							<field name="mergeCSSsFromDocument">
 								<Boolean>false</Boolean>
@@ -143,13 +162,359 @@
 						<String-array/>
 					</field>
 					<field name="description">
-						<String>This is a framework for TEI-XML-files for the SSRQ-SDS-FDS-SLS</String>
+						<String>This is a framework for the Oxygen XML Editor unsing TEI-XML-files created by the SSRQ-SDS-FDS</String>
 					</field>
 					<field name="doctypeRules">
-						<documentTypeRule-array/>
+						<documentTypeRule-array>
+							<documentTypeRule>
+								<field name="namespace">
+									<String>http://www.tei-c.org/ns/1.0</String>
+								</field>
+								<field name="rootElem">
+									<String>TEI</String>
+								</field>
+								<field name="fileName">
+									<String>*-1.xml</String>
+								</field>
+								<field name="publicID">
+									<String>*</String>
+								</field>
+								<field name="javaRuleClass">
+									<String></String>
+								</field>
+								<field name="attributeLocalName">
+									<String>*</String>
+								</field>
+								<field name="attributeNamespace">
+									<String>*</String>
+								</field>
+								<field name="attributeValue">
+									<String>*</String>
+								</field>
+							</documentTypeRule>
+						</documentTypeRule-array>
 					</field>
 					<field name="scenarios">
-						<scenario-array/>
+						<scenario-array>
+							<scenario>
+								<field name="advancedOptionsMap">
+									<null/>
+								</field>
+								<field name="name">
+									<String>SSRQ-TEI2HTML</String>
+								</field>
+								<field name="baseURL">
+									<String></String>
+								</field>
+								<field name="footerURL">
+									<String></String>
+								</field>
+								<field name="fOPMethod">
+									<String>pdf</String>
+								</field>
+								<field name="fOProcessorName">
+									<String>Apache FOP</String>
+								</field>
+								<field name="headerURL">
+									<String></String>
+								</field>
+								<field name="inputXSLURL">
+									<String>${framework}/transformations/xml2html.xslt</String>
+								</field>
+								<field name="inputXMLURL">
+									<String>${currentFileURL}</String>
+								</field>
+								<field name="defaultScenario">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="isFOPPerforming">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="type">
+									<String>XSL</String>
+								</field>
+								<field name="saveAs">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="openInBrowser">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="outputResource">
+									<String>${cfn}.html</String>
+								</field>
+								<field name="openOtherLocationInBrowser">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="locationToOpenInBrowserURL">
+									<null/>
+								</field>
+								<field name="openInEditor">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInHTMLPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInXMLPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInSVGPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInResultSetPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="useXSLTInput">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="xsltParams">
+									<list/>
+								</field>
+								<field name="cascadingStylesheets">
+									<String-array/>
+								</field>
+								<field name="xslTransformer">
+									<String>Saxon-EE</String>
+								</field>
+								<field name="extensionURLs">
+									<String-array/>
+								</field>
+							</scenario>
+							<chemistryScenario>
+								<field name="shouldUseFrameworkCSSs">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="additionalAntArgs">
+									<null/>
+								</field>
+								<field name="buildTarget">
+									<null/>
+								</field>
+								<field name="buildFilePath">
+									<String>tools/chemistry/build_chemistry.xml</String>
+								</field>
+								<field name="ditaParams">
+									<list>
+										<antParameter>
+											<field name="name">
+												<String>xmlURL</String>
+											</field>
+											<field name="description">
+												<String></String>
+											</field>
+											<field name="value">
+												<String>${currentFileURL}</String>
+											</field>
+											<field name="defaultValue">
+												<null/>
+											</field>
+											<field name="type">
+												<Integer>2</Integer>
+											</field>
+											<field name="possibleValues">
+												<null/>
+											</field>
+											<field name="possibleValuesDescriptions">
+												<null/>
+											</field>
+										</antParameter>
+										<antParameter>
+											<field name="name">
+												<String>cssURL</String>
+											</field>
+											<field name="description">
+												<String></String>
+											</field>
+											<field name="value">
+												<String>${framework}/transformations/xml2pdf.css</String>
+											</field>
+											<field name="defaultValue">
+												<null/>
+											</field>
+											<field name="type">
+												<Integer>2</Integer>
+											</field>
+											<field name="possibleValues">
+												<null/>
+											</field>
+											<field name="possibleValuesDescriptions">
+												<null/>
+											</field>
+										</antParameter>
+										<antParameter>
+											<field name="name">
+												<String>outputPath</String>
+											</field>
+											<field name="description">
+												<String></String>
+											</field>
+											<field name="value">
+												<String>${cfd}/${cfn}.pdf</String>
+											</field>
+											<field name="defaultValue">
+												<null/>
+											</field>
+											<field name="type">
+												<Integer>2</Integer>
+											</field>
+											<field name="possibleValues">
+												<null/>
+											</field>
+											<field name="possibleValuesDescriptions">
+												<null/>
+											</field>
+										</antParameter>
+										<antParameter>
+											<field name="name">
+												<String>dumpStyledContent</String>
+											</field>
+											<field name="description">
+												<String></String>
+											</field>
+											<field name="value">
+												<String>false</String>
+											</field>
+											<field name="defaultValue">
+												<null/>
+											</field>
+											<field name="type">
+												<Integer>0</Integer>
+											</field>
+											<field name="possibleValues">
+												<null/>
+											</field>
+											<field name="possibleValuesDescriptions">
+												<null/>
+											</field>
+										</antParameter>
+										<antParameter>
+											<field name="name">
+												<String>dumpFO</String>
+											</field>
+											<field name="description">
+												<String></String>
+											</field>
+											<field name="value">
+												<String>false</String>
+											</field>
+											<field name="defaultValue">
+												<null/>
+											</field>
+											<field name="type">
+												<Integer>0</Integer>
+											</field>
+											<field name="possibleValues">
+												<null/>
+											</field>
+											<field name="possibleValuesDescriptions">
+												<null/>
+											</field>
+										</antParameter>
+									</list>
+								</field>
+								<field name="jvmArgs">
+									<String>-Xmx256m</String>
+								</field>
+								<field name="useCustomJavaHome">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="customJavaHomeDir">
+									<null/>
+								</field>
+								<field name="useCustomANTHome">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="customANTHomeDir">
+									<null/>
+								</field>
+								<field name="workingDir">
+									<String>${oxygenInstallDir}</String>
+								</field>
+								<field name="showConsoleAlways">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="advancedOptionsMap">
+									<null/>
+								</field>
+								<field name="name">
+									<String>SSRQ-TEI2PDF</String>
+								</field>
+								<field name="baseURL">
+									<String></String>
+								</field>
+								<field name="footerURL">
+									<String></String>
+								</field>
+								<field name="fOPMethod">
+									<null/>
+								</field>
+								<field name="fOProcessorName">
+									<null/>
+								</field>
+								<field name="headerURL">
+									<String></String>
+								</field>
+								<field name="inputXSLURL">
+									<String></String>
+								</field>
+								<field name="inputXMLURL">
+									<String></String>
+								</field>
+								<field name="defaultScenario">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="isFOPPerforming">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="type">
+									<String>XML_CHEMISTRY</String>
+								</field>
+								<field name="saveAs">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="openInBrowser">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="outputResource">
+									<null/>
+								</field>
+								<field name="openOtherLocationInBrowser">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="locationToOpenInBrowserURL">
+									<String>${cfd}/${cfn}.pdf</String>
+								</field>
+								<field name="openInEditor">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInHTMLPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInXMLPane">
+									<Boolean>true</Boolean>
+								</field>
+								<field name="showInSVGPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="showInResultSetPane">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="useXSLTInput">
+									<Boolean>false</Boolean>
+								</field>
+								<field name="xsltParams">
+									<list/>
+								</field>
+								<field name="cascadingStylesheets">
+									<String-array/>
+								</field>
+								<field name="xslTransformer">
+									<String>CHEMISTRY</String>
+								</field>
+								<field name="extensionURLs">
+									<String-array/>
+								</field>
+							</chemistryScenario>
+						</scenario-array>
 					</field>
 					<field name="validationScenarios">
 						<validationScenario-array/>
@@ -158,7 +523,9 @@
 						<null/>
 					</field>
 					<field name="defaultTransformationScenarios">
-						<null/>
+						<list>
+							<String>SSRQ-TEI2HTML</String>
+						</list>
 					</field>
 					<field name="extensionsBundleClassName">
 						<null/>
@@ -191,7 +558,7 @@
 						<null/>
 					</field>
 					<field name="priority">
-						<Integer>3</Integer>
+						<Integer>5</Integer>
 					</field>
 					<field name="xmlNodeCustomizerExtension">
 						<null/>
