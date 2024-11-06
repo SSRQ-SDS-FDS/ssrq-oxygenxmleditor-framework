@@ -54,7 +54,54 @@
 								<Boolean>true</Boolean>
 							</field>
 							<field name="actionDescriptors">
-								<action-array/>
+								<action-array>
+									<action>
+										<field name="id">
+											<String>insert_persName</String>
+										</field>
+										<field name="name">
+											<String>persName</String>
+										</field>
+										<field name="description">
+											<String>Insert a person's name</String>
+										</field>
+										<field name="largeIconPath">
+											<String></String>
+										</field>
+										<field name="smallIconPath">
+											<String></String>
+										</field>
+										<field name="accessKey">
+											<String>p</String>
+										</field>
+										<field name="accelerator">
+											<String>M4 P</String>
+										</field>
+										<field name="actionModes">
+											<actionMode-array>
+												<actionMode>
+													<field name="xpathCondition">
+														<String></String>
+													</field>
+													<field name="argValues">
+														<serializableOrderedMap>
+															<entry>
+																<String>fragment</String>
+																<String>&lt;persName xmlns="http://www.tei-c.org/ns/1.0" ref="per000000">&lt;/persName></String>
+															</entry>
+														</serializableOrderedMap>
+													</field>
+													<field name="operationID">
+														<String>ro.sync.ecss.extensions.commons.operations.SurroundWithFragmentOperation</String>
+													</field>
+												</actionMode>
+											</actionMode-array>
+										</field>
+										<field name="enabledInReadOnlyContext">
+											<Boolean>false</Boolean>
+										</field>
+									</action>
+								</action-array>
 							</field>
 							<field name="menubarDescriptor">
 								<menu>
@@ -68,7 +115,13 @@
 										<null/>
 									</field>
 									<field name="menuEntriesDescriptorList">
-										<menuEntry-array/>
+										<menuEntry-array>
+											<menuItem>
+												<field name="actionID">
+													<String>insert_persName</String>
+												</field>
+											</menuItem>
+										</menuEntry-array>
 									</field>
 									<field name="context">
 										<null/>
@@ -87,7 +140,13 @@
 										<null/>
 									</field>
 									<field name="menuEntriesDescriptorList">
-										<menuEntry-array/>
+										<menuEntry-array>
+											<menuItem>
+												<field name="actionID">
+													<String>insert_persName</String>
+												</field>
+											</menuItem>
+										</menuEntry-array>
 									</field>
 									<field name="context">
 										<null/>
@@ -109,7 +168,13 @@
 										<null/>
 									</field>
 									<field name="toolbarEntriesDescriptorList">
-										<toolbarEntry-array/>
+										<toolbarEntry-array>
+											<toolbarItem>
+												<field name="actionID">
+													<String>insert_persName</String>
+												</field>
+											</toolbarItem>
+										</toolbarEntry-array>
 									</field>
 								</toolbar>
 							</field>
@@ -176,7 +241,7 @@
 									<String>TEI</String>
 								</field>
 								<field name="fileName">
-									<String>*-1.xml</String>
+									<String>*.xml</String>
 								</field>
 								<field name="publicID">
 									<String>*</String>
