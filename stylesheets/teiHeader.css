@@ -20,5 +20,37 @@ seal{
     border-width:1px;
 }
 seal:before{
-    content:attr(n) " "
+    content: "Siegel " attr(n) ": " attr(ssrq|material) ", " attr(ssrq|condition) ", " attr(ssrq|shape) ", " attr(ssrq|attachment)
+}
+
+material:before{
+    content: "Material: "
+}
+extent{
+    border-style:solid;
+    border-width:1px;
+}
+extent:before{
+    content: "Masse: ";
+}
+dimensions{
+    display:block;
+}
+height:before{
+    content:"Höhe: " attr(quantity) " " attr(unit)
+}
+dimensions[type="leaves"]:before{
+    content:"Blätter: "
+}
+dimensions[type="plica"]:before{
+    content:"Plica: "
+}
+width:before{
+    content:"Breite: " attr(quantity) " " attr(unit)
+}
+teiHeader origDate:before{  /* nur im TEI-Header anzeigen */
+    content: "Datierung: " attr(when) ""
+}
+teiHeader origPlace:before{  /* nur im TEI-Header anzeigen */
+    content: "Ausstellungsort: "
 }
