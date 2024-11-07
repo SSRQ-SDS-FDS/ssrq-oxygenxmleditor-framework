@@ -1,7 +1,40 @@
-@import "content.css";
-@import "entities.css";
-@import "misc.css";
+/* TEI, teiHeader, text, body, back
+ *  div, seg, p, ab, signed, head, pb, cb, lb */
 @import "structure.css";
-@import "tables.css";
-@import "teiHeader.css";
+
+/* fileDesc 
+ * publicationStmt, publisher, date, availability, licence
+ * seriesStmt, title, idno
+ * titleStmt, title, editor
+ * sourceDesc, listWit, witness */
+@import "fileDesc.css";
+
+/* respStmt, resp, persName, OrgName */
+@import "respStmt.css";
+
+/* msDesc
+ * msIdentifier, settlement, repository, idno, altIdentifier, head
+ * msContents, msItem, textLang, author, docImprint, publisher, pubPlace, summary
+ * physDesc, objectDesc, supportDesc, support, material, extent, dimensions, height, width
+ * foliation, condition, bindingDesc, handDesc, handNote, sealDesc, seal
+ * history, origin, origDate, origPlace, additional, adminInfo, custodialHist, custEvent */
+@import "msDesc.css";
+
+/* encodingDesc, editorialDecl, profileDesc, textClass, keywords */
+@import "encoding-and-profile.css";
+
+/* date, precision, time, measureGrp, measure, num
+ * persName, placeName, orgName, term */ 
+@import "content.css";
+
+/* table, row, cell, list, item */
+@import "tables-and-lists.css";
+
+/*  choice, abbr, expan, corr, sic 
+ *  app, lem, rdg
+ *  add, addSpan, del, delSpan, damage, damageSpan, anchor
+ *  subst, supplied, unclear, gap, space, handShift */
 @import "textcritical.css";
+
+/*  foreign, orig, q, quote, hi, figure, graphic, pc, listBibl, bibl, ref, label, fw */
+@import "misc.css";

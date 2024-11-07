@@ -1,88 +1,105 @@
-note{
-    font-size:smaller;
-    background-color:#dcdcdc;
+choice {}
+
+abbr {
+    color:#FF0000;
 }
-note:before{
-    content:" "
-}
-choice > abbr{
-    color:#FF0000
-}
-choice > expan{
+
+expan {
     color:#A9A9A9;
 }
-choice > expan:before{
-    content:" "
+
+expan:before {
+    content:" ";
 }
-abbr{
-    color:#FF0000
-}
-choice > sic{
-    color:#FF00FF
-}
-choice > corr{
+
+corr {
     color:#A9A9A9;
 }
-choice > corr:before{
-    content:" "
+
+corr:before {
+    content:" ";
 }
-/*:not(choice) sic {content: "[sic]"}*/
-sic{
-    color:#FF00FF
+
+sic {
+    color:#FF00FF;
 }
-sic:after{
-    content:" [sic]"
+
+sic:after {
+    content:" [sic]";
 }
-gap{
-    content:"[...] "
-}
-space{
-    content:".."
-}
-subst:before{
-    content:"*"
-}
-subst:after{
-    content:"*"
-}
-subst > del:after{
-    content:" "
-}
-damage{
-    content:"[_] ";
-    color:#008000
-}
-damage > supplied{
-    font-weight:bold
-}
-supplied:before{
-    content:"["
-}
-supplied:after{
-    content:"] "
-}
-add{
-    color:#0000FF
-}
-foreign{
-    color:#FFD700
-}
-unclear{
-    color:#008080
-}
-app{
+
+app {
     color:#7B68EE;
 }
-app > rdg{
+
+lem:after {
+    content:" ";
+}
+
+rdg {
     font-style:italic;
 }
-app > lem:after{
-    content:" "
+
+rdg:after {
+    content:" ";
 }
-app > rdg:after{
-    content:" "
+
+add {
+    color:#0000FF;
 }
+
+addSpan {}
+
 del,
 delSpan{
-    text-decoration:line-through
+    text-decoration:line-through;
 }
+
+damage {
+    content:"[_] ";
+    color:#008000;
+}
+
+damageSpan {}
+
+anchor {}
+
+subst:before {
+    content:"*";
+}
+
+subst:after {
+    content:"*";
+}
+
+subst > del:after {
+    content:" ";
+}
+
+supplied {
+    font-weight:bold;
+}
+
+supplied:before {
+    content:"[";
+}
+
+supplied:after {
+    content:"] ";
+}
+
+unclear {
+    color:#008080;
+}
+
+gap {
+    content:"[...] ";
+}
+
+space {
+    content:"..";
+}
+
+handShift {}
+
+note {}

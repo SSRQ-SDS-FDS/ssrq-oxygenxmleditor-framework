@@ -1,44 +1,50 @@
-signed{
-    content:"\A"
+foreign {
+    color:#FFD700;
 }
 
-q:before{
-    content:"«"
-}
-q:after{
-    content:"»"
-}
-quote:before{
-    content:"«"
-}
-quote:after{
-    content:"»"
-}
-orig:before{
-    content:"«"
-}
-orig:after{
-    content:"»"
+orig:before {
+    content:"«";
 }
 
-head{
-    font-weight:bold
+orig:after {
+    content:"»";
 }
-head:before{
-    content:"\A\A"
+
+q:before {
+    content:"«";
 }
-head:after{
-    content:"\A\A\A"
+
+q:after {
+    content:"»";
 }
-head[resp]:before{
-    content:"["
+
+quote:before {
+    content:"«";
 }
-head[resp]:after{
-    content:"]"
+
+quote:after {
+    content:"»";
 }
-hi[rend = "sup"]{
-    vertical-align:super
+
+hi[rend = "sup"] { 
+    vertical-align:super;
 }
-hi[rend = "underline"]{
-    text-decoration:underline
+hi[rend = "underline"] {
+    text-decoration:underline;
 }
+
+figure {}
+
+graphic {}
+
+pc {}
+
+listBibl {}
+
+bibl {}
+
+ref {}
+
+label {}
+
+fw {}

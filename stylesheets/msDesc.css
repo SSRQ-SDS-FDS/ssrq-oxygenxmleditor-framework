@@ -1,0 +1,114 @@
+msDesc {}
+
+msIdentifier {}
+
+settlement {}
+
+repository {}
+
+msIdentifier idno {}
+
+altIdentifier {}
+
+msDesc head {}
+
+msContents {}
+
+msItem {}
+
+textLang {}
+
+author {}
+
+docImprint {}
+
+docImprint publisher {}
+
+pubPlace {}
+
+summary {}
+
+physDesc {}
+
+objectDesc {}
+
+supportDesc {}
+
+support {}
+
+material:before {
+    content: "Material: ";
+}
+
+extent {
+    border-style:solid;
+    border-width:1px;
+}
+
+extent:before {
+    content: "Masse: ";
+}
+
+dimensions {
+    display:block;
+}
+
+dimensions[type="leaves"]:before {
+    content:"Blätter: ";
+}
+
+dimensions[type="plica"]:before {
+    content:"Plica: ";
+}
+
+height:before {
+    content:"Höhe: " attr(quantity) " " attr(unit);
+}
+
+width:before {
+    content:"Breite: " attr(quantity) " " attr(unit);
+}
+
+foliation {}
+
+condition {}
+
+bindingDesc {}
+
+handDesc {}
+
+handNote {}
+
+sealDesc {}
+
+seal {
+    display:block;
+    border-style:solid;
+    border-width:1px;
+}
+
+seal:before {
+    content: "Siegel " attr(n) ": " attr(material) ", " attr(condition) ", " attr(shape) ", " attr(attachment);
+}
+
+history {}
+
+origin {}
+
+origDate:before { 
+    color:#40E0D0;
+    content: "Datierung: " attr(when) "";
+}
+
+origPlace:before { 
+    color:#008000;
+    content: "Ausstellungsort: ";
+}
+
+additional {}
+
+adminInfo {}
+
+custodialHist {}
+
+custEvent {}
