@@ -34,10 +34,10 @@
                 <title>Collection des sources du droit suisse</title>
                 <respStmt>
                     <orgName>Fondation des sources du droit de la Société suisse des juristes</orgName>
-                    <resp>Publication</resp> 
+                    <resp>Publication</resp>
                 </respStmt>
                 <idno>SSRQ-EX-I_1-1-1</idno>
-                <idno type="uuid"></idno>
+                <idno type="uuid">${uuid}</idno>
             </seriesStmt>
             <sourceDesc>
                 <msDesc>
