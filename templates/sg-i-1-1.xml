@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>XIV. Abteilung: Die Rechtsquellen des Kantons St. Gallen, Erster Teil: 
+               Die Rechtsquellen der Abtei St. Gallen, 1. Reihe: Die Herrschaft des Abtes von 
+               St. Gallen, Band 1: Die Rechtsquellen der weltlichen Amtleute des Klosters St. Gallen</title>
+            <editor>
+               <persName>Michael Nadig</persName>
+            </editor>
+            <editor>
+               <persName>Anina Steinmann</persName>
+            </editor>
+            <respStmt>
+               <persName></persName>
+               <resp>Transkription</resp>
+               <resp>XML-Codierung der Transkription</resp>
+            </respStmt>
+            <respStmt>
+               <persName>Michael Nadig</persName>
+               <persName>Anina Steinmann</persName>
+               <resp>Erstellung Faksimile</resp>
+            </respStmt>
+            <respStmt>
+               <persName>Pascale Sutter</persName>
+               <resp>Qualitätskontrolle</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>SSRQ-SDS-FDS</publisher>
+            <date type="electronic" when-custom="0000-01-01"/>
+            <date type="print" when-custom="0000-01-01"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+               </licence>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title>Sammlung Schweizerischer Rechtsquellen</title>
+            <respStmt>
+               <orgName>Rechtsquellenstiftung des Schweizerischen Juristenvereins</orgName>
+               <resp>Herausgabe</resp>
+            </respStmt>
+            <idno>SSRQ-SG-I-1-1-<!--Hier der Rest der IDNO--></idno>
+            <idno type="uuid">${uuid}</idno>
+         </seriesStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement xml:lang="de" ref="loc000082">St. Gallen</settlement>
+                  <repository xml:lang="de">Stiftsarchiv St. Gallen</repository>
+                  <idno xml:lang="de">StiASG, <!--Hier der Rest der Signatur--></idno>
+               </msIdentifier>
+               <head></head>
+               <msContents>
+                  <summary xml:lang="de">
+                     <p></p>
+                  </summary>
+                  <msItem>
+                     <textLang xml:lang="de"/>
+                  </msItem>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <material type="paper"/>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origDate type="document" calendar="" when-custom=""/>
+                  </origin>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <p>
+               <ref target="https://p.ssrq-sds-fds.ch/guidelines/transcription"/>
+            </p>
+         </editorialDecl>
+      </encodingDesc>
+   </teiHeader>
+   <text type="transcript">
+      <body>
+         <div>
+            <p></p>
+         </div>
+      </body>
+   </text>
+</TEI>
