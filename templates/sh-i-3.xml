@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title>XII. Abteilung: Die Rechtsquellen des Kantons Schaffhausen, Erster Teil: Stadtrechte von
+               Schaffhausen und Stein am Rhein, 1. Reihe: Stadt und Territorialstaat Schaffhausen, Band 3: Die
+               Rechtsquellen von Schaffhausen ab 1416 bis zum Ende der Reformation (1535/1540)</title>
+            <editor>
+               <persName>Claudia Sutter</persName>
+            </editor>
+            <respStmt>
+               <persName>Claudia Sutter</persName>
+               <resp>Transkription</resp>
+               <resp>XML-Codierung der Transkription</resp>
+               <resp>Erstellung Faksimile</resp>
+            </respStmt>
+            <respStmt>
+               <persName>Pascale Sutter</persName>
+               <resp>Qualitätskontrolle</resp>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <publisher>SSRQ-SDS-FDS</publisher>
+            <date type="electronic" when-custom="0000-01-01"/>
+            <date type="print" when-custom="0000-01-01"/>
+            <availability>
+               <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+               </licence>
+            </availability>
+         </publicationStmt>
+         <seriesStmt>
+            <title>Sammlung Schweizerischer Rechtsquellen</title>
+            <respStmt>
+               <orgName>Rechtsquellenstiftung des Schweizerischen Juristenvereins</orgName>
+               <resp>Herausgabe</resp>
+            </respStmt>
+            <idno>SSRQ-SH-I-3-<!--Hier der Rest der IDNO--></idno>
+            <idno type="uuid">${uuid}</idno>
+         </seriesStmt>
+         <sourceDesc>
+            <msDesc>
+               <msIdentifier>
+                  <settlement xml:lang="de" ref=""></settlement>
+                  <repository xml:lang="de"></repository>
+                  <idno xml:lang="de"></idno>
+               </msIdentifier>
+               <head></head>
+               <msContents>
+                  <summary xml:lang="de">
+                     <p></p>
+                  </summary>
+                  <msItem>
+                     <textLang xml:lang="de"/>
+                  </msItem>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc>
+                        <support>
+                           <material type="paper"/>
+                        </support>
+                     </supportDesc>
+                  </objectDesc>
+               </physDesc>
+               <history>
+                  <origin>
+                     <origDate type="document" calendar="" when-custom=""/>
+                  </origin>
+               </history>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <editorialDecl>
+            <p>
+               <ref target="https://p.ssrq-sds-fds.ch/guidelines/transcription"/>
+            </p>
+         </editorialDecl>
+      </encodingDesc>
+   </teiHeader>
+   <text type="transcript">
+      <body>
+         <div>
+            <p></p>
+         </div>
+      </body>
+   </text>
+</TEI>
