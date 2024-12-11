@@ -38,7 +38,7 @@
                <orgName>Rechtsquellenstiftung des Schweizerischen Juristenvereins</orgName>
                <resp>Herausgabe</resp>
             </respStmt>
-            <idno>SSRQ-SH-I-3-<!--Hier der Rest der IDNO--></idno>
+            <idno>SSRQ-SH-I_3-0-1</idno>
             <idno type="uuid">${uuid}</idno>
          </seriesStmt>
          <sourceDesc>
@@ -46,14 +46,14 @@
                <witness n="A" xml:id="id-ssrq-${uuid}">
                   <msDesc>
                      <msIdentifier>
-                        <settlement xml:lang="de" ref=""></settlement>
-                        <repository xml:lang="de"></repository>
-                        <idno xml:lang="de"></idno>
+                        <settlement xml:lang="de" ref=""/>
+                        <repository xml:lang="de"/>
+                        <idno xml:lang="de"/>
                      </msIdentifier>
-                     <head></head>
+                     <head/>
                      <msContents>
                         <summary xml:lang="de">
-                           <p></p>
+                           <p/>
                         </summary>
                         <msItem>
                            <textLang xml:lang="de"/>
@@ -78,14 +78,14 @@
                <witness n="B" xml:id="id-ssrq-${uuid}">
                   <msDesc>
                      <msIdentifier>
-                        <settlement xml:lang="de" ref=""></settlement>
-                        <repository xml:lang="de"></repository>
-                        <idno xml:lang="de"></idno>
+                        <settlement xml:lang="de" ref=""/>
+                        <repository xml:lang="de"/>
+                        <idno xml:lang="de"/>
                      </msIdentifier>
-                     <head></head>
+                     <head/>
                      <msContents>
                         <summary xml:lang="de">
-                           <p></p>
+                           <p/>
                         </summary>
                         <msItem>
                            <textLang xml:lang="de"/>
@@ -121,7 +121,7 @@
    <text type="transcript">
       <body>
          <div>
-            <p></p>
+            <p/>
          </div>
       </body>
    </text>

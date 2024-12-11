@@ -5,7 +5,8 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>XXI<hi rend="sup">e</hi> partie<pc>:</pc> Les sources du droit du Canton de Neuchâtel, 
+                <title>XXI<hi rend="sup"
+                        >e</hi> partie<pc>:</pc> Les sources du droit du Canton de Neuchâtel, 
                     Tome 5<pc>:</pc> Principauté de Neuchâtel<pc>:</pc> Les sources du droit du gouvernement 
                     à distance 1707-1729</title>
                 <editor>
@@ -21,12 +22,12 @@
                     <persName>Adrien Wyssbrod</persName>
                 </editor>
                 <respStmt>
-                    <persName></persName>
+                    <persName/>
                     <resp>Transcription</resp>
                     <resp>Codage XML du transcript</resp>
                 </respStmt>
                 <respStmt>
-                    <persName></persName>
+                    <persName/>
                     <persName>Pascale Sutter</persName>
                     <resp>Contrôle de qualité</resp>
                 </respStmt>
@@ -47,7 +48,7 @@
                     <orgName>Fondation des sources du droit de la Société suisse des juristes</orgName>
                     <resp>Publication</resp>
                 </respStmt>
-                <idno>SDS-NE-5-<!--Voici le reste du IDNO--></idno>
+                <idno>SDS-NE-5-0-1</idno>
                 <idno type="uuid">${uuid}</idno>
             </seriesStmt>
             <sourceDesc>
@@ -55,12 +56,13 @@
                     <msIdentifier>
                         <settlement xml:lang="de" ref="loc007786">Neuchâtel</settlement>
                         <repository xml:lang="de">Archives de l'État de Neuchâtel</repository>
-                        <idno xml:lang="de">AEN <!--Voici le reste de la signature de l'archive--></idno>
+                        <idno xml:lang="de"
+                            >AEN <!--Voici le reste de la signature de l'archive--></idno>
                     </msIdentifier>
-                    <head></head>
+                    <head/>
                     <msContents>
                         <summary xml:lang="fr">
-                            <p></p>
+                            <p/>
                         </summary>
                         <msItem>
                             <textLang xml:lang="fr"/>
@@ -94,7 +96,7 @@
     <text type="transcript">
         <body>
             <div>
-                <p></p>
+                <p/>
             </div>
         </body>
     </text>

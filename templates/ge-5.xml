@@ -14,17 +14,17 @@
                     <persName>Marco Cicchini</persName>
                 </editor>
                 <respStmt>
-                    <persName></persName>
+                    <persName/>
                     <resp>Transcription</resp>
                     <resp>Codage XML du transcript</resp>
                 </respStmt>
                 <respStmt>
-                    <persName></persName>
+                    <persName/>
                     <persName>Pascale Sutter</persName>
                     <resp>Contrôle de qualité</resp>
                 </respStmt>
                 <respStmt>
-                    <orgName></orgName>
+                    <orgName/>
                     <resp>Création d'un fac-similé</resp>
                 </respStmt>
             </titleStmt>
@@ -44,20 +44,20 @@
                     <orgName>Fondation des sources du droit de la Société suisse des juristes</orgName>
                     <resp>Publication</resp>
                 </respStmt>
-                <idno>SDS-GE-5-<!--Voici le reste du IDNO--></idno>
+                <idno>SDS-GE-5-0-1</idno>
                 <idno type="uuid">${uuid}</idno>
             </seriesStmt>
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
                         <settlement xml:lang="de" ref="loc007646">Genève</settlement>
-                        <repository xml:lang="de"></repository>
-                        <idno xml:lang="de"></idno>
+                        <repository xml:lang="de"/>
+                        <idno xml:lang="de"/>
                     </msIdentifier>
-                    <head></head>
+                    <head/>
                     <msContents>
                         <summary xml:lang="fr">
-                            <p></p>
+                            <p/>
                         </summary>
                         <msItem>
                             <textLang xml:lang="fr"/>
@@ -91,7 +91,7 @@
     <text type="transcript">
         <body>
             <div>
-                <p></p>
+                <p/>
             </div>
         </body>
     </text>
