@@ -1,0 +1,5 @@
+ab {
+  background-color: #ffb6c1;
+  content: "[" attr(type) ", " attr(place) "] ";
+  display: block;
+}

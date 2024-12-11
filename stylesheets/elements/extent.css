@@ -1,0 +1,7 @@
+extent {
+    border-style: solid;
+    border-width: 1px;
+}
+extent:before {
+    content: "Masse: ";
+}

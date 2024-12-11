@@ -1,0 +1,30 @@
+head {
+    font-weight: bold;
+}
+
+head:before {
+    content: "\n\n";
+}
+
+head:after {
+    content: "\n\n\n";
+}
+
+head[resp]:before {
+    content: "[";
+}
+
+head[resp]:after {
+    content: "]";
+}
+
+msDesc head {
+}
+
+table > head:before {
+    content: "";
+}
+
+table > head:after {
+    content: "\n";
+}

@@ -1,0 +1,4 @@
+origDate:before {
+  color: #40e0d0;
+  content: "Datierung: " attr(when) "";
+}

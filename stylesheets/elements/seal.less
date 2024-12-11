@@ -1,0 +1,9 @@
+seal {
+    display: block;
+    border-style: solid;
+    border-width: 1px;
+}
+
+seal:before {
+    content: "Siegel " attr(n) ": " attr(material) ", " attr(condition) ", " attr(shape) ", " attr(attachment);
+}
