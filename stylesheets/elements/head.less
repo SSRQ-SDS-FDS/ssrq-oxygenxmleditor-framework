@@ -1,13 +1,9 @@
+@import "../commons/sizes.less";
+
 head {
+    display: block;
+    font-size: @large-size;
     font-weight: bold;
-}
-
-head:before {
-    content: "\n\n";
-}
-
-head:after {
-    content: "\n\n\n";
 }
 
 head[resp]:before {
@@ -18,13 +14,6 @@ head[resp]:after {
     content: "]";
 }
 
-msDesc head {
-}
-
-table > head:before {
-    content: "";
-}
-
-table > head:after {
-    content: "\n";
+table > head {
+    display: table-caption;
 }

@@ -1,3 +1,13 @@
+@import "../commons/colors.less";
+
 row {
-    display: block;
+    display: table-row;
+}
+
+row:nth-child(even) {
+    background-color: @row-even-background-color;
+}
+
+row:nth-child(odd) {
+    background-color: @row-odd-background-color;
 }

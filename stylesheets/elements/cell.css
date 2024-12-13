@@ -1,3 +1,11 @@
 cell {
-    width: 250px;
+  display: table-cell;
+  padding: 5px;
+}
+cell[role='label'] {
+  font-weight: bold;
+  font-size: 16px;
+}
+cell[rend='align-bottom'] {
+  vertical-align: bottom;
 }
