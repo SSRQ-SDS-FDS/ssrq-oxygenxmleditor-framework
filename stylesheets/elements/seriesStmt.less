@@ -1,3 +1,14 @@
+@import "../commons/classes.less";
+
 seriesStmt {
-    display: block;
+    .margin-block;
+    border-bottom: 1px solid black;
+}
+
+TEI[xml|lang = 'de'] seriesStmt:before {
+    content: "Angaben zur Reihe:";
+}
+
+TEI[xml|lang = 'fr'] seriesStmt:before {
+    content: "Informations sur la série :";
 }

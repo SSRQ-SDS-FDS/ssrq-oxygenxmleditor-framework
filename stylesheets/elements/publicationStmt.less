@@ -1,2 +1,14 @@
+@import "../commons/classes.less";
+
 publicationStmt {
+    .margin-block;
+    border-bottom: 1px solid black;
+}
+
+TEI[xml|lang = 'de'] publicationStmt:before {
+    content: "Angaben zur Veröffentlichung:";
+}
+
+TEI[xml|lang = 'fr'] publicationStmt:before {
+    content: "Informations sur la publication :";
 }

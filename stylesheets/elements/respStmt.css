@@ -1,3 +1,10 @@
 respStmt {
-    display: block;
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang='de'] respStmt:before {
+  content: "Verantwortlich: ";
+}
+TEI[xml|lang='fr'] respStmt:before {
+  content: "Responsable : ";
 }

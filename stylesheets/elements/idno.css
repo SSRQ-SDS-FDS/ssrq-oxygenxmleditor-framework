@@ -1,0 +1,18 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
+seriesStmt idno {
+  display: block;
+  margin: 10px;
+}
+seriesStmt idno:before {
+  content: "IDNO ";
+}
+seriesStmt idno[type='uuid']:before {
+  content: "IDNO (UUID) ";
+}

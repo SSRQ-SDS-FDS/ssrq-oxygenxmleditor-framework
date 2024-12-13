@@ -1,0 +1,10 @@
+editor {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang='de'] editor:before {
+  content: "Herausgeber: ";
+}
+TEI[xml|lang='fr'] editor:before {
+  content: "Éditeur : ";
+}

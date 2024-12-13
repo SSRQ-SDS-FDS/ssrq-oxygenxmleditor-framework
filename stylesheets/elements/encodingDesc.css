@@ -1,0 +1,14 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
+encodingDesc {
+  border: 1px solid black;
+  border-collapse: collapse;
+  display: block;
+  margin: 10px;
+}

@@ -1,0 +1,14 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
+profileDesc {
+  display: block;
+  margin: 10px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}

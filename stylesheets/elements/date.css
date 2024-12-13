@@ -1,3 +1,28 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
 date {
   color: #ffa500;
+}
+publicationStmt date {
+  color: #000000;
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang='de'] publicationStmt date[type='electronic'] {
+  content: "Publikationsdatum (elektronisch): " attr(when-custom);
+}
+TEI[xml|lang='fr'] publicationStmt date[type='electronic'] {
+  content: "Date de publication (électronique) : " attr(when-custom);
+}
+TEI[xml|lang='de'] publicationStmt date[type='print'] {
+  content: "Publikationsdatum (Druck): " attr(when-custom);
+}
+TEI[xml|lang='fr'] publicationStmt date[type='print'] {
+  content: "Date de publication (imprimé) : " attr(when-custom);
 }

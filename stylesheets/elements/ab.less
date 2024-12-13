@@ -1,7 +1,12 @@
 @import "../commons/colors.less";
+@import "../commons/classes.less";
 
 ab {
     background-color: @ab-background-color;
-    content: "[" attr(type) ", " attr(place) "] ";
-    display: block;
+    .margin-block;
+    width: 90%;
+}
+
+ab:before {
+        content: "Anonymer Block [" attr(type) ", " attr(place) "]:\A";
 }

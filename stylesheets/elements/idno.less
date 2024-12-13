@@ -1,2 +1,13 @@
-idno {
+@import "../commons/classes.less";
+
+seriesStmt idno {
+    .margin-block;
+}
+
+seriesStmt idno:before {
+    content: "IDNO ";
+}
+
+seriesStmt idno[type = 'uuid']:before {
+    content: "IDNO (UUID) ";
 }

@@ -1,3 +1,19 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
 titleStmt {
-    display: block;
+  display: block;
+  margin: 10px;
+  border-bottom: 1px solid black;
+}
+TEI[xml|lang='de'] titleStmt:before {
+  content: "Angaben zum Band:";
+}
+TEI[xml|lang='fr'] titleStmt:before {
+  content: "Informations du volume :";
 }

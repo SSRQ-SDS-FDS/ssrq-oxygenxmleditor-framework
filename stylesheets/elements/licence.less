@@ -1,2 +1,13 @@
+@import "../commons/classes.less";
+
 licence {
+    .margin-block();
+}
+
+TEI[xml|lang = 'de'] licence:before {
+    content: "Lizenz: ";
+}
+
+TEI[xml|lang = 'fr'] licence:before {
+    content: "Licence : ";
 }

@@ -1,5 +1,17 @@
-ab {
-  background-color: #ffb6c1;
-  content: "[" attr(type) ", " attr(place) "] ";
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.margin-block {
   display: block;
+  margin: 10px;
+}
+ab {
+  background-color: #93a5f5;
+  display: block;
+  margin: 10px;
+  width: 90%;
+}
+ab:before {
+  content: "Anonymer Block [" attr(type) ", " attr(place) "]:\A";
 }

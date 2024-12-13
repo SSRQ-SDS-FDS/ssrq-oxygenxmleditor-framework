@@ -1,3 +1,9 @@
 persName {
   color: #0000ff;
 }
+editor persName {
+  color: #000000;
+}
+respStmt persName {
+  color: #000000;
+}
