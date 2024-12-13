@@ -1,121 +1,434 @@
-@import "commons/colors.css";
-@import "elements/ab.css";
-@import "elements/abbr.css";
-@import "elements/add.css";
-@import "elements/additional.css";
-@import "elements/addSpan.css";
-@import "elements/adminInfo.css";
-@import "elements/altIdentifier.css";
-@import "elements/anchor.css";
-@import "elements/app.css";
-@import "elements/author.css";
-@import "elements/availability.css";
-@import "elements/back.css";
-@import "elements/bibl.css";
-@import "elements/bindingDesc.css";
-@import "elements/body.css";
-@import "elements/cb.css";
-@import "elements/cell.css";
-@import "elements/choice.css";
-@import "elements/condition.css";
-@import "elements/corr.css";
-@import "elements/custEvent.css";
-@import "elements/custodialHist.css";
-@import "elements/damage.css";
-@import "elements/damageSpan.css";
-@import "elements/date.css";
-@import "elements/del.css";
-@import "elements/delSpan.css";
-@import "elements/dimensions.css";
-@import "elements/div.css";
-@import "elements/docImprint.css";
-@import "elements/editor.css";
-@import "elements/editorialDecl.css";
-@import "elements/encodingDesc.css";
-@import "elements/expan.css";
-@import "elements/extent.css";
-@import "elements/figure.css";
-@import "elements/fileDesc.css";
-@import "elements/foliation.css";
-@import "elements/foreign.css";
-@import "elements/fw.css";
-@import "elements/gap.css";
-@import "elements/graphic.css";
-@import "elements/handDesc.css";
-@import "elements/handNote.css";
-@import "elements/handShift.css";
-@import "elements/head.css";
-@import "elements/height.css";
-@import "elements/hi.css";
-@import "elements/history.css";
-@import "elements/idno.css";
-@import "elements/item.css";
-@import "elements/keywords.css";
-@import "elements/label.css";
-@import "elements/lb.css";
-@import "elements/lem.css";
-@import "elements/licence.css";
-@import "elements/list.css";
-@import "elements/listBibl.css";
-@import "elements/listWit.css";
-@import "elements/material.css";
-@import "elements/measure.css";
-@import "elements/measureGrp.css";
-@import "elements/msContents.css";
-@import "elements/msDesc.css";
-@import "elements/msIdentifier.css";
-@import "elements/msItem.css";
-@import "elements/note.css";
-@import "elements/num.css";
-@import "elements/objectDesc.css";
-@import "elements/orgName.css";
-@import "elements/orig.css";
-@import "elements/origDate.css";
-@import "elements/origin.css";
-@import "elements/origPlace.css";
-@import "elements/p.css";
-@import "elements/pb.css";
-@import "elements/pc.css";
-@import "elements/persName.css";
-@import "elements/physDesc.css";
-@import "elements/placeName.css";
-@import "elements/precision.css";
-@import "elements/profileDesc.css";
-@import "elements/publicationStmt.css";
-@import "elements/publisher.css";
-@import "elements/pubPlace.css";
-@import "elements/q.css";
-@import "elements/quote.css";
-@import "elements/rdg.css";
-@import "elements/ref.css";
-@import "elements/repository.css";
-@import "elements/resp.css";
-@import "elements/respStmt.css";
-@import "elements/row.css";
-@import "elements/seal.css";
-@import "elements/sealDesc.css";
-@import "elements/seg.css";
-@import "elements/seriesStmt.css";
-@import "elements/settlement.css";
-@import "elements/sic.css";
-@import "elements/signed.css";
-@import "elements/sourceDesc.css";
-@import "elements/space.css";
-@import "elements/subst.css";
-@import "elements/summary.css";
-@import "elements/supplied.css";
-@import "elements/support.css";
-@import "elements/supportDesc.css";
-@import "elements/table.css";
-@import "elements/TEI.css";
-@import "elements/teiHeader.css";
-@import "elements/term.css";
-@import "elements/text.css";
-@import "elements/textClass.css";
-@import "elements/textLang.css";
-@import "elements/time.css";
-@import "elements/title.css";
-@import "elements/titleStmt.css";
-@import "elements/unclear.css";
-@import "elements/width.css";
-@import "elements/witness.css";
+@namespace xml "https://www.w3.org/TR/xml/";
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
+ab {
+  background-color: #93a5f5;
+  display: block;
+  margin: 10px;
+  width: 90%;
+}
+ab:before {
+  content: "Anonymer Block [" attr(type) ", " attr(place) "]:\A";
+}
+abbr {
+  color: #ff0000;
+}
+add {
+  color: #0000ff;
+}
+additional {
+  display: block;
+}
+altIdentifier {
+  display: block;
+}
+app {
+  color: #7b68ee;
+}
+body {
+  color: #000000;
+  background-color: #ffffff;
+  font-family: "Lexia Fontes";
+  font-size: 16px;
+}
+cell {
+  display: table-cell;
+  padding: 5px;
+}
+cell[role='label'] {
+  font-weight: bold;
+  font-size: 16px;
+}
+cell[rend='align-bottom'] {
+  vertical-align: bottom;
+}
+corr {
+  color: #a9a9a9;
+}
+corr:before {
+  content: " ";
+}
+damage {
+  content: "[_] ";
+  color: #008000;
+}
+date {
+  color: #ffa500;
+}
+publicationStmt date {
+  color: #000000;
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang='de'] publicationStmt date[type='electronic'] {
+  content: "Publikationsdatum (elektronisch): " attr(when-custom);
+}
+TEI[xml|lang='fr'] publicationStmt date[type='electronic'] {
+  content: "Date de publication (électronique) : " attr(when-custom);
+}
+TEI[xml|lang='de'] publicationStmt date[type='print'] {
+  content: "Publikationsdatum (Druck): " attr(when-custom);
+}
+TEI[xml|lang='fr'] publicationStmt date[type='print'] {
+  content: "Date de publication (imprimé) : " attr(when-custom);
+}
+del {
+  text-decoration: line-through;
+}
+subst > del:after {
+  content: " ";
+}
+delSpan {
+  text-decoration: line-through;
+}
+dimensions {
+  display: block;
+}
+dimensions[type="leaves"]:before {
+  content: "Blätter: ";
+}
+dimensions[type="plica"]:before {
+  content: "Plica: ";
+}
+div:before {
+  content: "\n[" attr(n) "]";
+}
+editor {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang='de'] editor:before {
+  content: "Herausgeber: ";
+}
+TEI[xml|lang='fr'] editor:before {
+  content: "Éditeur : ";
+}
+encodingDesc {
+  border: 1px solid black;
+  border-collapse: collapse;
+  display: block;
+  margin: 10px;
+}
+expan {
+  color: #a9a9a9;
+}
+expan:before {
+  content: " ";
+}
+extent {
+  border-style: solid;
+  border-width: 1px;
+}
+extent:before {
+  content: "Masse: ";
+}
+fileDesc {
+  display: block;
+  margin: 10px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+foreign {
+  color: #ffd700;
+}
+gap {
+  content: "[...] ";
+}
+head {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+}
+head[resp]:before {
+  content: "[";
+}
+head[resp]:after {
+  content: "]";
+}
+table > head {
+  display: table-caption;
+}
+height:before {
+  content: "Höhe: " attr(quantity) " " attr(unit);
+}
+hi[rend="sup"] {
+  vertical-align: super;
+}
+hi[rend="underline"] {
+  text-decoration: underline;
+}
+seriesStmt idno {
+  display: block;
+  margin: 10px;
+}
+seriesStmt idno:before {
+  content: "IDNO ";
+}
+seriesStmt idno[type='uuid']:before {
+  content: "IDNO (UUID) ";
+}
+item {
+  display: list-item;
+  padding: 0px;
+  margin-bottom: 5px;
+  width: 90%;
+}
+item:nth-child(even) {
+  background-color: #f2f2f2;
+}
+item:nth-child(odd) {
+  background-color: #92a8d1;
+}
+lb[break="no"]:before {
+  content: "-/\n";
+}
+lb:before {
+  content: "/\n";
+}
+lem:after {
+  content: " ";
+}
+licence {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang='de'] licence:before {
+  content: "Lizenz: ";
+}
+TEI[xml|lang='fr'] licence:before {
+  content: "Licence : ";
+}
+list {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+list[rend='bulleted'] {
+  list-style-type: disc;
+}
+list[rend='numbered'] {
+  list-style-type: decimal;
+}
+material:before {
+  content: "Material: ";
+}
+measure {
+  color: #ff1493;
+}
+measureGrp {
+  color: #ff1493;
+}
+num {
+  color: #ffd700;
+}
+orgName {
+  color: #9400d3;
+}
+respStmt orgName {
+  color: #000000;
+}
+orig:before {
+  content: "«";
+}
+orig:after {
+  content: "»";
+}
+origDate:before {
+  color: #40e0d0;
+  content: "Datierung: " attr(when) "";
+}
+origPlace:before {
+  color: #008000;
+  content: "Ausstellungsort: ";
+}
+p {
+  display: block;
+  line-height: 115%;
+  margin-left: 3em;
+  margin-top: 0.75ex;
+}
+pb {
+  page-break-after: always;
+  content: "\n//[" attr(n) "] ";
+}
+persName {
+  color: #0000ff;
+}
+editor persName {
+  color: #000000;
+}
+respStmt persName {
+  color: #000000;
+}
+placeName {
+  color: #00ff00;
+}
+profileDesc {
+  display: block;
+  margin: 10px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+publicationStmt {
+  display: block;
+  margin: 10px;
+  border-bottom: 1px solid black;
+}
+TEI[xml|lang='de'] publicationStmt:before {
+  content: "Angaben zur Veröffentlichung:";
+}
+TEI[xml|lang='fr'] publicationStmt:before {
+  content: "Informations sur la publication :";
+}
+publicationStmt publisher {
+  display: block;
+  margin: 10px;
+}
+q:before {
+  content: "«";
+}
+q:after {
+  content: "»";
+}
+quote:before {
+  content: "«";
+}
+quote:after {
+  content: "»";
+}
+rdg {
+  font-style: italic;
+}
+rdg:after {
+  content: " ";
+}
+resp {
+  display: inline-block;
+  margin-left: 10px;
+}
+respStmt {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang='de'] respStmt:before {
+  content: "Verantwortlich: ";
+}
+TEI[xml|lang='fr'] respStmt:before {
+  content: "Responsable : ";
+}
+row {
+  display: table-row;
+}
+row:nth-child(even) {
+  background-color: #f2f2f2;
+}
+row:nth-child(odd) {
+  background-color: #92a8d1;
+}
+seal {
+  display: block;
+  border-style: solid;
+  border-width: 1px;
+}
+seal:before {
+  content: "Siegel " attr(n) ": " attr(material) ", " attr(condition) ", " attr(shape) ", " attr(attachment);
+}
+seg {
+  display: block;
+}
+seg:before {
+  content: "[" attr(n) "]";
+}
+seriesStmt {
+  display: block;
+  margin: 10px;
+  border-bottom: 1px solid black;
+}
+TEI[xml|lang='de'] seriesStmt:before {
+  content: "Angaben zur Reihe:";
+}
+TEI[xml|lang='fr'] seriesStmt:before {
+  content: "Informations sur la série :";
+}
+sic {
+  color: #ff00ff;
+}
+sic:after {
+  content: " [sic]";
+}
+signed {
+  content: "\n";
+}
+sourceDesc {
+  display: block;
+  margin: 10px;
+}
+space {
+  content: "..";
+}
+subst:before {
+  content: "*";
+}
+subst:after {
+  content: "*";
+}
+supplied {
+  font-weight: bold;
+}
+supplied:before {
+  content: "[";
+}
+supplied:after {
+  content: "] ";
+}
+table {
+  display: table;
+  border: 1px solid black;
+  margin: 10px;
+}
+TEI {
+  display: block;
+  margin: 10px;
+}
+teiHeader {
+  display: block;
+  margin: 10px;
+  background-color: #dfe3f7;
+}
+term {
+  color: #ff0000;
+}
+time {
+  color: #808080;
+}
+title {
+  display: block;
+  font-size: 20px;
+  width: 90%;
+  margin: 10px;
+}
+titleStmt {
+  display: block;
+  margin: 10px;
+  border-bottom: 1px solid black;
+}
+TEI[xml|lang='de'] titleStmt:before {
+  content: "Angaben zum Band:";
+}
+TEI[xml|lang='fr'] titleStmt:before {
+  content: "Informations du volume :";
+}
+unclear {
+  color: #008080;
+}
+width:before {
+  content: "[" attr(quantity) " " attr(unit) "]";
+}
