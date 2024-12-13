@@ -32,7 +32,7 @@
                 <date type="print" when-custom="0000-01-01"/>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-                        > Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) </licence>
+                        >Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) </licence>
                 </availability>
             </publicationStmt>
             <seriesStmt>
@@ -93,6 +93,13 @@
                 </p>
             </editorialDecl>
         </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords>
+                    <term ref="key123456">Foo</term>
+                </keywords>
+            </textClass>
+        </profileDesc>
     </teiHeader>
     <text type="transcript">
         <body>
@@ -106,6 +113,41 @@
                     <addSpan spanTo="add1"/>
                     <anchor xml:id="add1"/>
                 </p>
+                <table>
+                    <head>Tabellenüberschrift</head>
+                    <row>
+                        <cell role="label">Spaltenüberschrift links</cell>
+                        <cell role="label">Spaltenüberschrift rechts</cell>
+                    </row>
+                    <row>
+                        <cell rend="align-bottom">oben links</cell>
+                        <cell rend="align-bottom">oben rechts</cell>
+                    </row>
+                    <row>
+                        <cell>Mitte links</cell>
+                        <cell>Mitte rechts</cell>
+                    </row>
+                    <row>
+                        <cell>unten links</cell>
+                        <cell>unten rechts</cell>
+                    </row>
+                </table>
+                <list rend="bulleted">
+                    <head>Bullet-List Überschrift</head>
+                    <item>Eintrag 1</item>
+                    <item>Eintrag 2</item>
+                    <pb n="10r"/>
+                    <item>Eintrag 3</item>
+                    <item>Eintrag 4</item>
+                </list>
+                <list rend="numbered">
+                    <head>Numbered-List Überschrift</head>
+                    <item>Eintrag 1</item>
+                    <item>Eintrag 2</item>
+                    <pb n="20r"/>
+                    <item>Eintrag 3</item>
+                    <item>Eintrag 4</item>
+                </list>
             </div>
             <ab type="address" place="above">Das ist ein ab.</ab>
         </body>
