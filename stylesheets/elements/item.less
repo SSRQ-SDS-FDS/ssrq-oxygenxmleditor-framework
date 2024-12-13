@@ -1,2 +1,16 @@
+@import "../commons/colors.less";
+
 item {
+    display: list-item;
+    padding: 0px;
+    margin-bottom: 5px;
+    width: 90%;
+}
+
+item:nth-child(even) {
+    background-color: @item-even-background-color;
+}
+
+item:nth-child(odd) {
+    background-color: @item-odd-background-color;
 }

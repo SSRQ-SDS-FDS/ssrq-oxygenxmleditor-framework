@@ -1,0 +1,12 @@
+item {
+  display: list-item;
+  padding: 0px;
+  margin-bottom: 5px;
+  width: 90%;
+}
+item:nth-child(even) {
+  background-color: #f2f2f2;
+}
+item:nth-child(odd) {
+  background-color: #92a8d1;
+}

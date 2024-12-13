@@ -1,0 +1,13 @@
+list {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  list-style-type: disc;
+  list-style-position: outside;
+}
+list[rend='bulleted'] {
+  list-style-type: disc;
+}
+list[rend='numbered'] {
+  list-style-type: decimal;
+}
