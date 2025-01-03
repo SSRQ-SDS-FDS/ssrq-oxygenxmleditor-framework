@@ -1,10 +1,19 @@
 .bordered {
   border: 1px solid black;
   border-collapse: collapse;
+  border-radius: 5px;
 }
 .margin-block {
   display: block;
   margin: 10px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
 }
 publicationStmt {
   display: block;
@@ -12,8 +21,14 @@ publicationStmt {
   border-bottom: 1px solid black;
 }
 TEI[xml|lang='de'] publicationStmt:before {
-  content: "Angaben zur Veröffentlichung:";
+  content: "Angaben zur Veröffentlichung";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
 }
 TEI[xml|lang='fr'] publicationStmt:before {
-  content: "Informations sur la publication :";
+  content: "Informations sur la publication";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
 }

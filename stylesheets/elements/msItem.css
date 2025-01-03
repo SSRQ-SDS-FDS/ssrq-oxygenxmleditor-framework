@@ -1,0 +1,13 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
+msItem {
+  display: block;
+  margin: 10px;
+}

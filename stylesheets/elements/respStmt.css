@@ -1,10 +1,29 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
 respStmt {
   display: block;
   margin: 10px;
 }
 TEI[xml|lang='de'] respStmt:before {
   content: "Verantwortlich: ";
+  font-style: italic;
 }
 TEI[xml|lang='fr'] respStmt:before {
   content: "Responsable : ";
+  font-style: italic;
 }

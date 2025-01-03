@@ -1,2 +1,15 @@
+@import "../commons/classes.less";
+
 physDesc {
+    display: block;
+}
+
+TEI[xml|lang = "de"] physDesc:before {
+    content: "Physische Beschreibung des Textzeugen";
+    .additional-text;
+}
+
+TEI[xml|lang = "fr"] physDesc:before {
+    content: "Description physique du témoin textuel";
+    .additional-text;
 }

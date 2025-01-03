@@ -1,2 +1,15 @@
+@import "../commons/classes.less";
+
 settlement {
+    .margin-block;
+}
+
+TEI[xml|lang = 'de'] settlement:before {
+    content: "Archivstandort: ";
+    .additional-text;
+}
+
+TEI[xml|lang = 'fr'] settlement:before {
+    content: "Localisation d'archive : ";
+    .additional-text;
 }

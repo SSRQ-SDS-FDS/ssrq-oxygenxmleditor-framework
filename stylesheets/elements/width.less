@@ -1,3 +1,16 @@
-width:before {
-    content: "[" attr(quantity) " " attr(unit) "]";
+@import "../commons/classes.less";
+
+width {
+    content: attr(quantity) " " attr(unit);
+    .margin-block;
+}
+
+TEI[xml|lang = "de"] width:before {
+    content: "Breite: ";
+    .additional-text;
+}
+
+TEI[xml|lang = "fr"] width:before {
+    content: "Largeur : ";
+    .additional-text;
 }

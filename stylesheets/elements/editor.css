@@ -1,10 +1,29 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
 editor {
   display: block;
   margin: 10px;
 }
 TEI[xml|lang='de'] editor:before {
   content: "Herausgeber: ";
+  font-style: italic;
 }
 TEI[xml|lang='fr'] editor:before {
   content: "Éditeur : ";
+  font-style: italic;
 }

@@ -1,0 +1,29 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+textLang {
+  content: attr("xml|lang");
+  display: block;
+}
+TEI[xml|lang='de'] textLang:before {
+  content: "Sprache des Textes: ";
+  font-style: italic;
+}
+TEI[xml|lang='fr'] textLang:before {
+  content: "Langue du text : ";
+  font-style: italic;
+}

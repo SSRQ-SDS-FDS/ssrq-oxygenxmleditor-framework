@@ -1,6 +1,9 @@
 orgName {
   color: #9400d3;
 }
+author orgName {
+  color: #000000;
+}
 respStmt orgName {
   color: #000000;
 }

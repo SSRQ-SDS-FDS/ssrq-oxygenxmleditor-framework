@@ -1,12 +1,15 @@
+@import "../commons/classes.less";
+
 respStmt {
-    display: block;
-    margin: 10px;
+    .margin-block;
 }
 
 TEI[xml|lang = 'de'] respStmt:before {
     content: "Verantwortlich: ";
+    .additional-text;
 }
 
 TEI[xml|lang = 'fr'] respStmt:before {
     content: "Responsable : ";
+    .additional-text;
 }

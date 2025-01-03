@@ -1,12 +1,15 @@
+@import "../commons/classes.less";
+
 editor {
-    display: block;
-    margin: 10px;
+    .margin-block;
 }
 
 TEI[xml|lang = 'de'] editor:before {
     content: "Herausgeber: ";
+    .additional-text;
 }
 
 TEI[xml|lang = 'fr'] editor:before {
     content: "Éditeur : ";
+    .additional-text;
 }

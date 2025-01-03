@@ -1,0 +1,28 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+physDesc {
+  display: block;
+}
+TEI[xml|lang="de"] physDesc:before {
+  content: "Physische Beschreibung des Textzeugen";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] physDesc:before {
+  content: "Description physique du témoin textuel";
+  font-style: italic;
+}

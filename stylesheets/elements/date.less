@@ -7,21 +7,25 @@ date {
 
 publicationStmt date {
     color: @default-text-color;
-    .margin-block();
+    .margin-block;
 }
 
 TEI[xml|lang = 'de'] publicationStmt date[type = 'electronic'] {
     content: "Publikationsdatum (elektronisch): " attr(when-custom);
+    .additional-text;
 }
 
 TEI[xml|lang = 'fr'] publicationStmt date[type = 'electronic'] {
     content: "Date de publication (électronique) : " attr(when-custom);
+    .additional-text;
 }
 
 TEI[xml|lang = 'de'] publicationStmt date[type = 'print'] {
     content: "Publikationsdatum (Druck): " attr(when-custom);
+    .additional-text;
 }
 
 TEI[xml|lang = 'fr'] publicationStmt date[type = 'print'] {
     content: "Date de publication (imprimé) : " attr(when-custom);
+    .additional-text;
 }

@@ -1,3 +1,16 @@
-height:before {
-    content: "Höhe: " attr(quantity) " " attr(unit);
+@import "../commons/classes.less";
+
+height {
+    content:  attr(quantity) " " attr(unit);
+    .margin-block;
+}
+
+TEI[xml|lang = "de"] height:before {
+    content: "Höhe: ";
+    .additional-text;
+}
+
+TEI[xml|lang = "fr"] height:before {
+    content: "Hauteur : ";
+    .additional-text;
 }

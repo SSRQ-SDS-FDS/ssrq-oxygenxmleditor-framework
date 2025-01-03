@@ -1,5 +1,15 @@
 @import "../commons/classes.less";
 
 sourceDesc {
-    .margin-block();
+    .margin-block;
+}
+
+TEI[xml|lang = 'de'] sourceDesc:before {
+    content: "Quellenbeschreibung";
+    .additional-heading;
+}
+
+TEI[xml|lang = 'fr'] sourceDesc:before {
+    content: "Description de la source";
+    .additional-heading;
 }

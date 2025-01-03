@@ -1,3 +1,16 @@
-material:before {
+@import "../commons/classes.less";
+
+material {
+    content: attr("type");
+    .margin-block;
+}
+
+TEI[xml|lang = "de"] material:before {
     content: "Material: ";
+    .additional-text;
+}
+
+TEI[xml|lang = "fr"] material:before {
+    content: "Matériel : ";
+    .additional-text;
 }

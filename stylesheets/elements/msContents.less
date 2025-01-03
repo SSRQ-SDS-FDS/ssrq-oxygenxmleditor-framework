@@ -1,2 +1,15 @@
+@import "../commons/classes.less";
+
 msContents {
+    display: block;
+}
+
+TEI[xml|lang = 'de'] msContents:before {
+    content: "Inhalt des Textzeugen";
+    .additional-text;
+}
+
+TEI[xml|lang = 'fr'] msContents:before {
+    content: "Contenu du témoin textuel";
+    .additional-text;
 }

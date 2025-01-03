@@ -1,0 +1,28 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+author {
+  display: block;
+}
+TEI[xml|lang='de'] author:before {
+  content: "Autor: ";
+  font-style: italic;
+}
+TEI[xml|lang='fr'] author:before {
+  content: "Auteur : ";
+  font-style: italic;
+}

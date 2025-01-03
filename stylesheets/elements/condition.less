@@ -1,2 +1,16 @@
+@import "../commons/classes.less";
+
 condition {
+    content: attr("agent");
+    display: block;
+}
+
+TEI[xml|lang = "de"] condition:before {
+    content: "Beschädigung: ";
+    .additional-text;
+}
+
+TEI[xml|lang = "fr"] condition:before {
+    content: "Dommage : ";
+    .additional-text;
 }

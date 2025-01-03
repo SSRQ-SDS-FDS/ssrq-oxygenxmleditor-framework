@@ -1,9 +1,22 @@
+@import "sizes.less";
+
 .bordered {
     border: 1px solid black;
     border-collapse: collapse;
+    border-radius: 5px;
 }
 
 .margin-block {
     display: block;
     margin: 10px;
+}
+
+.additional-text {
+    font-style: italic;
+}
+
+.additional-heading {
+    .additional-text;
+    font-weight: bold;
+    font-size: @large-size;
 }

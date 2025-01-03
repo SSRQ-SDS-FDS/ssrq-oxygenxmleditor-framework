@@ -1,6 +1,9 @@
 persName {
   color: #0000ff;
 }
+author persName {
+  color: #000000;
+}
 editor persName {
   color: #000000;
 }

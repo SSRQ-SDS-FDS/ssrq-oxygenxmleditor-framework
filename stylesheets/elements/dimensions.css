@@ -1,9 +1,37 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
 dimensions {
-    display: block;
+  display: block;
+  margin: 10px;
 }
-dimensions[type = "leaves"]:before {
-    content: "Blätter: ";
+TEI[xml|lang="de"] dimensions[type="leaves"]:before {
+  content: "Mass der Blätter: ";
+  font-style: italic;
 }
-dimensions[type = "plica"]:before {
-    content: "Plica: ";
+TEI[xml|lang="fr"] dimensions[type="leaves"]:before {
+  content: "Dimensions des feuilles : ";
+  font-style: italic;
+}
+TEI[xml|lang="de"] dimensions[type="plica"]:before {
+  content: "Mass der Plica: ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] dimensions[type="plica"]:before {
+  content: "Dimensions de la Plica : ";
+  font-style: italic;
 }

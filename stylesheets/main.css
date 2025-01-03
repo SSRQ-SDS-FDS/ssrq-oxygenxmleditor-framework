@@ -2,10 +2,19 @@
 .bordered {
   border: 1px solid black;
   border-collapse: collapse;
+  border-radius: 5px;
 }
 .margin-block {
   display: block;
   margin: 10px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
 }
 ab {
   background-color: #93a5f5;
@@ -26,10 +35,25 @@ additional {
   display: block;
 }
 altIdentifier {
-  display: block;
+  display: inline;
 }
 app {
   color: #7b68ee;
+}
+author {
+  display: block;
+}
+TEI[xml|lang='de'] author:before {
+  content: "Autor: ";
+  font-style: italic;
+}
+TEI[xml|lang='fr'] author:before {
+  content: "Auteur : ";
+  font-style: italic;
+}
+bindingDesc {
+  display: block;
+  margin: 10px;
 }
 body {
   color: #000000;
@@ -47,6 +71,18 @@ cell[role='label'] {
 }
 cell[rend='align-bottom'] {
   vertical-align: bottom;
+}
+condition {
+  content: attr("agent");
+  display: block;
+}
+TEI[xml|lang="de"] condition:before {
+  content: "Beschädigung: ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] condition:before {
+  content: "Dommage : ";
+  font-style: italic;
 }
 corr {
   color: #a9a9a9;
@@ -68,15 +104,19 @@ publicationStmt date {
 }
 TEI[xml|lang='de'] publicationStmt date[type='electronic'] {
   content: "Publikationsdatum (elektronisch): " attr(when-custom);
+  font-style: italic;
 }
 TEI[xml|lang='fr'] publicationStmt date[type='electronic'] {
   content: "Date de publication (électronique) : " attr(when-custom);
+  font-style: italic;
 }
 TEI[xml|lang='de'] publicationStmt date[type='print'] {
   content: "Publikationsdatum (Druck): " attr(when-custom);
+  font-style: italic;
 }
 TEI[xml|lang='fr'] publicationStmt date[type='print'] {
   content: "Date de publication (imprimé) : " attr(when-custom);
+  font-style: italic;
 }
 del {
   text-decoration: line-through;
@@ -89,12 +129,23 @@ delSpan {
 }
 dimensions {
   display: block;
+  margin: 10px;
 }
-dimensions[type="leaves"]:before {
-  content: "Blätter: ";
+TEI[xml|lang="de"] dimensions[type="leaves"]:before {
+  content: "Mass der Blätter: ";
+  font-style: italic;
 }
-dimensions[type="plica"]:before {
-  content: "Plica: ";
+TEI[xml|lang="fr"] dimensions[type="leaves"]:before {
+  content: "Dimensions des feuilles : ";
+  font-style: italic;
+}
+TEI[xml|lang="de"] dimensions[type="plica"]:before {
+  content: "Mass der Plica: ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] dimensions[type="plica"]:before {
+  content: "Dimensions de la Plica : ";
+  font-style: italic;
 }
 div:before {
   content: "\n[" attr(n) "]";
@@ -105,15 +156,19 @@ editor {
 }
 TEI[xml|lang='de'] editor:before {
   content: "Herausgeber: ";
+  font-style: italic;
 }
 TEI[xml|lang='fr'] editor:before {
   content: "Éditeur : ";
+  font-style: italic;
 }
 encodingDesc {
   border: 1px solid black;
   border-collapse: collapse;
+  border-radius: 5px;
   display: block;
   margin: 10px;
+  background-color: #dfe3f7;
 }
 expan {
   color: #a9a9a9;
@@ -122,17 +177,18 @@ expan:before {
   content: " ";
 }
 extent {
-  border-style: solid;
-  border-width: 1px;
-}
-extent:before {
-  content: "Masse: ";
+  display: block;
 }
 fileDesc {
   display: block;
   margin: 10px;
   border: 1px solid black;
   border-collapse: collapse;
+  border-radius: 5px;
+  background-color: #dfe3f7;
+}
+foliation {
+  display: block;
 }
 foreign {
   color: #ffd700;
@@ -151,11 +207,24 @@ head[resp]:before {
 head[resp]:after {
   content: "]";
 }
+msDesc head {
+  margin-bottom: 10px;
+}
 table > head {
   display: table-caption;
 }
-height:before {
-  content: "Höhe: " attr(quantity) " " attr(unit);
+height {
+  content: attr(quantity) " " attr(unit);
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang="de"] height:before {
+  content: "Höhe: ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] height:before {
+  content: "Hauteur : ";
+  font-style: italic;
 }
 hi[rend="sup"] {
   vertical-align: super;
@@ -163,15 +232,33 @@ hi[rend="sup"] {
 hi[rend="underline"] {
   text-decoration: underline;
 }
-seriesStmt idno {
+idno {
   display: block;
   margin: 10px;
 }
 seriesStmt idno:before {
   content: "IDNO ";
+  font-style: italic;
 }
 seriesStmt idno[type='uuid']:before {
   content: "IDNO (UUID) ";
+  font-style: italic;
+}
+TEI[xml|lang='de'] msIdentifier idno:before {
+  content: "Signatur: ";
+  font-style: italic;
+}
+TEI[xml|lang='fr'] msIdentifier idno:before {
+  content: "Signature : ";
+  font-style: italic;
+}
+TEI[xml|lang='de'] altIdentifier idno:before {
+  content: "Alternative Signatur: ";
+  font-style: italic;
+}
+TEI[xml|lang='fr'] altIdentifier idno:before {
+  content: "Signature alternative : ";
+  font-style: italic;
 }
 item {
   display: list-item;
@@ -200,15 +287,17 @@ licence {
 }
 TEI[xml|lang='de'] licence:before {
   content: "Lizenz: ";
+  font-style: italic;
 }
 TEI[xml|lang='fr'] licence:before {
   content: "Licence : ";
+  font-style: italic;
 }
 list {
   display: block;
   margin: 10px;
   padding: 10px;
-  list-style-type: disc;
+  list-style-type: none;
   list-style-position: outside;
 }
 list[rend='bulleted'] {
@@ -217,8 +306,22 @@ list[rend='bulleted'] {
 list[rend='numbered'] {
   list-style-type: decimal;
 }
-material:before {
+listWit {
+  display: block;
+  margin: 10px;
+}
+material {
+  content: attr("type");
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang="de"] material:before {
   content: "Material: ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] material:before {
+  content: "Matériel : ";
+  font-style: italic;
 }
 measure {
   color: #ff1493;
@@ -226,11 +329,56 @@ measure {
 measureGrp {
   color: #ff1493;
 }
+msContents {
+  display: block;
+}
+TEI[xml|lang='de'] msContents:before {
+  content: "Inhalt des Textzeugen";
+  font-style: italic;
+}
+TEI[xml|lang='fr'] msContents:before {
+  content: "Contenu du témoin textuel";
+  font-style: italic;
+}
+msDesc {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang='de'] msDesc:before {
+  content: "Textzeugenbeschreibung";
+  font-style: italic;
+}
+TEI[xml|lang='fr'] msDesc:before {
+  content: "Description du témoin textuel";
+  font-style: italic;
+}
+msIdentifier {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang='de'] msIdentifier:before {
+  content: "Angaben zum Textzeugen";
+  font-style: italic;
+}
+TEI[xml|lang='fr'] msIdentifier:before {
+  content: "Informations du témoin textuel";
+  font-style: italic;
+}
+msItem {
+  display: block;
+  margin: 10px;
+}
 num {
   color: #ffd700;
 }
+objectDesc {
+  display: block;
+}
 orgName {
   color: #9400d3;
+}
+author orgName {
+  color: #000000;
 }
 respStmt orgName {
   color: #000000;
@@ -251,9 +399,7 @@ origPlace:before {
 }
 p {
   display: block;
-  line-height: 115%;
-  margin-left: 3em;
-  margin-top: 0.75ex;
+  margin: 10px;
 }
 pb {
   page-break-after: always;
@@ -262,11 +408,25 @@ pb {
 persName {
   color: #0000ff;
 }
+author persName {
+  color: #000000;
+}
 editor persName {
   color: #000000;
 }
 respStmt persName {
   color: #000000;
+}
+physDesc {
+  display: block;
+}
+TEI[xml|lang="de"] physDesc:before {
+  content: "Physische Beschreibung des Textzeugen";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] physDesc:before {
+  content: "Description physique du témoin textuel";
+  font-style: italic;
 }
 placeName {
   color: #00ff00;
@@ -276,6 +436,8 @@ profileDesc {
   margin: 10px;
   border: 1px solid black;
   border-collapse: collapse;
+  border-radius: 5px;
+  background-color: #dfe3f7;
 }
 publicationStmt {
   display: block;
@@ -283,10 +445,16 @@ publicationStmt {
   border-bottom: 1px solid black;
 }
 TEI[xml|lang='de'] publicationStmt:before {
-  content: "Angaben zur Veröffentlichung:";
+  content: "Angaben zur Veröffentlichung";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
 }
 TEI[xml|lang='fr'] publicationStmt:before {
-  content: "Informations sur la publication :";
+  content: "Informations sur la publication";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
 }
 publicationStmt publisher {
   display: block;
@@ -310,6 +478,18 @@ rdg {
 rdg:after {
   content: " ";
 }
+repository {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang='de'] repository:before {
+  content: "Archiv: ";
+  font-style: italic;
+}
+TEI[xml|lang='fr'] repository:before {
+  content: "Archive : ";
+  font-style: italic;
+}
 resp {
   display: inline-block;
   margin-left: 10px;
@@ -320,9 +500,11 @@ respStmt {
 }
 TEI[xml|lang='de'] respStmt:before {
   content: "Verantwortlich: ";
+  font-style: italic;
 }
 TEI[xml|lang='fr'] respStmt:before {
   content: "Responsable : ";
+  font-style: italic;
 }
 row {
   display: table-row;
@@ -353,10 +535,28 @@ seriesStmt {
   border-bottom: 1px solid black;
 }
 TEI[xml|lang='de'] seriesStmt:before {
-  content: "Angaben zur Reihe:";
+  content: "Angaben zur Reihe";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
 }
 TEI[xml|lang='fr'] seriesStmt:before {
-  content: "Informations sur la série :";
+  content: "Informations sur la série";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+settlement {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang='de'] settlement:before {
+  content: "Archivstandort: ";
+  font-style: italic;
+}
+TEI[xml|lang='fr'] settlement:before {
+  content: "Localisation d'archive : ";
+  font-style: italic;
 }
 sic {
   color: #ff00ff;
@@ -371,6 +571,18 @@ sourceDesc {
   display: block;
   margin: 10px;
 }
+TEI[xml|lang='de'] sourceDesc:before {
+  content: "Quellenbeschreibung";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+TEI[xml|lang='fr'] sourceDesc:before {
+  content: "Description de la source";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
 space {
   content: "..";
 }
@@ -380,6 +592,10 @@ subst:before {
 subst:after {
   content: "*";
 }
+summary {
+  display: block;
+  margin: 10px;
+}
 supplied {
   font-weight: bold;
 }
@@ -388,6 +604,13 @@ supplied:before {
 }
 supplied:after {
   content: "] ";
+}
+support {
+  display: block;
+}
+supportDesc {
+  display: block;
+  margin: 10px;
 }
 table {
   display: table;
@@ -399,12 +622,22 @@ TEI {
   margin: 10px;
 }
 teiHeader {
-  display: block;
-  margin: 10px;
-  background-color: #dfe3f7;
+  margin-bottom: 12px;
 }
 term {
   color: #ff0000;
+}
+textLang {
+  content: attr("xml|lang");
+  display: block;
+}
+TEI[xml|lang='de'] textLang:before {
+  content: "Sprache des Textes: ";
+  font-style: italic;
+}
+TEI[xml|lang='fr'] textLang:before {
+  content: "Langue du text : ";
+  font-style: italic;
 }
 time {
   color: #808080;
@@ -421,14 +654,34 @@ titleStmt {
   border-bottom: 1px solid black;
 }
 TEI[xml|lang='de'] titleStmt:before {
-  content: "Angaben zum Band:";
+  content: "Angaben zum Band";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
 }
 TEI[xml|lang='fr'] titleStmt:before {
-  content: "Informations du volume :";
+  content: "Informations du volume";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
 }
 unclear {
   color: #008080;
 }
-width:before {
-  content: "[" attr(quantity) " " attr(unit) "]";
+width {
+  content: attr(quantity) " " attr(unit);
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang="de"] width:before {
+  content: "Breite: ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] width:before {
+  content: "Largeur : ";
+  font-style: italic;
+}
+witness {
+  display: block;
+  margin: 10px;
 }

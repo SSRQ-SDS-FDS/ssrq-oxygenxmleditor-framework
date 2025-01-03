@@ -1,10 +1,19 @@
 .bordered {
   border: 1px solid black;
   border-collapse: collapse;
+  border-radius: 5px;
 }
 .margin-block {
   display: block;
   margin: 10px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
 }
 seriesStmt {
   display: block;
@@ -12,8 +21,14 @@ seriesStmt {
   border-bottom: 1px solid black;
 }
 TEI[xml|lang='de'] seriesStmt:before {
-  content: "Angaben zur Reihe:";
+  content: "Angaben zur Reihe";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
 }
 TEI[xml|lang='fr'] seriesStmt:before {
-  content: "Informations sur la série :";
+  content: "Informations sur la série";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
 }

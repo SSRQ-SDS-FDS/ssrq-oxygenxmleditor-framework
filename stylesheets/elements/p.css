@@ -1,6 +1,13 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
 p {
   display: block;
-  line-height: 115%;
-  margin-left: 3em;
-  margin-top: 0.75ex;
+  margin: 10px;
 }
