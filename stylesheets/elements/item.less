@@ -1,16 +1,14 @@
 @import "../commons/colors.less";
+@import "../commons/classes.less";
 
 item {
-    display: list-item;
-    padding: 0px;
-    margin-bottom: 5px;
-    width: 90%;
+    .smart-list-item;
 }
 
-item:nth-child(even) {
+item:nth-of-type(even) {
     background-color: @item-even-background-color;
 }
 
-item:nth-child(odd) {
+item:nth-of-type(odd) {
     background-color: @item-odd-background-color;
 }

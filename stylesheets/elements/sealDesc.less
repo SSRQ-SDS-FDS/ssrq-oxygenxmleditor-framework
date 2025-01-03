@@ -1,2 +1,15 @@
+@import "../commons/classes.less";
+
 sealDesc {
+    .margin-block;
+}
+
+TEI[xml|lang = "de"] sealDesc:before {
+    content: "Angaben zu den Siegeln";
+    .additional-text;
+}
+
+TEI[xml|lang = "fr"] sealDesc:before {
+    content: "Informations sur les sceaux";
+    .additional-text;
 }

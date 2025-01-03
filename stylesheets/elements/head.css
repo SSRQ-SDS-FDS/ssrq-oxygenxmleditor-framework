@@ -12,6 +12,9 @@ head[resp]:after {
 msDesc head {
   margin-bottom: 10px;
 }
-table > head {
+list head {
+  margin-bottom: 5px;
+}
+table head {
   display: table-caption;
 }

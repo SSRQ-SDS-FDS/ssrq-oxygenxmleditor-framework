@@ -16,6 +16,11 @@
   font-weight: bold;
   font-size: 16px;
 }
+.smart-list-item {
+  display: list-item;
+  padding: 5px;
+  margin-bottom: 5px;
+}
 ab {
   background-color: #93a5f5;
   display: block;
@@ -32,6 +37,9 @@ add {
   color: #0000ff;
 }
 additional {
+  display: block;
+}
+adminInfo {
   display: block;
 }
 altIdentifier {
@@ -51,9 +59,28 @@ TEI[xml|lang='fr'] author:before {
   content: "Auteur : ";
   font-style: italic;
 }
+listBibl bibl {
+  display: list-item;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+listBibl bibl:nth-of-type(even) {
+  background-color: #92a8d1;
+}
+listBibl bibl:nth-of-type(odd) {
+  background-color: #f2f2f2;
+}
 bindingDesc {
   display: block;
   margin: 10px;
+}
+TEI[xml|lang="de"] bindingDesc:before {
+  content: "Angaben zur Bindung";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] bindingDesc:before {
+  content: "Informations sur la reliure";
+  font-style: italic;
 }
 body {
   color: #000000;
@@ -73,15 +100,15 @@ cell[rend='align-bottom'] {
   vertical-align: bottom;
 }
 condition {
-  content: attr("agent");
+  content: " (" attr("agent") ")";
   display: block;
 }
 TEI[xml|lang="de"] condition:before {
-  content: "Beschädigung: ";
+  content: "Angaben zur Beschädigung";
   font-style: italic;
 }
 TEI[xml|lang="fr"] condition:before {
-  content: "Dommage : ";
+  content: "Informations sur les dommages";
   font-style: italic;
 }
 corr {
@@ -89,6 +116,22 @@ corr {
 }
 corr:before {
   content: " ";
+}
+custEvent {
+  display: block;
+  margin: 10px;
+}
+custodialHist {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang="de"] custodialHist:before {
+  content: "Angaben zur Aufbewahrungsgeschichte";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] custodialHist:before {
+  content: "Informations sur l'histoire de la conservation";
+  font-style: italic;
 }
 damage {
   content: "[_] ";
@@ -162,6 +205,22 @@ TEI[xml|lang='fr'] editor:before {
   content: "Éditeur : ";
   font-style: italic;
 }
+editiorialDecl {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang="de"] editorialDecl:before {
+  content: "Angaben zu den Editionsrichtlinien";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+TEI[xml|lang="fr"] editorialDecl:before {
+  content: "Informations sur les directives d'édition";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
 encodingDesc {
   border: 1px solid black;
   border-collapse: collapse;
@@ -169,6 +228,7 @@ encodingDesc {
   display: block;
   margin: 10px;
   background-color: #dfe3f7;
+  padding: 10px;
 }
 expan {
   color: #a9a9a9;
@@ -196,6 +256,23 @@ foreign {
 gap {
   content: "[...] ";
 }
+handDesc {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang="de"] handDesc:before {
+  content: "Angaben zu den Händen";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] handDesc:before {
+  content: "Informations sur les mains";
+  font-style: italic;
+}
+handNote {
+  content: attr("xml:id");
+  display: block;
+  margin: 10px;
+}
 head {
   display: block;
   font-size: 16px;
@@ -210,7 +287,10 @@ head[resp]:after {
 msDesc head {
   margin-bottom: 10px;
 }
-table > head {
+list head {
+  margin-bottom: 5px;
+}
+table head {
   display: table-caption;
 }
 height {
@@ -231,6 +311,9 @@ hi[rend="sup"] {
 }
 hi[rend="underline"] {
   text-decoration: underline;
+}
+history {
+  display: block;
 }
 idno {
   display: block;
@@ -262,15 +345,20 @@ TEI[xml|lang='fr'] altIdentifier idno:before {
 }
 item {
   display: list-item;
-  padding: 0px;
+  padding: 5px;
   margin-bottom: 5px;
-  width: 90%;
 }
-item:nth-child(even) {
+item:nth-of-type(even) {
+  background-color: #92a8d1;
+}
+item:nth-of-type(odd) {
   background-color: #f2f2f2;
 }
-item:nth-child(odd) {
-  background-color: #92a8d1;
+keywords {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  list-style-type: none;
 }
 lb[break="no"]:before {
   content: "-/\n";
@@ -298,13 +386,36 @@ list {
   margin: 10px;
   padding: 10px;
   list-style-type: none;
-  list-style-position: outside;
 }
 list[rend='bulleted'] {
-  list-style-type: disc;
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  list-style-type: "disc";
 }
 list[rend='numbered'] {
-  list-style-type: decimal;
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  list-style-type: "decimal";
+}
+listBibl {
+  display: block;
+  margin: 10px;
+  padding: 10px;
+  list-style-type: none;
+}
+TEI[xml|lang="de"] additional listBibl:before {
+  content: "Literaturliste (" attr("type") ")";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+TEI[xml|lang="fr"] additional listBibl:before {
+  content: "Liste de littérature (" attr("type") ")";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
 }
 listWit {
   display: block;
@@ -380,6 +491,19 @@ orgName {
 author orgName {
   color: #000000;
 }
+origin orgName {
+  color: #000000;
+  display: block;
+  margin: 10px;
+}
+origin orgName:before {
+  content: "Organisation (" attr("ref") ") ";
+  font-style: italic;
+}
+origin orgName[role]:before {
+  content: "Organisation (" attr("ref") ") (" attr("role") ") ";
+  font-style: italic;
+}
 respStmt orgName {
   color: #000000;
 }
@@ -389,13 +513,81 @@ orig:before {
 orig:after {
   content: "»";
 }
-origDate:before {
-  color: #40e0d0;
-  content: "Datierung: " attr(when) "";
+origDate {
+  display: block;
+  margin: 10px;
 }
-origPlace:before {
-  color: #008000;
-  content: "Ausstellungsort: ";
+TEI[xml|lang="de"] origDate[when-custom]:before {
+  content: "Datierung (" attr("type") ") " attr("when-custom") " (" attr("calendar") ") ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] origDate[when-custom]:before {
+  content: "Datation (" attr("type") ") " attr("when-custom") " (" attr("calendar") ") ";
+  font-style: italic;
+}
+TEI[xml|lang="de"] origDate[from-custom]:before {
+  content: "Datierung (" attr("type") ") von " attr("from-custom") " bis " attr("to-custom") " (" attr("calendar") ") ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] origDate[from-custom]:before {
+  content: "Datation (" attr("type") ") de " attr("from-custom") " à " attr("to-custom") " (" attr("calendar") ") ";
+  font-style: italic;
+}
+TEI[xml|lang="de"] origDate[notBefore-custom]:before {
+  content: "Datierung (" attr("type") ") nicht vor " attr("notBefore-custom") " (" attr("calendar") ") ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] origDate[notBefore-custom]:before {
+  content: "Datation (" attr("type") ") pas avant " attr("notBefore-custom") " (" attr("calendar") ") ";
+  font-style: italic;
+}
+TEI[xml|lang="de"] origDate[notAfter-custom]:before {
+  content: "Datierung (" attr("type") ") nicht nach " attr("notAfter-custom") " (" attr("calendar") ") ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] origDate[notAfter-cusom]:before {
+  content: "Datation (" attr("type") ") pas après " attr("notAfter-custom") " (" attr("calendar") ") ";
+  font-style: italic;
+}
+TEI[xml|lang="de"] origDate[notBefore-custom][notAfter-custom]:before {
+  content: "Datierung (" attr("type") ") nicht vor " attr("notBefore-custom") " und nicht nach " attr("notAfter-custom") " (" attr("calendar") ") ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] origDate[notBefore-custom][notAfter-cusom]:before {
+  content: "Datation (" attr("type") ") pas avant " attr("notBefore-custom") " et pas après " attr("notAfter-custom") " (" attr("calendar") ") ";
+  font-style: italic;
+}
+origin {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang="de"] origin:before {
+  content: "Angaben zur Herkunft";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] origin:before {
+  content: "Informations sur l'origine";
+  font-style: italic;
+}
+origPlace {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang="de"] origPlace:before {
+  content: "Ausstellungsort (" attr("type") ") (" attr("ref") ") ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] origPlace:before {
+  content: "Lieu d'exposition (" attr("type") ") (" attr("ref") ") ";
+  font-style: italic;
+}
+TEI[xml|lang="de"] origPlace[cert]:before {
+  content: "Ausstellungsort (" attr("type") ") (" attr("ref") ") [" attr("cert") "] ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] origPlace[cert]:before {
+  content: "Lieu d'exposition (" attr("type") ") (" attr("ref") ") [" attr("cert") "] ";
+  font-style: italic;
 }
 p {
   display: block;
@@ -478,6 +670,9 @@ rdg {
 rdg:after {
   content: " ";
 }
+editorialDecl ref {
+  content: attr("target");
+}
 repository {
   display: block;
   margin: 10px;
@@ -510,18 +705,34 @@ row {
   display: table-row;
 }
 row:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #92a8d1;
 }
 row:nth-child(odd) {
-  background-color: #92a8d1;
+  background-color: #f2f2f2;
 }
 seal {
   display: block;
-  border-style: solid;
-  border-width: 1px;
+  margin: 10px;
 }
-seal:before {
-  content: "Siegel " attr(n) ": " attr(material) ", " attr(condition) ", " attr(shape) ", " attr(attachment);
+TEI[xml|lang="de"] seal {
+  content: attr("n") ": Erhaltungszustand (" attr("condition") "), Befestigung (" attr("attachment") "), " "Form (" attr("shape") "), Material (" attr("material") "), Ort (" attr("place") "), " "Faksimile (" attr("facs") ")";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] seal {
+  content: attr("n") " : état de conservation (" attr("condition") "), fixation (" attr("attachment") "), " "forme (" attr("shape") "), matériau (" attr("material") "), lieux (" attr("place") "), " "facsimilé (" attr("facs") ")";
+  font-style: italic;
+}
+sealDesc {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang="de"] sealDesc:before {
+  content: "Angaben zu den Siegeln";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] sealDesc:before {
+  content: "Informations sur les sceaux";
+  font-style: italic;
 }
 seg {
   display: block;
@@ -594,7 +805,6 @@ subst:after {
 }
 summary {
   display: block;
-  margin: 10px;
 }
 supplied {
   font-weight: bold;
@@ -626,6 +836,37 @@ teiHeader {
 }
 term {
   color: #ff0000;
+}
+keywords term {
+  color: #000000;
+  display: list-item;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+keywords term:after {
+  content: " (" attr("ref") ")";
+}
+keywords term:nth-of-type(even) {
+  background-color: #92a8d1;
+}
+keywords term:nth-of-type(odd) {
+  background-color: #f2f2f2;
+}
+textClass {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang="de"] textClass:before {
+  content: "Angaben zum Textprofil";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+TEI[xml|lang="fr"] textClass:before {
+  content: "Informations sur le profil du texte";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
 }
 textLang {
   content: attr("xml|lang");

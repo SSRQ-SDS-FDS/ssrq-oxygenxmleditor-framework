@@ -16,14 +16,14 @@
   font-size: 16px;
 }
 condition {
-  content: attr("agent");
+  content: " (" attr("agent") ")";
   display: block;
 }
 TEI[xml|lang="de"] condition:before {
-  content: "Beschädigung: ";
+  content: "Angaben zur Beschädigung";
   font-style: italic;
 }
 TEI[xml|lang="fr"] condition:before {
-  content: "Dommage : ";
+  content: "Informations sur les dommages";
   font-style: italic;
 }

@@ -95,17 +95,39 @@
                             <handNote xml:id="otherHand"/>
                         </handDesc>
                         <sealDesc>
-                            <seal condition="absent" n="1"/>
+                            <seal n="1" condition="polished" shape="heart-shaped" material="wax"
+                                attachment="applied" place="end" facs="1r"/>
+                            <seal n="2" condition="absent"/>
                         </sealDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origDate type="document" calendar="gregorian" when-custom="1000-01-01"
-                            />
+                            <origDate type="document" calendar="gregorian"
+                                notBefore-custom="2000-01-01">Foo</origDate>
+                            <origDate type="content" calendar="gregorian" when-custom="1000-01-01"
+                                >Bar</origDate>
+                            <origPlace type="content" ref="loc123456">Foofoo</origPlace>
+                            <origPlace type="document" ref="loc123457" cert="high"
+                                >Barbar</origPlace>
                         </origin>
                     </history>
                     <additional>
+                        <adminInfo>
+                            <custodialHist>
+                                <custEvent type="lost"
+                                    > Das Manuskript ging am XX.XX.1900 verloren.</custEvent>
+                            </custodialHist>
+                        </adminInfo>
+                        <listBibl type="edition">
+                            <bibl>bibl</bibl>
+                            <bibl>bibl</bibl>
+                            <bibl>bibl</bibl>
+                            <bibl>bibl</bibl>
+                        </listBibl>
                         <listBibl type="literature">
+                            <bibl>bibl</bibl>
+                            <bibl>bibl</bibl>
+                            <bibl>bibl</bibl>
                             <bibl>bibl</bibl>
                         </listBibl>
                     </additional>
@@ -123,6 +145,9 @@
             <textClass>
                 <keywords>
                     <term ref="key123456">Foo</term>
+                    <term ref="key123457">Bar</term>
+                    <term ref="key123458">Baz</term>
+                    <term ref="key123459">Foobar</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -182,9 +207,20 @@
                     <pb n="20r"/>
                     <item>Eintrag 3</item>
                     <item>Eintrag 4</item>
+                    <item>Eintrag 5</item>
+                    <item>Eintrag 6</item>
+                    <item>Eintrag 7</item>
+                    <item>Eintrag 8</item>
+                    <item>Eintrag 9</item>
+                    <item>Eintrag 10</item>
                 </list>
             </div>
             <ab type="address" place="above">Das ist ein ab.</ab>
         </body>
+        <back>
+            <div>
+                <p> Foo </p>
+            </div>
+        </back>
     </text>
 </TEI>

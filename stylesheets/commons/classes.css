@@ -15,3 +15,8 @@
   font-weight: bold;
   font-size: 16px;
 }
+.smart-list-item {
+  display: list-item;
+  padding: 5px;
+  margin-bottom: 5px;
+}

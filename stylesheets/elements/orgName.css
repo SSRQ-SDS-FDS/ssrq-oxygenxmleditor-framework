@@ -1,8 +1,38 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
 orgName {
   color: #9400d3;
 }
 author orgName {
   color: #000000;
+}
+origin orgName {
+  color: #000000;
+  display: block;
+  margin: 10px;
+}
+origin orgName:before {
+  content: "Organisation (" attr("ref") ") ";
+  font-style: italic;
+}
+origin orgName[role]:before {
+  content: "Organisation (" attr("ref") ") (" attr("role") ") ";
+  font-style: italic;
 }
 respStmt orgName {
   color: #000000;

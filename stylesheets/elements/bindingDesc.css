@@ -19,3 +19,11 @@ bindingDesc {
   display: block;
   margin: 10px;
 }
+TEI[xml|lang="de"] bindingDesc:before {
+  content: "Angaben zur Bindung";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] bindingDesc:before {
+  content: "Informations sur la reliure";
+  font-style: italic;
+}

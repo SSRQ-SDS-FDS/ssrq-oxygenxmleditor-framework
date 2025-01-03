@@ -1,6 +1,57 @@
-@import "../commons/colors.less";
+@import "../commons/classes.less";
 
-origDate:before {
-    color: @origDate-text-color;
-    content: "Datierung: " attr(when) "";
+origDate {
+    .margin-block;
+}
+
+TEI[xml|lang = "de"] origDate[when-custom]:before {
+    content: "Datierung (" attr("type") ") " attr("when-custom") " (" attr("calendar") ") ";
+    .additional-text;
+}
+
+TEI[xml|lang = "fr"] origDate[when-custom]:before {
+    content: "Datation (" attr("type") ") " attr("when-custom") " (" attr("calendar") ") ";
+    .additional-text;
+}
+
+TEI[xml|lang = "de"] origDate[from-custom]:before {
+    content: "Datierung (" attr("type") ") von " attr("from-custom") " bis " attr("to-custom") " (" attr("calendar") ") ";
+    .additional-text;
+}
+
+TEI[xml|lang = "fr"] origDate[from-custom]:before {
+    content: "Datation (" attr("type") ") de " attr("from-custom") " à " attr("to-custom") " (" attr("calendar") ") ";
+    .additional-text;
+}
+
+TEI[xml|lang = "de"] origDate[notBefore-custom]:before {
+    content: "Datierung (" attr("type") ") nicht vor " attr("notBefore-custom") " (" attr("calendar") ") ";
+    .additional-text;
+}
+
+TEI[xml|lang = "fr"] origDate[notBefore-custom]:before {
+    content: "Datation (" attr("type") ") pas avant " attr("notBefore-custom") " (" attr("calendar") ") ";
+    .additional-text;
+}
+
+TEI[xml|lang = "de"] origDate[notAfter-custom]:before {
+    content: "Datierung (" attr("type") ") nicht nach " attr("notAfter-custom") " (" attr("calendar") ") ";
+    .additional-text;
+}
+
+TEI[xml|lang = "fr"] origDate[notAfter-cusom]:before {
+    content: "Datation (" attr("type") ") pas après " attr("notAfter-custom") " (" attr("calendar") ") ";
+    .additional-text;
+}
+
+TEI[xml|lang = "de"] origDate[notBefore-custom][notAfter-custom]:before {
+    content: "Datierung (" attr("type") ") nicht vor " attr("notBefore-custom") " und nicht nach "
+    attr("notAfter-custom") " (" attr("calendar") ") ";
+    .additional-text;
+}
+
+TEI[xml|lang = "fr"] origDate[notBefore-custom][notAfter-cusom]:before {
+    content: "Datation (" attr("type") ") pas avant " attr("notBefore-custom") " et pas après "
+    attr("notAfter-custom") " (" attr("calendar") ") ";
+    .additional-text;
 }

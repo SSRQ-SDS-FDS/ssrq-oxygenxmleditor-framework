@@ -1,15 +1,13 @@
+@import "../commons/classes.less";
+
 list {
-    display: block;
-    margin: 10px;
-    padding: 10px;
-    list-style-type: none;
-    list-style-position: outside;
+    .smart-list();
 }
 
 list[rend = 'bulleted'] {
-    list-style-type: disc;
+   .smart-list("disc");
 }
 
 list[rend = 'numbered'] {
-    list-style-type: decimal;
+    .smart-list("decimal");
 }

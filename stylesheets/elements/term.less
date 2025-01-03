@@ -1,5 +1,23 @@
+@import "../commons/classes.less";
 @import "../commons/colors.less";
 
 term {
     color: @term-text-color;
+}
+
+keywords term {
+    color: @default-text-color;
+    .smart-list-item;
+}
+
+keywords term:after {
+    content: " (" attr("ref") ")";
+}
+
+keywords term:nth-of-type(even) {
+    background-color: @item-even-background-color;
+}
+
+keywords term:nth-of-type(odd) {
+    background-color: @item-odd-background-color;
 }

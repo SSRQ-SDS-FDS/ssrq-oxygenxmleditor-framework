@@ -1,4 +1,42 @@
-origPlace:before {
-  color: #008000;
-  content: "Ausstellungsort: ";
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+.smart-list-item {
+  display: list-item;
+  padding: 5px;
+  margin-bottom: 5px;
+}
+origPlace {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang="de"] origPlace:before {
+  content: "Ausstellungsort (" attr("type") ") (" attr("ref") ") ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] origPlace:before {
+  content: "Lieu d'exposition (" attr("type") ") (" attr("ref") ") ";
+  font-style: italic;
+}
+TEI[xml|lang="de"] origPlace[cert]:before {
+  content: "Ausstellungsort (" attr("type") ") (" attr("ref") ") [" attr("cert") "] ";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] origPlace[cert]:before {
+  content: "Lieu d'exposition (" attr("type") ") (" attr("ref") ") [" attr("cert") "] ";
+  font-style: italic;
 }

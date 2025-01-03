@@ -1,3 +1,4 @@
+@import "../commons/classes.less";
 @import "../commons/colors.less";
 
 orgName {
@@ -6,6 +7,21 @@ orgName {
 
 author orgName {
     color: @default-text-color;
+}
+
+origin orgName {
+    color: @default-text-color;
+    .margin-block;
+}
+
+origin orgName:before {
+    content: "Organisation (" attr("ref") ") ";
+    .additional-text;
+}
+
+origin orgName[role]:before {
+    content: "Organisation (" attr("ref") ") (" attr("role") ") ";
+    .additional-text;
 }
 
 respStmt orgName {

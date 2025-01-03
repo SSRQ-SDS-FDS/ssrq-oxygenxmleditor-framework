@@ -1,0 +1,29 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
+}
+.margin-block {
+  display: block;
+  margin: 10px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+handDesc {
+  display: block;
+  margin: 10px;
+}
+TEI[xml|lang="de"] handDesc:before {
+  content: "Angaben zu den Händen";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] handDesc:before {
+  content: "Informations sur les mains";
+  font-style: italic;
+}
