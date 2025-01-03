@@ -1,8 +1,21 @@
+@import "../commons/classes.less";
 @import "../commons/colors.less";
+@import "../commons/sizes.less";
 
 body {
-    color: @body-text-color;
+    .bordered;
+    color: @default-text-color;
     background-color: @body-background-color;
-    font-family: "Lexia Fontes";
-    font-size: 16px;
+    margin-bottom: @larger-size;
+    padding: @normal-size;
+}
+
+TEI[xml|lang = "de"] body::before {
+    content: "Textbereich";
+    .additional-heading;
+}
+
+TEI[xml|lang = "fr"] body::before {
+    content: "Zone du texte";
+    .additional-heading;
 }

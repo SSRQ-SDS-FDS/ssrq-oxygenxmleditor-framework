@@ -4,32 +4,32 @@ idno {
     .margin-block;
 }
 
-seriesStmt idno:before {
+seriesStmt idno::before {
     content: "IDNO ";
     .additional-text;
 }
 
-seriesStmt idno[type = 'uuid']:before {
+seriesStmt idno[type = 'uuid']::before {
     content: "IDNO (UUID) ";
     .additional-text;
 }
 
-TEI[xml|lang = 'de'] msIdentifier idno:before {
+TEI[xml|lang = 'de'] msIdentifier idno::before {
     content: "Signatur: ";
     .additional-text;
 }
 
-TEI[xml|lang = 'fr'] msIdentifier idno:before {
+TEI[xml|lang = 'fr'] msIdentifier idno::before {
     content: "Signature : ";
     .additional-text;
 }
 
-TEI[xml|lang = 'de'] altIdentifier idno:before {
+TEI[xml|lang = 'de'] altIdentifier idno::before {
     content: "Alternative Signatur: ";
     .additional-text;
 }
 
-TEI[xml|lang = 'fr'] altIdentifier idno:before {
+TEI[xml|lang = 'fr'] altIdentifier idno::before {
     content: "Signature alternative : ";
     .additional-text;
 }

@@ -1,15 +1,27 @@
 .bordered {
   border: 1px solid black;
   border-collapse: collapse;
+  border-radius: 5px;
 }
 .margin-block {
   display: block;
   margin: 10px;
 }
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 16px;
+}
+.smart-list-item {
+  display: list-item;
+  padding: 5px;
+  margin-bottom: 5px;
+}
 fileDesc {
   display: block;
   margin: 10px;
-  border: 1px solid black;
-  border-collapse: collapse;
-  background-color: #dfe3f7;
+  border-bottom: 1px solid black;
 }

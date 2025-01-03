@@ -19,13 +19,13 @@ sourceDesc {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang='de'] sourceDesc:before {
+TEI[xml|lang='de'] sourceDesc::before {
   content: "Quellenbeschreibung";
   font-style: italic;
   font-weight: bold;
   font-size: 16px;
 }
-TEI[xml|lang='fr'] sourceDesc:before {
+TEI[xml|lang='fr'] sourceDesc::before {
   content: "Description de la source";
   font-style: italic;
   font-weight: bold;

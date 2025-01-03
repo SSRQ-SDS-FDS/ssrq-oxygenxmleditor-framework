@@ -19,19 +19,19 @@ dimensions {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] dimensions[type="leaves"]:before {
+TEI[xml|lang="de"] dimensions[type="leaves"]::before {
   content: "Mass der Blätter: ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] dimensions[type="leaves"]:before {
+TEI[xml|lang="fr"] dimensions[type="leaves"]::before {
   content: "Dimensions des feuilles : ";
   font-style: italic;
 }
-TEI[xml|lang="de"] dimensions[type="plica"]:before {
+TEI[xml|lang="de"] dimensions[type="plica"]::before {
   content: "Mass der Plica: ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] dimensions[type="plica"]:before {
+TEI[xml|lang="fr"] dimensions[type="plica"]::before {
   content: "Dimensions de la Plica : ";
   font-style: italic;
 }

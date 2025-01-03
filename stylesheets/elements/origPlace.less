@@ -4,22 +4,22 @@ origPlace {
     .margin-block;
 }
 
-TEI[xml|lang = "de"] origPlace:before {
+TEI[xml|lang = "de"] origPlace::before {
     content: "Ausstellungsort (" attr("type") ") (" attr("ref") ") ";
     .additional-text;
 }
 
-TEI[xml|lang = "fr"] origPlace:before {
+TEI[xml|lang = "fr"] origPlace::before {
     content: "Lieu d'exposition (" attr("type") ") (" attr("ref") ") ";
     .additional-text;
 }
 
-TEI[xml|lang = "de"] origPlace[cert]:before {
+TEI[xml|lang = "de"] origPlace[cert]::before {
     content: "Ausstellungsort (" attr("type") ") (" attr("ref") ") [" attr("cert") "] ";
     .additional-text;
 }
 
-TEI[xml|lang = "fr"] origPlace[cert]:before {
+TEI[xml|lang = "fr"] origPlace[cert]::before {
     content: "Lieu d'exposition (" attr("type") ") (" attr("ref") ") [" attr("cert") "] ";
     .additional-text;
 }

@@ -20,11 +20,11 @@ material {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] material:before {
+TEI[xml|lang="de"] material::before {
   content: "Material: ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] material:before {
+TEI[xml|lang="fr"] material::before {
   content: "Matériel : ";
   font-style: italic;
 }

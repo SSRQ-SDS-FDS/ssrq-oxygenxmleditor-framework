@@ -24,11 +24,11 @@ custodialHist {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] custodialHist:before {
+TEI[xml|lang="de"] custodialHist::before {
   content: "Angaben zur Aufbewahrungsgeschichte";
   font-style: italic;
 }
-TEI[xml|lang="fr"] custodialHist:before {
+TEI[xml|lang="fr"] custodialHist::before {
   content: "Informations sur l'histoire de la conservation";
   font-style: italic;
 }

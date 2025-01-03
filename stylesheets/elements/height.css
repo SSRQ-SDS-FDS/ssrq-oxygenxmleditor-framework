@@ -20,11 +20,11 @@ height {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] height:before {
+TEI[xml|lang="de"] height::before {
   content: "Höhe: ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] height:before {
+TEI[xml|lang="fr"] height::before {
   content: "Hauteur : ";
   font-style: italic;
 }

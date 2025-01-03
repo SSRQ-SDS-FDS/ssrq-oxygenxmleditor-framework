@@ -1,6 +1,6 @@
 seg {
   display: block;
 }
-seg:before {
+seg::before {
   content: "[" attr(n) "]";
 }

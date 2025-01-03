@@ -12,6 +12,6 @@ ab {
   margin: 10px;
   width: 90%;
 }
-ab:before {
+ab::before {
   content: "Anonymer Block [" attr(type) ", " attr(place) "]:\A";
 }

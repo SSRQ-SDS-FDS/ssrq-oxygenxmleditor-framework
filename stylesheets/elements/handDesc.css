@@ -19,11 +19,11 @@ handDesc {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] handDesc:before {
+TEI[xml|lang="de"] handDesc::before {
   content: "Angaben zu den Händen";
   font-style: italic;
 }
-TEI[xml|lang="fr"] handDesc:before {
+TEI[xml|lang="fr"] handDesc::before {
   content: "Informations sur les mains";
   font-style: italic;
 }

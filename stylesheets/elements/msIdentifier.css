@@ -19,11 +19,11 @@ msIdentifier {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang='de'] msIdentifier:before {
+TEI[xml|lang='de'] msIdentifier::before {
   content: "Angaben zum Textzeugen";
   font-style: italic;
 }
-TEI[xml|lang='fr'] msIdentifier:before {
+TEI[xml|lang='fr'] msIdentifier::before {
   content: "Informations du témoin textuel";
   font-style: italic;
 }

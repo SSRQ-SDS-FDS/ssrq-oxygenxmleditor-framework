@@ -1,6 +1,6 @@
-lb[break="no"]:before {
+lb[break="no"]::before {
   content: "-/\n";
 }
-lb:before {
+lb::before {
   content: "/\n";
 }

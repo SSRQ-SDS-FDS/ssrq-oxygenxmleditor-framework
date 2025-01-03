@@ -26,13 +26,13 @@ listBibl {
   padding: 10px;
   list-style-type: none;
 }
-TEI[xml|lang="de"] additional listBibl:before {
+TEI[xml|lang="de"] additional listBibl::before {
   content: "Literaturliste (" attr("type") ")";
   font-style: italic;
   font-weight: bold;
   font-size: 16px;
 }
-TEI[xml|lang="fr"] additional listBibl:before {
+TEI[xml|lang="fr"] additional listBibl::before {
   content: "Liste de littérature (" attr("type") ")";
   font-style: italic;
   font-weight: bold;

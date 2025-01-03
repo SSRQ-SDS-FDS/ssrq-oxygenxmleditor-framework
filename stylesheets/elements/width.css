@@ -20,11 +20,11 @@ width {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] width:before {
+TEI[xml|lang="de"] width::before {
   content: "Breite: ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] width:before {
+TEI[xml|lang="fr"] width::before {
   content: "Largeur : ";
   font-style: italic;
 }

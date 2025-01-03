@@ -19,11 +19,11 @@ licence {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang='de'] licence:before {
+TEI[xml|lang='de'] licence::before {
   content: "Lizenz: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] licence:before {
+TEI[xml|lang='fr'] licence::before {
   content: "Licence : ";
   font-style: italic;
 }

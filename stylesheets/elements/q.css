@@ -1,6 +1,6 @@
-q:before {
+q::before {
     content: "«";
 }
-q:after {
+q::after {
     content: "»";
 }

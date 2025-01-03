@@ -1,12 +1,12 @@
 head {
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
-head[resp]:before {
+head[resp]::before {
   content: "[";
 }
-head[resp]:after {
+head[resp]::after {
   content: "]";
 }
 msDesc head {

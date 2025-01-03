@@ -14,12 +14,12 @@ origin orgName {
     .margin-block;
 }
 
-origin orgName:before {
+origin orgName::before {
     content: "Organisation (" attr("ref") ") ";
     .additional-text;
 }
 
-origin orgName[role]:before {
+origin orgName[role]::before {
     content: "Organisation (" attr("ref") ") (" attr("role") ") ";
     .additional-text;
 }

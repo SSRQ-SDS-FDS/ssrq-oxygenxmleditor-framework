@@ -18,11 +18,11 @@
 physDesc {
   display: block;
 }
-TEI[xml|lang="de"] physDesc:before {
+TEI[xml|lang="de"] physDesc::before {
   content: "Physische Beschreibung des Textzeugen";
   font-style: italic;
 }
-TEI[xml|lang="fr"] physDesc:before {
+TEI[xml|lang="fr"] physDesc::before {
   content: "Description physique du témoin textuel";
   font-style: italic;
 }

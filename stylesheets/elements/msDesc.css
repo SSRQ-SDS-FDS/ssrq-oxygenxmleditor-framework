@@ -19,11 +19,11 @@ msDesc {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang='de'] msDesc:before {
+TEI[xml|lang='de'] msDesc::before {
   content: "Textzeugenbeschreibung";
   font-style: italic;
 }
-TEI[xml|lang='fr'] msDesc:before {
+TEI[xml|lang='fr'] msDesc::before {
   content: "Description du témoin textuel";
   font-style: italic;
 }

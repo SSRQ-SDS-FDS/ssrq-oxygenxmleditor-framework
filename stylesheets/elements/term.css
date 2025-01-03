@@ -29,7 +29,7 @@ keywords term {
   padding: 5px;
   margin-bottom: 5px;
 }
-keywords term:after {
+keywords term::after {
   content: " (" attr("ref") ")";
 }
 keywords term:nth-of-type(even) {

@@ -1,6 +1,6 @@
 sic {
   color: #ff00ff;
 }
-sic:after {
+sic::after {
   content: " [sic]";
 }

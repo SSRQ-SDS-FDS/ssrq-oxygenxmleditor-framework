@@ -19,11 +19,11 @@ settlement {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang='de'] settlement:before {
+TEI[xml|lang='de'] settlement::before {
   content: "Archivstandort: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] settlement:before {
+TEI[xml|lang='fr'] settlement::before {
   content: "Localisation d'archive : ";
   font-style: italic;
 }

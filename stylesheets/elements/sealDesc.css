@@ -19,11 +19,11 @@ sealDesc {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] sealDesc:before {
+TEI[xml|lang="de"] sealDesc::before {
   content: "Angaben zu den Siegeln";
   font-style: italic;
 }
-TEI[xml|lang="fr"] sealDesc:before {
+TEI[xml|lang="fr"] sealDesc::before {
   content: "Informations sur les sceaux";
   font-style: italic;
 }

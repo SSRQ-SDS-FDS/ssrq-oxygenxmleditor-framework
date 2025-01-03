@@ -1,2 +1,21 @@
+@import "../commons/classes.less";
+@import "../commons/colors.less";
+@import "../commons/sizes.less";
+
 back {
+    .bordered;
+    color: @default-text-color;
+    background-color: @back-background-color;
+    margin-bottom: @larger-size;
+    padding: @normal-size;
+}
+
+TEI[xml|lang = "de"] back::before {
+    content: "Kommentarbereich";
+    .additional-heading;
+}
+
+TEI[xml|lang = "fr"] back::before {
+    content: "Zone des commentaires";
+    .additional-heading;
 }

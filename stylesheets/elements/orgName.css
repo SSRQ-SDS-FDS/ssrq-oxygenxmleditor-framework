@@ -26,11 +26,11 @@ origin orgName {
   display: block;
   margin: 10px;
 }
-origin orgName:before {
+origin orgName::before {
   content: "Organisation (" attr("ref") ") ";
   font-style: italic;
 }
-origin orgName[role]:before {
+origin orgName[role]::before {
   content: "Organisation (" attr("ref") ") (" attr("role") ") ";
   font-style: italic;
 }

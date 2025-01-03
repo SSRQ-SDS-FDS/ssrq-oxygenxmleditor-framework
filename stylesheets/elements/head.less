@@ -2,15 +2,15 @@
 
 head {
     display: block;
-    font-size: @large-size;
+    font-size: @larger-size;
     font-weight: bold;
 }
 
-head[resp]:before {
+head[resp]::before {
     content: "[";
 }
 
-head[resp]:after {
+head[resp]::after {
     content: "]";
 }
 

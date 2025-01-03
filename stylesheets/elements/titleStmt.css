@@ -20,13 +20,13 @@ titleStmt {
   margin: 10px;
   border-bottom: 1px solid black;
 }
-TEI[xml|lang='de'] titleStmt:before {
+TEI[xml|lang='de'] titleStmt::before {
   content: "Angaben zum Band";
   font-style: italic;
   font-weight: bold;
   font-size: 16px;
 }
-TEI[xml|lang='fr'] titleStmt:before {
+TEI[xml|lang='fr'] titleStmt::before {
   content: "Informations du volume";
   font-style: italic;
   font-weight: bold;

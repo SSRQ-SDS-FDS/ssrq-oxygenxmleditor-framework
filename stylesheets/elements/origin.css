@@ -19,11 +19,11 @@ origin {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] origin:before {
+TEI[xml|lang="de"] origin::before {
   content: "Angaben zur Herkunft";
   font-style: italic;
 }
-TEI[xml|lang="fr"] origin:before {
+TEI[xml|lang="fr"] origin::before {
   content: "Informations sur l'origine";
   font-style: italic;
 }

@@ -13,17 +13,22 @@
 .additional-heading {
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
+}
+.smart-list-item {
+  display: list-item;
+  padding: 5px;
+  margin-bottom: 5px;
 }
 textLang {
   content: attr("xml|lang");
   display: block;
 }
-TEI[xml|lang='de'] textLang:before {
+TEI[xml|lang='de'] textLang::before {
   content: "Sprache des Textes: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] textLang:before {
-  content: "Langue du text : ";
+TEI[xml|lang='fr'] textLang::before {
+  content: "Langue du texte : ";
   font-style: italic;
 }

@@ -19,27 +19,27 @@ idno {
   display: block;
   margin: 10px;
 }
-seriesStmt idno:before {
+seriesStmt idno::before {
   content: "IDNO ";
   font-style: italic;
 }
-seriesStmt idno[type='uuid']:before {
+seriesStmt idno[type='uuid']::before {
   content: "IDNO (UUID) ";
   font-style: italic;
 }
-TEI[xml|lang='de'] msIdentifier idno:before {
+TEI[xml|lang='de'] msIdentifier idno::before {
   content: "Signatur: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] msIdentifier idno:before {
+TEI[xml|lang='fr'] msIdentifier idno::before {
   content: "Signature : ";
   font-style: italic;
 }
-TEI[xml|lang='de'] altIdentifier idno:before {
+TEI[xml|lang='de'] altIdentifier idno::before {
   content: "Alternative Signatur: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] altIdentifier idno:before {
+TEI[xml|lang='fr'] altIdentifier idno::before {
   content: "Signature alternative : ";
   font-style: italic;
 }

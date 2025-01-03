@@ -19,11 +19,11 @@ repository {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang='de'] repository:before {
+TEI[xml|lang='de'] repository::before {
   content: "Archiv: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] repository:before {
+TEI[xml|lang='fr'] repository::before {
   content: "Archive : ";
   font-style: italic;
 }

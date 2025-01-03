@@ -5,12 +5,12 @@ textLang {
     display: block;
 }
 
-TEI[xml|lang = 'de'] textLang:before {
+TEI[xml|lang = 'de'] textLang::before {
     content: "Sprache des Textes: ";
     .additional-text;
 }
 
-TEI[xml|lang = 'fr'] textLang:before {
-    content: "Langue du text : ";
+TEI[xml|lang = 'fr'] textLang::before {
+    content: "Langue du texte : ";
     .additional-text;
 }

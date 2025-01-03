@@ -24,13 +24,13 @@ editiorialDecl {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] editorialDecl:before {
+TEI[xml|lang="de"] editorialDecl::before {
   content: "Angaben zu den Editionsrichtlinien";
   font-style: italic;
   font-weight: bold;
   font-size: 16px;
 }
-TEI[xml|lang="fr"] editorialDecl:before {
+TEI[xml|lang="fr"] editorialDecl::before {
   content: "Informations sur les directives d'édition";
   font-style: italic;
   font-weight: bold;

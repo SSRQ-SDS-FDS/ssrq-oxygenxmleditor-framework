@@ -23,8 +23,4 @@
 profileDesc {
   display: block;
   margin: 10px;
-  border: 1px solid black;
-  border-collapse: collapse;
-  border-radius: 5px;
-  background-color: #dfe3f7;
 }

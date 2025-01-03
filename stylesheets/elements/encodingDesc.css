@@ -21,11 +21,8 @@
   margin-bottom: 5px;
 }
 encodingDesc {
-  border: 1px solid black;
-  border-collapse: collapse;
-  border-radius: 5px;
   display: block;
   margin: 10px;
-  background-color: #dfe3f7;
   padding: 10px;
+  border-bottom: 1px solid black;
 }

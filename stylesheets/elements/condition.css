@@ -19,11 +19,11 @@ condition {
   content: " (" attr("agent") ")";
   display: block;
 }
-TEI[xml|lang="de"] condition:before {
+TEI[xml|lang="de"] condition::before {
   content: "Angaben zur Beschädigung";
   font-style: italic;
 }
-TEI[xml|lang="fr"] condition:before {
+TEI[xml|lang="fr"] condition::before {
   content: "Informations sur les dommages";
   font-style: italic;
 }

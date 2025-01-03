@@ -14,7 +14,7 @@
 .additional-heading {
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 .smart-list-item {
   display: list-item;
@@ -27,7 +27,7 @@ ab {
   margin: 10px;
   width: 90%;
 }
-ab:before {
+ab::before {
   content: "Anonymer Block [" attr(type) ", " attr(place) "]:\A";
 }
 abbr {
@@ -51,13 +51,34 @@ app {
 author {
   display: block;
 }
-TEI[xml|lang='de'] author:before {
+TEI[xml|lang='de'] author::before {
   content: "Autor: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] author:before {
+TEI[xml|lang='fr'] author::before {
   content: "Auteur : ";
   font-style: italic;
+}
+back {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
+  color: #000000;
+  background-color: #ffffff;
+  margin-bottom: 20px;
+  padding: 12px;
+}
+TEI[xml|lang="de"] back::before {
+  content: "Kommentarbereich";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+}
+TEI[xml|lang="fr"] back::before {
+  content: "Zone des commentaires";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
 }
 listBibl bibl {
   display: list-item;
@@ -74,19 +95,34 @@ bindingDesc {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] bindingDesc:before {
+TEI[xml|lang="de"] bindingDesc::before {
   content: "Angaben zur Bindung";
   font-style: italic;
 }
-TEI[xml|lang="fr"] bindingDesc:before {
+TEI[xml|lang="fr"] bindingDesc::before {
   content: "Informations sur la reliure";
   font-style: italic;
 }
 body {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
   color: #000000;
   background-color: #ffffff;
-  font-family: "Lexia Fontes";
-  font-size: 16px;
+  margin-bottom: 20px;
+  padding: 12px;
+}
+TEI[xml|lang="de"] body::before {
+  content: "Textbereich";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+}
+TEI[xml|lang="fr"] body::before {
+  content: "Zone du texte";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
 }
 cell {
   display: table-cell;
@@ -103,18 +139,18 @@ condition {
   content: " (" attr("agent") ")";
   display: block;
 }
-TEI[xml|lang="de"] condition:before {
+TEI[xml|lang="de"] condition::before {
   content: "Angaben zur Beschädigung";
   font-style: italic;
 }
-TEI[xml|lang="fr"] condition:before {
+TEI[xml|lang="fr"] condition::before {
   content: "Informations sur les dommages";
   font-style: italic;
 }
 corr {
   color: #a9a9a9;
 }
-corr:before {
+corr::before {
   content: " ";
 }
 custEvent {
@@ -125,11 +161,11 @@ custodialHist {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] custodialHist:before {
+TEI[xml|lang="de"] custodialHist::before {
   content: "Angaben zur Aufbewahrungsgeschichte";
   font-style: italic;
 }
-TEI[xml|lang="fr"] custodialHist:before {
+TEI[xml|lang="fr"] custodialHist::before {
   content: "Informations sur l'histoire de la conservation";
   font-style: italic;
 }
@@ -164,7 +200,7 @@ TEI[xml|lang='fr'] publicationStmt date[type='print'] {
 del {
   text-decoration: line-through;
 }
-subst > del:after {
+subst > del::after {
   content: " ";
 }
 delSpan {
@@ -174,34 +210,34 @@ dimensions {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] dimensions[type="leaves"]:before {
+TEI[xml|lang="de"] dimensions[type="leaves"]::before {
   content: "Mass der Blätter: ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] dimensions[type="leaves"]:before {
+TEI[xml|lang="fr"] dimensions[type="leaves"]::before {
   content: "Dimensions des feuilles : ";
   font-style: italic;
 }
-TEI[xml|lang="de"] dimensions[type="plica"]:before {
+TEI[xml|lang="de"] dimensions[type="plica"]::before {
   content: "Mass der Plica: ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] dimensions[type="plica"]:before {
+TEI[xml|lang="fr"] dimensions[type="plica"]::before {
   content: "Dimensions de la Plica : ";
   font-style: italic;
 }
-div:before {
+div::before {
   content: "\n[" attr(n) "]";
 }
 editor {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang='de'] editor:before {
+TEI[xml|lang='de'] editor::before {
   content: "Herausgeber: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] editor:before {
+TEI[xml|lang='fr'] editor::before {
   content: "Éditeur : ";
   font-style: italic;
 }
@@ -209,31 +245,28 @@ editiorialDecl {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] editorialDecl:before {
+TEI[xml|lang="de"] editorialDecl::before {
   content: "Angaben zu den Editionsrichtlinien";
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
-TEI[xml|lang="fr"] editorialDecl:before {
+TEI[xml|lang="fr"] editorialDecl::before {
   content: "Informations sur les directives d'édition";
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 encodingDesc {
-  border: 1px solid black;
-  border-collapse: collapse;
-  border-radius: 5px;
   display: block;
   margin: 10px;
-  background-color: #dfe3f7;
   padding: 10px;
+  border-bottom: 1px solid black;
 }
 expan {
   color: #a9a9a9;
 }
-expan:before {
+expan::before {
   content: " ";
 }
 extent {
@@ -242,10 +275,7 @@ extent {
 fileDesc {
   display: block;
   margin: 10px;
-  border: 1px solid black;
-  border-collapse: collapse;
-  border-radius: 5px;
-  background-color: #dfe3f7;
+  border-bottom: 1px solid black;
 }
 foliation {
   display: block;
@@ -260,11 +290,11 @@ handDesc {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] handDesc:before {
+TEI[xml|lang="de"] handDesc::before {
   content: "Angaben zu den Händen";
   font-style: italic;
 }
-TEI[xml|lang="fr"] handDesc:before {
+TEI[xml|lang="fr"] handDesc::before {
   content: "Informations sur les mains";
   font-style: italic;
 }
@@ -275,13 +305,13 @@ handNote {
 }
 head {
   display: block;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
 }
-head[resp]:before {
+head[resp]::before {
   content: "[";
 }
-head[resp]:after {
+head[resp]::after {
   content: "]";
 }
 msDesc head {
@@ -298,11 +328,11 @@ height {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] height:before {
+TEI[xml|lang="de"] height::before {
   content: "Höhe: ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] height:before {
+TEI[xml|lang="fr"] height::before {
   content: "Hauteur : ";
   font-style: italic;
 }
@@ -319,27 +349,27 @@ idno {
   display: block;
   margin: 10px;
 }
-seriesStmt idno:before {
+seriesStmt idno::before {
   content: "IDNO ";
   font-style: italic;
 }
-seriesStmt idno[type='uuid']:before {
+seriesStmt idno[type='uuid']::before {
   content: "IDNO (UUID) ";
   font-style: italic;
 }
-TEI[xml|lang='de'] msIdentifier idno:before {
+TEI[xml|lang='de'] msIdentifier idno::before {
   content: "Signatur: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] msIdentifier idno:before {
+TEI[xml|lang='fr'] msIdentifier idno::before {
   content: "Signature : ";
   font-style: italic;
 }
-TEI[xml|lang='de'] altIdentifier idno:before {
+TEI[xml|lang='de'] altIdentifier idno::before {
   content: "Alternative Signatur: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] altIdentifier idno:before {
+TEI[xml|lang='fr'] altIdentifier idno::before {
   content: "Signature alternative : ";
   font-style: italic;
 }
@@ -357,65 +387,65 @@ item:nth-of-type(odd) {
 keywords {
   display: block;
   margin: 10px;
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
   list-style-type: none;
 }
-lb[break="no"]:before {
+lb[break="no"]::before {
   content: "-/\n";
 }
-lb:before {
+lb::before {
   content: "/\n";
 }
-lem:after {
+lem::after {
   content: " ";
 }
 licence {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang='de'] licence:before {
+TEI[xml|lang='de'] licence::before {
   content: "Lizenz: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] licence:before {
+TEI[xml|lang='fr'] licence::before {
   content: "Licence : ";
   font-style: italic;
 }
 list {
   display: block;
   margin: 10px;
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
   list-style-type: none;
 }
 list[rend='bulleted'] {
   display: block;
   margin: 10px;
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
   list-style-type: "disc";
 }
 list[rend='numbered'] {
   display: block;
   margin: 10px;
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
   list-style-type: "decimal";
 }
 listBibl {
   display: block;
   margin: 10px;
-  padding: 10px;
+  padding: 10px 10px 10px 20px;
   list-style-type: none;
 }
-TEI[xml|lang="de"] additional listBibl:before {
+TEI[xml|lang="de"] additional listBibl::before {
   content: "Literaturliste (" attr("type") ")";
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
-TEI[xml|lang="fr"] additional listBibl:before {
+TEI[xml|lang="fr"] additional listBibl::before {
   content: "Liste de littérature (" attr("type") ")";
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 listWit {
   display: block;
@@ -426,11 +456,11 @@ material {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] material:before {
+TEI[xml|lang="de"] material::before {
   content: "Material: ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] material:before {
+TEI[xml|lang="fr"] material::before {
   content: "Matériel : ";
   font-style: italic;
 }
@@ -443,11 +473,11 @@ measureGrp {
 msContents {
   display: block;
 }
-TEI[xml|lang='de'] msContents:before {
+TEI[xml|lang='de'] msContents::before {
   content: "Inhalt des Textzeugen";
   font-style: italic;
 }
-TEI[xml|lang='fr'] msContents:before {
+TEI[xml|lang='fr'] msContents::before {
   content: "Contenu du témoin textuel";
   font-style: italic;
 }
@@ -455,11 +485,11 @@ msDesc {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang='de'] msDesc:before {
+TEI[xml|lang='de'] msDesc::before {
   content: "Textzeugenbeschreibung";
   font-style: italic;
 }
-TEI[xml|lang='fr'] msDesc:before {
+TEI[xml|lang='fr'] msDesc::before {
   content: "Description du témoin textuel";
   font-style: italic;
 }
@@ -467,11 +497,11 @@ msIdentifier {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang='de'] msIdentifier:before {
+TEI[xml|lang='de'] msIdentifier::before {
   content: "Angaben zum Textzeugen";
   font-style: italic;
 }
-TEI[xml|lang='fr'] msIdentifier:before {
+TEI[xml|lang='fr'] msIdentifier::before {
   content: "Informations du témoin textuel";
   font-style: italic;
 }
@@ -496,64 +526,64 @@ origin orgName {
   display: block;
   margin: 10px;
 }
-origin orgName:before {
+origin orgName::before {
   content: "Organisation (" attr("ref") ") ";
   font-style: italic;
 }
-origin orgName[role]:before {
+origin orgName[role]::before {
   content: "Organisation (" attr("ref") ") (" attr("role") ") ";
   font-style: italic;
 }
 respStmt orgName {
   color: #000000;
 }
-orig:before {
+orig::before {
   content: "«";
 }
-orig:after {
+orig::after {
   content: "»";
 }
 origDate {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] origDate[when-custom]:before {
+TEI[xml|lang="de"] origDate[when-custom]::before {
   content: "Datierung (" attr("type") ") " attr("when-custom") " (" attr("calendar") ") ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] origDate[when-custom]:before {
+TEI[xml|lang="fr"] origDate[when-custom]::before {
   content: "Datation (" attr("type") ") " attr("when-custom") " (" attr("calendar") ") ";
   font-style: italic;
 }
-TEI[xml|lang="de"] origDate[from-custom]:before {
+TEI[xml|lang="de"] origDate[from-custom]::before {
   content: "Datierung (" attr("type") ") von " attr("from-custom") " bis " attr("to-custom") " (" attr("calendar") ") ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] origDate[from-custom]:before {
+TEI[xml|lang="fr"] origDate[from-custom]::before {
   content: "Datation (" attr("type") ") de " attr("from-custom") " à " attr("to-custom") " (" attr("calendar") ") ";
   font-style: italic;
 }
-TEI[xml|lang="de"] origDate[notBefore-custom]:before {
+TEI[xml|lang="de"] origDate[notBefore-custom]::before {
   content: "Datierung (" attr("type") ") nicht vor " attr("notBefore-custom") " (" attr("calendar") ") ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] origDate[notBefore-custom]:before {
+TEI[xml|lang="fr"] origDate[notBefore-custom]::before {
   content: "Datation (" attr("type") ") pas avant " attr("notBefore-custom") " (" attr("calendar") ") ";
   font-style: italic;
 }
-TEI[xml|lang="de"] origDate[notAfter-custom]:before {
+TEI[xml|lang="de"] origDate[notAfter-custom]::before {
   content: "Datierung (" attr("type") ") nicht nach " attr("notAfter-custom") " (" attr("calendar") ") ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] origDate[notAfter-cusom]:before {
+TEI[xml|lang="fr"] origDate[notAfter-cusom]::before {
   content: "Datation (" attr("type") ") pas après " attr("notAfter-custom") " (" attr("calendar") ") ";
   font-style: italic;
 }
-TEI[xml|lang="de"] origDate[notBefore-custom][notAfter-custom]:before {
+TEI[xml|lang="de"] origDate[notBefore-custom][notAfter-custom]::before {
   content: "Datierung (" attr("type") ") nicht vor " attr("notBefore-custom") " und nicht nach " attr("notAfter-custom") " (" attr("calendar") ") ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] origDate[notBefore-custom][notAfter-cusom]:before {
+TEI[xml|lang="fr"] origDate[notBefore-custom][notAfter-cusom]::before {
   content: "Datation (" attr("type") ") pas avant " attr("notBefore-custom") " et pas après " attr("notAfter-custom") " (" attr("calendar") ") ";
   font-style: italic;
 }
@@ -561,11 +591,11 @@ origin {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] origin:before {
+TEI[xml|lang="de"] origin::before {
   content: "Angaben zur Herkunft";
   font-style: italic;
 }
-TEI[xml|lang="fr"] origin:before {
+TEI[xml|lang="fr"] origin::before {
   content: "Informations sur l'origine";
   font-style: italic;
 }
@@ -573,19 +603,19 @@ origPlace {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] origPlace:before {
+TEI[xml|lang="de"] origPlace::before {
   content: "Ausstellungsort (" attr("type") ") (" attr("ref") ") ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] origPlace:before {
+TEI[xml|lang="fr"] origPlace::before {
   content: "Lieu d'exposition (" attr("type") ") (" attr("ref") ") ";
   font-style: italic;
 }
-TEI[xml|lang="de"] origPlace[cert]:before {
+TEI[xml|lang="de"] origPlace[cert]::before {
   content: "Ausstellungsort (" attr("type") ") (" attr("ref") ") [" attr("cert") "] ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] origPlace[cert]:before {
+TEI[xml|lang="fr"] origPlace[cert]::before {
   content: "Lieu d'exposition (" attr("type") ") (" attr("ref") ") [" attr("cert") "] ";
   font-style: italic;
 }
@@ -612,11 +642,11 @@ respStmt persName {
 physDesc {
   display: block;
 }
-TEI[xml|lang="de"] physDesc:before {
+TEI[xml|lang="de"] physDesc::before {
   content: "Physische Beschreibung des Textzeugen";
   font-style: italic;
 }
-TEI[xml|lang="fr"] physDesc:before {
+TEI[xml|lang="fr"] physDesc::before {
   content: "Description physique du témoin textuel";
   font-style: italic;
 }
@@ -626,48 +656,44 @@ placeName {
 profileDesc {
   display: block;
   margin: 10px;
-  border: 1px solid black;
-  border-collapse: collapse;
-  border-radius: 5px;
-  background-color: #dfe3f7;
 }
 publicationStmt {
   display: block;
   margin: 10px;
   border-bottom: 1px solid black;
 }
-TEI[xml|lang='de'] publicationStmt:before {
+TEI[xml|lang='de'] publicationStmt::before {
   content: "Angaben zur Veröffentlichung";
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
-TEI[xml|lang='fr'] publicationStmt:before {
+TEI[xml|lang='fr'] publicationStmt::before {
   content: "Informations sur la publication";
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 publicationStmt publisher {
   display: block;
   margin: 10px;
 }
-q:before {
+q::before {
   content: "«";
 }
-q:after {
+q::after {
   content: "»";
 }
-quote:before {
+quote::before {
   content: "«";
 }
-quote:after {
+quote::after {
   content: "»";
 }
 rdg {
   font-style: italic;
 }
-rdg:after {
+rdg::after {
   content: " ";
 }
 editorialDecl ref {
@@ -677,11 +703,11 @@ repository {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang='de'] repository:before {
+TEI[xml|lang='de'] repository::before {
   content: "Archiv: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] repository:before {
+TEI[xml|lang='fr'] repository::before {
   content: "Archive : ";
   font-style: italic;
 }
@@ -693,11 +719,11 @@ respStmt {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang='de'] respStmt:before {
+TEI[xml|lang='de'] respStmt::before {
   content: "Verantwortlich: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] respStmt:before {
+TEI[xml|lang='fr'] respStmt::before {
   content: "Responsable : ";
   font-style: italic;
 }
@@ -726,18 +752,18 @@ sealDesc {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] sealDesc:before {
+TEI[xml|lang="de"] sealDesc::before {
   content: "Angaben zu den Siegeln";
   font-style: italic;
 }
-TEI[xml|lang="fr"] sealDesc:before {
+TEI[xml|lang="fr"] sealDesc::before {
   content: "Informations sur les sceaux";
   font-style: italic;
 }
 seg {
   display: block;
 }
-seg:before {
+seg::before {
   content: "[" attr(n) "]";
 }
 seriesStmt {
@@ -745,34 +771,34 @@ seriesStmt {
   margin: 10px;
   border-bottom: 1px solid black;
 }
-TEI[xml|lang='de'] seriesStmt:before {
+TEI[xml|lang='de'] seriesStmt::before {
   content: "Angaben zur Reihe";
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
-TEI[xml|lang='fr'] seriesStmt:before {
+TEI[xml|lang='fr'] seriesStmt::before {
   content: "Informations sur la série";
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 settlement {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang='de'] settlement:before {
+TEI[xml|lang='de'] settlement::before {
   content: "Archivstandort: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] settlement:before {
+TEI[xml|lang='fr'] settlement::before {
   content: "Localisation d'archive : ";
   font-style: italic;
 }
 sic {
   color: #ff00ff;
 }
-sic:after {
+sic::after {
   content: " [sic]";
 }
 signed {
@@ -782,25 +808,25 @@ sourceDesc {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang='de'] sourceDesc:before {
+TEI[xml|lang='de'] sourceDesc::before {
   content: "Quellenbeschreibung";
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
-TEI[xml|lang='fr'] sourceDesc:before {
+TEI[xml|lang='fr'] sourceDesc::before {
   content: "Description de la source";
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 space {
   content: "..";
 }
-subst:before {
+subst::before {
   content: "*";
 }
-subst:after {
+subst::after {
   content: "*";
 }
 summary {
@@ -809,10 +835,10 @@ summary {
 supplied {
   font-weight: bold;
 }
-supplied:before {
+supplied::before {
   content: "[";
 }
-supplied:after {
+supplied::after {
   content: "] ";
 }
 support {
@@ -830,9 +856,15 @@ table {
 TEI {
   display: block;
   margin: 10px;
+  font-family: "Lexia Fontes, Libertinus Serif";
+  font-size: 16px;
 }
 teiHeader {
-  margin-bottom: 12px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 5px;
+  background-color: #ffffff;
+  margin-bottom: 20px;
 }
 term {
   color: #ff0000;
@@ -843,7 +875,7 @@ keywords term {
   padding: 5px;
   margin-bottom: 5px;
 }
-keywords term:after {
+keywords term::after {
   content: " (" attr("ref") ")";
 }
 keywords term:nth-of-type(even) {
@@ -852,32 +884,35 @@ keywords term:nth-of-type(even) {
 keywords term:nth-of-type(odd) {
   background-color: #f2f2f2;
 }
+text {
+  display: block;
+}
 textClass {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] textClass:before {
+TEI[xml|lang="de"] textClass::before {
   content: "Angaben zum Textprofil";
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
-TEI[xml|lang="fr"] textClass:before {
+TEI[xml|lang="fr"] textClass::before {
   content: "Informations sur le profil du texte";
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 textLang {
   content: attr("xml|lang");
   display: block;
 }
-TEI[xml|lang='de'] textLang:before {
+TEI[xml|lang='de'] textLang::before {
   content: "Sprache des Textes: ";
   font-style: italic;
 }
-TEI[xml|lang='fr'] textLang:before {
-  content: "Langue du text : ";
+TEI[xml|lang='fr'] textLang::before {
+  content: "Langue du texte : ";
   font-style: italic;
 }
 time {
@@ -894,17 +929,17 @@ titleStmt {
   margin: 10px;
   border-bottom: 1px solid black;
 }
-TEI[xml|lang='de'] titleStmt:before {
+TEI[xml|lang='de'] titleStmt::before {
   content: "Angaben zum Band";
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
-TEI[xml|lang='fr'] titleStmt:before {
+TEI[xml|lang='fr'] titleStmt::before {
   content: "Informations du volume";
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 unclear {
   color: #008080;
@@ -914,11 +949,11 @@ width {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] width:before {
+TEI[xml|lang="de"] width::before {
   content: "Breite: ";
   font-style: italic;
 }
-TEI[xml|lang="fr"] width:before {
+TEI[xml|lang="fr"] width::before {
   content: "Largeur : ";
   font-style: italic;
 }

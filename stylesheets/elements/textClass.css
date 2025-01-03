@@ -24,13 +24,13 @@ textClass {
   display: block;
   margin: 10px;
 }
-TEI[xml|lang="de"] textClass:before {
+TEI[xml|lang="de"] textClass::before {
   content: "Angaben zum Textprofil";
   font-style: italic;
   font-weight: bold;
   font-size: 16px;
 }
-TEI[xml|lang="fr"] textClass:before {
+TEI[xml|lang="fr"] textClass::before {
   content: "Informations sur le profil du texte";
   font-style: italic;
   font-weight: bold;
