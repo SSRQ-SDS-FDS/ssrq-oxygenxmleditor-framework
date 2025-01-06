@@ -4,14 +4,6 @@ persName {
     color: @persName-text-color;
 }
 
-author persName {
-    color: @default-text-color;
-}
-
-editor persName {
-    color: @default-text-color;
-}
-
-respStmt persName {
-    color: @default-text-color;
+persName[ref]::after {
+    content: " (ID " attr("ref") ")";
 }

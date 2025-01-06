@@ -267,6 +267,15 @@
                         <item>Eintrag 10</item>
                     </list>
                 </div>
+                <div type="section" n="3">
+                    <head>Entitäten</head>
+                    <p>Beispiel für eine Person: <persName ref="per123456"
+                            >Hartmann von Aue</persName> war ein Autor. </p>
+                    <p>Beispiel für eine Organisation: <orgName ref="org123456">Der Rat von
+                        Zürich</orgName>.</p>
+                    <p>Beispiel für einen Ort: <placeName ref="loc123456">Brixen</placeName> ist eine Stadt.</p>
+                    <p>Beispiel für ein Lemma: Die <term ref="lem123456">Strafe</term> ist fällig.</p>
+                </div>
             </div>
             <ab type="address" place="above">Das ist ein ab.</ab>
         </body>

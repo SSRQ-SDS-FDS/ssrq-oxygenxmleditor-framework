@@ -5,13 +5,12 @@ term {
     color: @term-text-color;
 }
 
-keywords term {
-    color: @default-text-color;
-    .smart-list-item;
+term[ref]::after {
+    content: " (ID " attr("ref") ")";
 }
 
-keywords term::after {
-    content: " (" attr("ref") ")";
+keywords term {
+    .smart-list-item;
 }
 
 keywords term:nth-of-type(even) {

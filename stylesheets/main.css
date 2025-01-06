@@ -494,7 +494,6 @@ measure {
 }
 measureGrp {
   display: inline;
-  color: #ff1493;
 }
 row > measureGrp {
   display: table-row;
@@ -547,11 +546,10 @@ objectDesc {
 orgName {
   color: #9400d3;
 }
-author orgName {
-  color: #000000;
+orgName[ref]::after {
+  content: " (ID " attr("ref") ")";
 }
 origin orgName {
-  color: #000000;
   display: block;
   margin: 12px;
 }
@@ -562,9 +560,6 @@ origin orgName::before {
 origin orgName[role]::before {
   content: "Organisation (" attr("ref") ") (" attr("role") ") ";
   font-style: italic;
-}
-respStmt orgName {
-  color: #000000;
 }
 orig::before {
   content: "«";
@@ -659,14 +654,8 @@ pb {
 persName {
   color: #0000ff;
 }
-author persName {
-  color: #000000;
-}
-editor persName {
-  color: #000000;
-}
-respStmt persName {
-  color: #000000;
+persName[ref]::after {
+  content: " (ID " attr("ref") ")";
 }
 physDesc {
   display: block;
@@ -680,7 +669,10 @@ TEI[xml|lang="fr"] physDesc::before {
   font-style: italic;
 }
 placeName {
-  color: #00ff00;
+  color: #00b300;
+}
+placeName[ref]::after {
+  content: " (ID " attr("ref") ")";
 }
 profileDesc {
   display: block;
@@ -909,13 +901,12 @@ teiHeader::before {
 term {
   color: #ff0000;
 }
+term[ref]::after {
+  content: " (ID " attr("ref") ")";
+}
 keywords term {
-  color: #000000;
   display: list-item;
   padding: 6px;
-}
-keywords term::after {
-  content: " (" attr("ref") ")";
 }
 keywords term:nth-of-type(even) {
   background-color: #92a8d1;

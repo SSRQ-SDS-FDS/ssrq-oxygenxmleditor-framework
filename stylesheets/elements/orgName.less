@@ -5,12 +5,11 @@ orgName {
     color: @orgName-text-color;
 }
 
-author orgName {
-    color: @default-text-color;
+orgName[ref]::after {
+    content: " (ID " attr("ref") ")";
 }
 
 origin orgName {
-    color: @default-text-color;
     .margin-block;
 }
 
@@ -22,8 +21,4 @@ origin orgName::before {
 origin orgName[role]::before {
     content: "Organisation (" attr("ref") ") (" attr("role") ") ";
     .additional-text;
-}
-
-respStmt orgName {
-    color: @default-text-color;
 }

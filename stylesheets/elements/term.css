@@ -1,11 +1,11 @@
 .bordered {
   border: 1px solid black;
   border-collapse: collapse;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 .margin-block {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 .additional-text {
   font-style: italic;
@@ -13,24 +13,21 @@
 .additional-heading {
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 .smart-list-item {
   display: list-item;
-  padding: 5px;
-  margin-bottom: 5px;
+  padding: 6px;
 }
 term {
   color: #ff0000;
 }
-keywords term {
-  color: #000000;
-  display: list-item;
-  padding: 5px;
-  margin-bottom: 5px;
+term[ref]::after {
+  content: " (ID " attr("ref") ")";
 }
-keywords term::after {
-  content: " (" attr("ref") ")";
+keywords term {
+  display: list-item;
+  padding: 6px;
 }
 keywords term:nth-of-type(even) {
   background-color: #92a8d1;

@@ -1,12 +1,6 @@
 persName {
   color: #0000ff;
 }
-author persName {
-  color: #000000;
-}
-editor persName {
-  color: #000000;
-}
-respStmt persName {
-  color: #000000;
+persName[ref]::after {
+  content: " (ID " attr("ref") ")";
 }

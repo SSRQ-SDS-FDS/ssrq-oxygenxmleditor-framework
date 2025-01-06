@@ -1,3 +1,6 @@
 placeName {
   color: #00ff00;
 }
+placeName[ref]::after {
+  content: " (ID " attr("ref") ")";
+}
