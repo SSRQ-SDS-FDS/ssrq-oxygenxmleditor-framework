@@ -138,7 +138,7 @@ cell::last-of-type {
   border-right: none;
 }
 condition {
-  content: " (" attr("agent") ")";
+  content: " (" attr(agent) ")";
   display: block;
 }
 TEI[xml|lang="de"] condition::before {
@@ -461,13 +461,13 @@ listBibl {
   list-style-type: none;
 }
 TEI[xml|lang="de"] additional listBibl::before {
-  content: "Literaturliste (" attr("type") ")";
+  content: "Literaturliste (" attr(type) ")";
   font-style: italic;
   font-weight: bold;
   font-size: 20px;
 }
 TEI[xml|lang="fr"] additional listBibl::before {
-  content: "Liste de littérature (" attr("type") ")";
+  content: "Liste de littérature (" attr(type) ")";
   font-style: italic;
   font-weight: bold;
   font-size: 20px;
@@ -477,7 +477,7 @@ listWit {
   margin: 12px;
 }
 material {
-  content: attr("type");
+  content: attr(type);
   display: block;
   margin: 12px;
 }
@@ -493,16 +493,16 @@ measure {
   color: #ff1493;
 }
 measure::after {
-  content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ")";
+  content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ")";
 }
 measure[origin]::after {
-  content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ", origin: " attr(origin) ")";
+  content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", origin: " attr(origin) ")";
 }
 measure[commodity]::after {
-  content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ", commodity: " attr(commodity) ")";
+  content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", commodity: " attr(commodity) ")";
 }
 measure[origin][commodity]::after {
-  content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ", origin: " attr(origin) ", commodity: " attr(commodity) ")";
+  content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", origin: " attr(origin) ", commodity: " attr(commodity) ")";
 }
 measureGrp {
   display: inline;
@@ -552,8 +552,8 @@ msItem {
 num {
   color: #9a8100;
 }
-num::hover::after {
-  content: " (value: " attr("value") ")";
+num:hover::after {
+  content: " (value: " attr(value) ")";
 }
 objectDesc {
   display: block;
@@ -562,18 +562,18 @@ orgName {
   color: #9400d3;
 }
 orgName[ref]::after {
-  content: " (ID " attr("ref") ")";
+  content: " (ID " attr(ref) ")";
 }
 origin orgName {
   display: block;
   margin: 12px;
 }
 origin orgName::before {
-  content: "Organisation (" attr("ref") ") ";
+  content: "Organisation (" attr(ref) ") ";
   font-style: italic;
 }
 origin orgName[role]::before {
-  content: "Organisation (" attr("ref") ") (" attr("role") ") ";
+  content: "Organisation (" attr(ref) ") (" attr(role) ") ";
   font-style: italic;
 }
 orig::before {
@@ -587,43 +587,43 @@ origDate {
   margin: 12px;
 }
 TEI[xml|lang="de"] origDate[when-custom]::before {
-  content: "Datierung (" attr("type") ") " attr("when-custom") " (" attr("calendar") ") ";
+  content: "Datierung (" attr(type) ") " attr(when-custom) " (" attr(calendar) ") ";
   font-style: italic;
 }
 TEI[xml|lang="fr"] origDate[when-custom]::before {
-  content: "Datation (" attr("type") ") " attr("when-custom") " (" attr("calendar") ") ";
+  content: "Datation (" attr(type) ") " attr(when-custom) " (" attr(calendar) ") ";
   font-style: italic;
 }
 TEI[xml|lang="de"] origDate[from-custom]::before {
-  content: "Datierung (" attr("type") ") von " attr("from-custom") " bis " attr("to-custom") " (" attr("calendar") ") ";
+  content: "Datierung (" attr(type) ") von " attr(from-custom) " bis " attr(to-custom) " (" attr(calendar) ") ";
   font-style: italic;
 }
 TEI[xml|lang="fr"] origDate[from-custom]::before {
-  content: "Datation (" attr("type") ") de " attr("from-custom") " à " attr("to-custom") " (" attr("calendar") ") ";
+  content: "Datation (" attr(type) ") de " attr(from-custom) " à " attr(to-custom) " (" attr(calendar) ") ";
   font-style: italic;
 }
 TEI[xml|lang="de"] origDate[notBefore-custom]::before {
-  content: "Datierung (" attr("type") ") nicht vor " attr("notBefore-custom") " (" attr("calendar") ") ";
+  content: "Datierung (" attr(type) ") nicht vor " attr(notBefore-custom) " (" attr(calendar) ") ";
   font-style: italic;
 }
 TEI[xml|lang="fr"] origDate[notBefore-custom]::before {
-  content: "Datation (" attr("type") ") pas avant " attr("notBefore-custom") " (" attr("calendar") ") ";
+  content: "Datation (" attr(type) ") pas avant " attr(notBefore-custom) " (" attr(calendar) ") ";
   font-style: italic;
 }
 TEI[xml|lang="de"] origDate[notAfter-custom]::before {
-  content: "Datierung (" attr("type") ") nicht nach " attr("notAfter-custom") " (" attr("calendar") ") ";
+  content: "Datierung (" attr(type) ") nicht nach " attr(notAfter-custom) " (" attr(calendar) ") ";
   font-style: italic;
 }
 TEI[xml|lang="fr"] origDate[notAfter-cusom]::before {
-  content: "Datation (" attr("type") ") pas après " attr("notAfter-custom") " (" attr("calendar") ") ";
+  content: "Datation (" attr(type) ") pas après " attr(notAfter-custom) " (" attr(calendar) ") ";
   font-style: italic;
 }
 TEI[xml|lang="de"] origDate[notBefore-custom][notAfter-custom]::before {
-  content: "Datierung (" attr("type") ") nicht vor " attr("notBefore-custom") " und nicht nach " attr("notAfter-custom") " (" attr("calendar") ") ";
+  content: "Datierung (" attr(type) ") nicht vor " attr(notBefore-custom) " und nicht nach " attr(notAfter-custom) " (" attr(calendar) ") ";
   font-style: italic;
 }
 TEI[xml|lang="fr"] origDate[notBefore-custom][notAfter-cusom]::before {
-  content: "Datation (" attr("type") ") pas avant " attr("notBefore-custom") " et pas après " attr("notAfter-custom") " (" attr("calendar") ") ";
+  content: "Datation (" attr(type) ") pas avant " attr(notBefore-custom) " et pas après " attr(notAfter-custom) " (" attr(calendar) ") ";
   font-style: italic;
 }
 origin {
@@ -643,19 +643,19 @@ origPlace {
   margin: 12px;
 }
 TEI[xml|lang="de"] origPlace::before {
-  content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) ", Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") ";
+  content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") ";
   font-style: italic;
 }
 TEI[xml|lang="fr"] origPlace::before {
-  content: "Lieu d'exposition (" attr(type) ") (ID : " attr(ref) ", Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") ";
+  content: "Lieu d'exposition (" attr(type) ") (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") ";
   font-style: italic;
 }
 TEI[xml|lang="de"] origPlace[cert]::before {
-  content: "Ausstellungsort (" attr("type") ") (ID: " attr("ref") ", Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") [" attr("cert") "] ";
+  content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") [" attr(cert) "] ";
   font-style: italic;
 }
 TEI[xml|lang="fr"] origPlace[cert]::before {
-  content: "Lieu d'exposition (" attr("type") ") (ID : " attr("ref") ", Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") [" attr("cert") "] ";
+  content: "Lieu d'exposition (" attr(type) ") (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") [" attr(cert) "] ";
   font-style: italic;
 }
 p {
@@ -669,8 +669,11 @@ pb {
 persName {
   color: #0000ff;
 }
-persName[ref]::after {
-  content: " (ID " attr("ref") ")";
+TEI[xml|lang="de"] persName[ref]:hover::after {
+  content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/persons/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
+}
+TEI[xml|lang="fr"] persName[ref]:hover::after {
+  content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/persons/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
 }
 physDesc {
   display: block;
@@ -687,7 +690,7 @@ placeName {
   color: #00b300;
 }
 placeName[ref]::after {
-  content: " (ID " attr("ref") ")";
+  content: " (ID " attr(ref) ")";
 }
 profileDesc {
   display: block;
@@ -733,7 +736,7 @@ rdg::after {
   content: " ";
 }
 editorialDecl ref {
-  content: attr("target");
+  content: attr(target);
 }
 repository {
   display: block;
@@ -780,11 +783,11 @@ seal {
   margin: 12px;
 }
 TEI[xml|lang="de"] seal {
-  content: attr("n") ": Erhaltungszustand (" attr("condition") "), Befestigung (" attr("attachment") "), " "Form (" attr("shape") "), Material (" attr("material") "), Ort (" attr("place") "), " "Faksimile (" attr("facs") ")";
+  content: attr(n) ": Erhaltungszustand (" attr(condition) "), Befestigung (" attr(attachment) "), " "Form (" attr(shape) "), Material (" attr(material) "), Ort (" attr(place) "), " "Faksimile (" attr(facs) ")";
   font-style: italic;
 }
 TEI[xml|lang="fr"] seal {
-  content: attr("n") " : état de conservation (" attr("condition") "), fixation (" attr("attachment") "), " "forme (" attr("shape") "), matériau (" attr("material") "), lieux (" attr("place") "), " "facsimilé (" attr("facs") ")";
+  content: attr(n) " : état de conservation (" attr(condition) "), fixation (" attr(attachment) "), " "forme (" attr(shape) "), matériau (" attr(material) "), lieux (" attr(place) "), " "facsimilé (" attr(facs) ")";
   font-style: italic;
 }
 sealDesc {
@@ -917,7 +920,7 @@ term {
   color: #ff0000;
 }
 term[ref]::after {
-  content: " (ID " attr("ref") ")";
+  content: " (ID " attr(ref) ")";
 }
 keywords term {
   display: list-item;
@@ -964,22 +967,22 @@ time {
   color: #ff8800;
 }
 time[period]::after {
-  content: " (period: " attr("period") ")";
+  content: " (period: " attr(period) ")";
 }
 time[dur-iso]::after {
-  content: " (dur-iso: " attr("dur-iso") ")";
+  content: " (dur-iso: " attr(dur-iso) ")";
 }
 time[when-custom]::after {
-  content: " (when-custom: " attr("when-custom") ")";
+  content: " (when-custom: " attr(when-custom) ")";
 }
 time[from-custom]::after {
-  content: " (from-custom: " attr("from-custom") ", to-custom: " attr("to-custom") ")";
+  content: " (from-custom: " attr(from-custom) ", to-custom: " attr(to-custom) ")";
 }
 time[notBefore-custom]::after {
-  content: " (notBefore-custom: " attr("notBefore-custom") ")";
+  content: " (notBefore-custom: " attr(notBefore-custom) ")";
 }
 time[notAfter-custom]::after {
-  content: " (notAfter-custom: " attr("notAfter-custom") ")";
+  content: " (notAfter-custom: " attr(notAfter-custom) ")";
 }
 title {
   display: block;
