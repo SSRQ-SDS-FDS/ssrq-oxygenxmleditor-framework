@@ -213,6 +213,31 @@
                             <cell>unten rechts</cell>
                         </row>
                     </table>
+                    <table>
+                        <head>Beispiel für eine Tabelle mit measure-grp Inhalten</head>
+                        <row>
+                            <measureGrp>
+                                <cell>
+                                    <measure type="currency" unit="fl" quantity="1">1 fl</measure>
+                                </cell>
+                                <cell>
+                                    <measure type="currency" unit="Dukat" quantity="12"
+                                        >12 d</measure>
+                                </cell>
+                            </measureGrp>
+                        </row>
+                        <row>
+                            <measureGrp>
+                                <cell>
+                                    <measure type="currency" unit="fl" quantity="1">2 fl</measure>
+                                </cell>
+                                <cell>
+                                    <measure type="currency" unit="Dukat" quantity="12"
+                                        >24 d</measure>
+                                </cell>
+                            </measureGrp>
+                        </row>
+                    </table>
                     <list>
                         <head>Beispiel für eine Liste ohne Aufzählungszeichen</head>
                         <item>Eintrag 1</item>

@@ -493,6 +493,7 @@ measure {
   color: #ff1493;
 }
 measureGrp {
+  display: inline;
   color: #ff1493;
 }
 msContents {
