@@ -643,19 +643,19 @@ origPlace {
   margin: 12px;
 }
 TEI[xml|lang="de"] origPlace::before {
-  content: "Ausstellungsort (" attr("type") ") (" attr("ref") ") ";
+  content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) ", Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") ";
   font-style: italic;
 }
 TEI[xml|lang="fr"] origPlace::before {
-  content: "Lieu d'exposition (" attr("type") ") (" attr("ref") ") ";
+  content: "Lieu d'exposition (" attr(type) ") (ID : " attr(ref) ", Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") ";
   font-style: italic;
 }
 TEI[xml|lang="de"] origPlace[cert]::before {
-  content: "Ausstellungsort (" attr("type") ") (" attr("ref") ") [" attr("cert") "] ";
+  content: "Ausstellungsort (" attr("type") ") (ID: " attr("ref") ", Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") [" attr("cert") "] ";
   font-style: italic;
 }
 TEI[xml|lang="fr"] origPlace[cert]::before {
-  content: "Lieu d'exposition (" attr("type") ") (" attr("ref") ") [" attr("cert") "] ";
+  content: "Lieu d'exposition (" attr("type") ") (ID : " attr("ref") ", Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") [" attr("cert") "] ";
   font-style: italic;
 }
 p {

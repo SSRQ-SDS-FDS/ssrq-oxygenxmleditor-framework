@@ -106,9 +106,9 @@
                                 notBefore-custom="2000-01-01">Foo</origDate>
                             <origDate type="content" calendar="gregorian" when-custom="1000-01-01"
                                 >Bar</origDate>
-                            <origPlace type="content" ref="loc123456">Foofoo</origPlace>
-                            <origPlace type="document" ref="loc123457" cert="high"
-                                >Barbar</origPlace>
+                            <origPlace type="content" ref="loc123456">Bern</origPlace>
+                            <origPlace type="document" ref="loc000157" cert="high"
+                                >Bern</origPlace>
                         </origin>
                     </history>
                     <additional>
@@ -269,8 +269,8 @@
                 </div>
                 <div type="section" n="3">
                     <head>Entitäten</head>
-                    <p>Beispiel für eine Person: <persName ref="per123456"
-                            >Hartmann von Aue</persName> war ein Autor. </p>
+                    <p>Beispiel für eine Person: <persName ref="per037611a"
+                        >Lorenz</persName> wohnte in <placeName ref="loc015889">Törbel</placeName>. </p>
                     <p>Beispiel für eine Organisation: <orgName ref="org123456"
                             >Der Rat von Zürich</orgName>.</p>
                     <p>Beispiel für einen Ort: <placeName ref="loc123456"

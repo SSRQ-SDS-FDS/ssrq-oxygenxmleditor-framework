@@ -5,21 +5,25 @@ origPlace {
 }
 
 TEI[xml|lang = "de"] origPlace::before {
-    content: "Ausstellungsort (" attr("type") ") (" attr("ref") ") ";
+    // ToDo: Finale API-URL einfügen!
+    content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) ", Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") ";
     .additional-text;
 }
 
 TEI[xml|lang = "fr"] origPlace::before {
-    content: "Lieu d'exposition (" attr("type") ") (" attr("ref") ") ";
+    // ToDo: Finale API-URL einfügen!
+    content: "Lieu d'exposition (" attr(type) ") (ID : " attr(ref) ", Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") ";
     .additional-text;
 }
 
 TEI[xml|lang = "de"] origPlace[cert]::before {
-    content: "Ausstellungsort (" attr("type") ") (" attr("ref") ") [" attr("cert") "] ";
+    // ToDo: Finale API-URL einfügen!
+    content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) ", Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") [" attr(cert) "] ";
     .additional-text;
 }
 
 TEI[xml|lang = "fr"] origPlace[cert]::before {
-    content: "Lieu d'exposition (" attr("type") ") (" attr("ref") ") [" attr("cert") "] ";
+    // ToDo: Finale API-URL einfügen!
+    content: "Lieu d'exposition (" attr(type) ") (ID : " attr(ref) ", Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") [" attr(cert) "] ";
     .additional-text;
 }
