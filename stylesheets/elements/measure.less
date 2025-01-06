@@ -5,20 +5,20 @@ measure {
 }
 
 measure::after {
-    content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ")", 
+    content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ")", 
 }
 
 measure[origin]::after {
-    content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ", origin: "
+    content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", origin: "
  attr(origin) ")";
 }
 
 measure[commodity]::after {
-    content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ", commodity: "
+    content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", commodity: "
  attr(commodity) ")";
 }
 
 measure[origin][commodity]::after {
-    content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ", origin: "
+    content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", origin: "
  attr(origin) ", commodity: " attr(commodity) ")";
 }

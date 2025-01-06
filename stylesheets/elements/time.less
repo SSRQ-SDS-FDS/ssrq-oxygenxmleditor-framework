@@ -5,25 +5,25 @@ time {
 }
 
 time[period]::after {
-    content: " (period: " attr("period") ")";
+    content: " (period: " attr(period) ")";
 }
 
 time[dur-iso]::after {
-    content: " (dur-iso: " attr("dur-iso") ")";
+    content: " (dur-iso: " attr(dur-iso) ")";
 }
 
 time[when-custom]::after {
-    content: " (when-custom: " attr("when-custom") ")";
+    content: " (when-custom: " attr(when-custom) ")";
 }
 
 time[from-custom]::after {
-    content: " (from-custom: " attr("from-custom") ", to-custom: " attr("to-custom")  ")";
+    content: " (from-custom: " attr(from-custom) ", to-custom: " attr(to-custom)  ")";
 }
 
 time[notBefore-custom]::after {
-    content: " (notBefore-custom: " attr("notBefore-custom") ")";
+    content: " (notBefore-custom: " attr(notBefore-custom) ")";
 }
 
 time[notAfter-custom]::after {
-    content: " (notAfter-custom: " attr("notAfter-custom") ")";
+    content: " (notAfter-custom: " attr(notAfter-custom) ")";
 }

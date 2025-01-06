@@ -6,7 +6,7 @@ orgName {
 }
 
 orgName[ref]::after {
-    content: " (ID " attr("ref") ")";
+    content: " (ID " attr(ref) ")";
 }
 
 origin orgName {
@@ -14,11 +14,11 @@ origin orgName {
 }
 
 origin orgName::before {
-    content: "Organisation (" attr("ref") ") ";
+    content: "Organisation (" attr(ref) ") ";
     .additional-text;
 }
 
 origin orgName[role]::before {
-    content: "Organisation (" attr("ref") ") (" attr("role") ") ";
+    content: "Organisation (" attr(ref) ") (" attr(role) ") ";
     .additional-text;
 }
