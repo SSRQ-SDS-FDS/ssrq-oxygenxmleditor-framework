@@ -1,11 +1,11 @@
 .bordered {
   border: 1px solid black;
   border-collapse: collapse;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 .margin-block {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 .additional-text {
   font-style: italic;
@@ -17,6 +17,5 @@
 }
 .smart-list-item {
   display: list-item;
-  padding: 5px;
-  margin-bottom: 5px;
+  padding: 6px;
 }

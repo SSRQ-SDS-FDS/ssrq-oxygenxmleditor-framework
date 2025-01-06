@@ -7,3 +7,9 @@ teiHeader {
     background-color: @teiHeader-background-color;
     margin-bottom: @larger-size;
 }
+
+teiHeader::before {
+    content: "teiHeader";
+    .additional-heading;
+    margin-left: @normal-size;
+}

@@ -1,3 +1,23 @@
-div::before {
-    content: "\n[" attr(n) "]";
+@import "../commons/classes.less";
+@import "../commons/sizes.less";
+
+div {
+    .bordered;
+    .margin-block;
+    padding: @normal-size;
+}
+
+div[type]::before {
+    content: "[div, " attr(type) "]";
+    .additional-heading;
+}
+
+div[n]::before {
+    content: "[div, " attr(n) "]";
+    .additional-heading;
+}
+
+div[type][n]::before {
+    content: "[div, " attr(type) ", " attr(n) "]";
+    .additional-heading;
 }

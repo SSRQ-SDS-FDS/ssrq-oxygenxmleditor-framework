@@ -154,66 +154,94 @@
     </teiHeader>
     <text type="transcript">
         <body>
-            <div>
-                <p>
-                    <choice>
-                        <abbr>abbr</abbr>
-                        <expan>expan</expan>
-                    </choice>
-                    <handShift hand="otherHand"/>
-                    <add place="above">add</add>
-                    <addSpan spanTo="add1"/>
-                    <anchor xml:id="add1"/>
-                </p>
-                <table>
-                    <head>Tabellenüberschrift</head>
-                    <row>
-                        <cell role="label">Spaltenüberschrift links</cell>
-                        <cell role="label">Spaltenüberschrift rechts</cell>
-                    </row>
-                    <row>
-                        <cell rend="align-bottom">oben links</cell>
-                        <cell rend="align-bottom">oben rechts</cell>
-                    </row>
-                    <row>
-                        <cell>Mitte links</cell>
-                        <cell>Mitte rechts</cell>
-                    </row>
-                    <row>
-                        <cell>unten links</cell>
-                        <cell>unten rechts</cell>
-                    </row>
-                </table>
-                <list>
-                    <head>Einfache Liste Überschrift</head>
-                    <item>Eintrag 1</item>
-                    <item>Eintrag 2</item>
-                    <pb n="10r"/>
-                    <item>Eintrag 3</item>
-                    <item>Eintrag 4</item>
-                </list>
-                <list rend="bulleted">
-                    <head>Bullet-List Überschrift</head>
-                    <item>Eintrag 1</item>
-                    <item>Eintrag 2</item>
-                    <pb n="10r"/>
-                    <item>Eintrag 3</item>
-                    <item>Eintrag 4</item>
-                </list>
-                <list rend="numbered">
-                    <head>Numbered-List Überschrift</head>
-                    <item>Eintrag 1</item>
-                    <item>Eintrag 2</item>
-                    <pb n="20r"/>
-                    <item>Eintrag 3</item>
-                    <item>Eintrag 4</item>
-                    <item>Eintrag 5</item>
-                    <item>Eintrag 6</item>
-                    <item>Eintrag 7</item>
-                    <item>Eintrag 8</item>
-                    <item>Eintrag 9</item>
-                    <item>Eintrag 10</item>
-                </list>
+            <div type="chapter" n="1">
+                <div type="section" n="1">
+                    <head>Textkritische Auszeichnungen</head>
+                    <p>
+                        <choice>
+                            <abbr>abbr</abbr>
+                            <expan>expan</expan>
+                        </choice>
+                        <handShift hand="otherHand"/>
+                        <add place="above">add</add>
+                        <addSpan spanTo="add1"/>
+                        <anchor xml:id="add1"/>
+                    </p>
+                </div>
+                <div type="section" n="2">
+                    <head>Tabellen und Listen</head>
+                    <table>
+                        <head>Beispiel für eine zweispaltige Tabelle</head>
+                        <row>
+                            <cell role="label">Spaltenüberschrift links</cell>
+                            <cell role="label">Spaltenüberschrift rechts</cell>
+                        </row>
+                        <row>
+                            <cell rend="align-bottom">oben links</cell>
+                            <cell rend="align-bottom">oben rechts</cell>
+                        </row>
+                        <row>
+                            <cell>Mitte links</cell>
+                            <cell>Mitte rechts</cell>
+                        </row>
+                        <row>
+                            <cell>unten links</cell>
+                            <cell>unten rechts</cell>
+                        </row>
+                    </table>
+                    <table>
+                        <head>Beispiel für eine dreispaltige Tabelle</head>
+                        <row>
+                            <cell role="label">Spaltenüberschrift links</cell>
+                            <cell role="label">Spaltenüberschrift mitte</cell>
+                            <cell role="label"
+                                >Spaltenüberschrift rechts mit einem sehr langen Text, so dass die Spalten unterschiedlich lang sind</cell>
+                        </row>
+                        <row>
+                            <cell>oben links</cell>
+                            <cell>oben mittig</cell>
+                            <cell>oben rechts</cell>
+                        </row>
+                        <row>
+                            <cell>Mitte links</cell>
+                            <cell>Mitte mittig</cell>
+                            <cell>Mitte rechts</cell>
+                        </row>
+                        <row>
+                            <cell>unten links</cell>
+                            <cell>unten mittig</cell>
+                            <cell>unten rechts</cell>
+                        </row>
+                    </table>
+                    <list>
+                        <head>Beispiel für eine Liste ohne Aufzählungszeichen</head>
+                        <item>Eintrag 1</item>
+                        <item>Eintrag 2</item>
+                        <pb n="10r"/>
+                        <item>Eintrag 3</item>
+                        <item>Eintrag 4</item>
+                    </list>
+                    <list rend="bulleted">
+                        <head>Beispiel für eine Liste mit Aufzählungszeichen</head>
+                        <item>Eintrag 1</item>
+                        <item>Eintrag 2</item>
+                        <item>Eintrag 3</item>
+                        <item>Eintrag 4</item>
+                    </list>
+                    <list rend="numbered">
+                        <head>Beispiel für einen nummerierte Liste</head>
+                        <item>Eintrag 1</item>
+                        <item>Eintrag 2</item>
+                        <item>Eintrag 3</item>
+                        <item>Eintrag 4</item>
+                        <item>Eintrag 5</item>
+                        <item>Eintrag 6</item>
+                        <item>Eintrag 7</item>
+                        <item>Eintrag 8</item>
+                        <item>Eintrag 9</item>
+                        <item>Eintrag 10</item>
+                    </list>
+                </div>
             </div>
             <ab type="address" place="above">Das ist ein ab.</ab>
         </body>

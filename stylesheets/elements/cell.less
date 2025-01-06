@@ -2,7 +2,8 @@
 
 cell {
     display: table-cell;
-    padding: 5px;
+    padding: @tiny-size;
+    border-right: 1px solid black;
 }
 
 cell[role = 'label'] {
@@ -12,4 +13,8 @@ cell[role = 'label'] {
 
 cell[rend = 'align-bottom'] {
     vertical-align: bottom;
+}
+
+cell::last-of-type {
+    border-right: none;
 }

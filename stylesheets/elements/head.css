@@ -10,10 +10,11 @@ head[resp]::after {
   content: "]";
 }
 msDesc head {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 list head {
-  margin-bottom: 5px;
+  margin-left: -24px;
+  margin-bottom: 6px;
 }
 table head {
   display: table-caption;

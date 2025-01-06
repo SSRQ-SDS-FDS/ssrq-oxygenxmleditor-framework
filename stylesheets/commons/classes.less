@@ -3,12 +3,12 @@
 .bordered {
     border: 1px solid black;
     border-collapse: collapse;
-    border-radius: 5px;
+    border-radius: @tiny-size;
 }
 
 .margin-block {
     display: block;
-    margin: 10px;
+    margin: @normal-size;
 }
 
 .additional-text {
@@ -23,12 +23,11 @@
 
 .smart-list(@list-style-type: none) {
     .margin-block;
-    padding: 10px 10px 10px 20px;
+    padding: @normal-size @normal-size @normal-size @huge-size;
     list-style-type: @list-style-type;
 }
 
 .smart-list-item {
     display: list-item;
-    padding: 5px;
-    margin-bottom: 5px;
+    padding: @tiny-size;
 }

@@ -2,11 +2,11 @@
 .bordered {
   border: 1px solid black;
   border-collapse: collapse;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 .margin-block {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 .additional-text {
   font-style: italic;
@@ -18,13 +18,12 @@
 }
 .smart-list-item {
   display: list-item;
-  padding: 5px;
-  margin-bottom: 5px;
+  padding: 6px;
 }
 ab {
   background-color: #93a5f5;
   display: block;
-  margin: 10px;
+  margin: 12px;
   width: 90%;
 }
 ab::before {
@@ -62,7 +61,7 @@ TEI[xml|lang='fr'] author::before {
 back {
   border: 1px solid black;
   border-collapse: collapse;
-  border-radius: 5px;
+  border-radius: 6px;
   color: #000000;
   background-color: #ffffff;
   margin-bottom: 20px;
@@ -82,8 +81,7 @@ TEI[xml|lang="fr"] back::before {
 }
 listBibl bibl {
   display: list-item;
-  padding: 5px;
-  margin-bottom: 5px;
+  padding: 6px;
 }
 listBibl bibl:nth-of-type(even) {
   background-color: #92a8d1;
@@ -93,7 +91,7 @@ listBibl bibl:nth-of-type(odd) {
 }
 bindingDesc {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang="de"] bindingDesc::before {
   content: "Angaben zur Bindung";
@@ -106,7 +104,7 @@ TEI[xml|lang="fr"] bindingDesc::before {
 body {
   border: 1px solid black;
   border-collapse: collapse;
-  border-radius: 5px;
+  border-radius: 6px;
   color: #000000;
   background-color: #ffffff;
   margin-bottom: 20px;
@@ -126,7 +124,8 @@ TEI[xml|lang="fr"] body::before {
 }
 cell {
   display: table-cell;
-  padding: 5px;
+  padding: 6px;
+  border-right: 1px solid black;
 }
 cell[role='label'] {
   font-weight: bold;
@@ -134,6 +133,9 @@ cell[role='label'] {
 }
 cell[rend='align-bottom'] {
   vertical-align: bottom;
+}
+cell::last-of-type {
+  border-right: none;
 }
 condition {
   content: " (" attr("agent") ")";
@@ -155,11 +157,11 @@ corr::before {
 }
 custEvent {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 custodialHist {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang="de"] custodialHist::before {
   content: "Angaben zur Aufbewahrungsgeschichte";
@@ -179,7 +181,7 @@ date {
 publicationStmt date {
   color: #000000;
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang='de'] publicationStmt date[type='electronic'] {
   content: "Publikationsdatum (elektronisch): " attr(when-custom);
@@ -208,7 +210,7 @@ delSpan {
 }
 dimensions {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang="de"] dimensions[type="leaves"]::before {
   content: "Mass der Blätter: ";
@@ -226,12 +228,35 @@ TEI[xml|lang="fr"] dimensions[type="plica"]::before {
   content: "Dimensions de la Plica : ";
   font-style: italic;
 }
-div::before {
-  content: "\n[" attr(n) "]";
+div {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 6px;
+  display: block;
+  margin: 12px;
+  padding: 12px;
+}
+div[type]::before {
+  content: "[div, " attr(type) "]";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+}
+div[n]::before {
+  content: "[div, " attr(n) "]";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+}
+div[type][n]::before {
+  content: "[div, " attr(type) ", " attr(n) "]";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
 }
 editor {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang='de'] editor::before {
   content: "Herausgeber: ";
@@ -243,7 +268,7 @@ TEI[xml|lang='fr'] editor::before {
 }
 editiorialDecl {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang="de"] editorialDecl::before {
   content: "Angaben zu den Editionsrichtlinien";
@@ -259,8 +284,8 @@ TEI[xml|lang="fr"] editorialDecl::before {
 }
 encodingDesc {
   display: block;
-  margin: 10px;
-  padding: 10px;
+  margin: 12px;
+  padding: 12px;
   border-bottom: 1px solid black;
 }
 expan {
@@ -274,7 +299,7 @@ extent {
 }
 fileDesc {
   display: block;
-  margin: 10px;
+  margin: 12px;
   border-bottom: 1px solid black;
 }
 foliation {
@@ -288,7 +313,7 @@ gap {
 }
 handDesc {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang="de"] handDesc::before {
   content: "Angaben zu den Händen";
@@ -301,7 +326,7 @@ TEI[xml|lang="fr"] handDesc::before {
 handNote {
   content: attr("xml:id");
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 head {
   display: block;
@@ -315,10 +340,11 @@ head[resp]::after {
   content: "]";
 }
 msDesc head {
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 list head {
-  margin-bottom: 5px;
+  margin-left: -24px;
+  margin-bottom: 6px;
 }
 table head {
   display: table-caption;
@@ -326,7 +352,7 @@ table head {
 height {
   content: attr(quantity) " " attr(unit);
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang="de"] height::before {
   content: "Höhe: ";
@@ -347,7 +373,7 @@ history {
 }
 idno {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 seriesStmt idno::before {
   content: "IDNO ";
@@ -375,8 +401,7 @@ TEI[xml|lang='fr'] altIdentifier idno::before {
 }
 item {
   display: list-item;
-  padding: 5px;
-  margin-bottom: 5px;
+  padding: 6px;
 }
 item:nth-of-type(even) {
   background-color: #92a8d1;
@@ -386,8 +411,8 @@ item:nth-of-type(odd) {
 }
 keywords {
   display: block;
-  margin: 10px;
-  padding: 10px 10px 10px 20px;
+  margin: 12px;
+  padding: 12px 12px 12px 24px;
   list-style-type: none;
 }
 lb[break="no"]::before {
@@ -401,7 +426,7 @@ lem::after {
 }
 licence {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang='de'] licence::before {
   content: "Lizenz: ";
@@ -413,26 +438,26 @@ TEI[xml|lang='fr'] licence::before {
 }
 list {
   display: block;
-  margin: 10px;
-  padding: 10px 10px 10px 20px;
+  margin: 12px;
+  padding: 12px 12px 12px 24px;
   list-style-type: none;
 }
 list[rend='bulleted'] {
   display: block;
-  margin: 10px;
-  padding: 10px 10px 10px 20px;
+  margin: 12px;
+  padding: 12px 12px 12px 24px;
   list-style-type: "disc";
 }
 list[rend='numbered'] {
   display: block;
-  margin: 10px;
-  padding: 10px 10px 10px 20px;
+  margin: 12px;
+  padding: 12px 12px 12px 24px;
   list-style-type: "decimal";
 }
 listBibl {
   display: block;
-  margin: 10px;
-  padding: 10px 10px 10px 20px;
+  margin: 12px;
+  padding: 12px 12px 12px 24px;
   list-style-type: none;
 }
 TEI[xml|lang="de"] additional listBibl::before {
@@ -449,12 +474,12 @@ TEI[xml|lang="fr"] additional listBibl::before {
 }
 listWit {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 material {
   content: attr("type");
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang="de"] material::before {
   content: "Material: ";
@@ -483,7 +508,7 @@ TEI[xml|lang='fr'] msContents::before {
 }
 msDesc {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang='de'] msDesc::before {
   content: "Textzeugenbeschreibung";
@@ -495,7 +520,7 @@ TEI[xml|lang='fr'] msDesc::before {
 }
 msIdentifier {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang='de'] msIdentifier::before {
   content: "Angaben zum Textzeugen";
@@ -507,7 +532,7 @@ TEI[xml|lang='fr'] msIdentifier::before {
 }
 msItem {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 num {
   color: #ffd700;
@@ -524,7 +549,7 @@ author orgName {
 origin orgName {
   color: #000000;
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 origin orgName::before {
   content: "Organisation (" attr("ref") ") ";
@@ -545,7 +570,7 @@ orig::after {
 }
 origDate {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang="de"] origDate[when-custom]::before {
   content: "Datierung (" attr("type") ") " attr("when-custom") " (" attr("calendar") ") ";
@@ -589,7 +614,7 @@ TEI[xml|lang="fr"] origDate[notBefore-custom][notAfter-cusom]::before {
 }
 origin {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang="de"] origin::before {
   content: "Angaben zur Herkunft";
@@ -601,7 +626,7 @@ TEI[xml|lang="fr"] origin::before {
 }
 origPlace {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang="de"] origPlace::before {
   content: "Ausstellungsort (" attr("type") ") (" attr("ref") ") ";
@@ -621,7 +646,7 @@ TEI[xml|lang="fr"] origPlace[cert]::before {
 }
 p {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 pb {
   page-break-after: always;
@@ -655,11 +680,11 @@ placeName {
 }
 profileDesc {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 publicationStmt {
   display: block;
-  margin: 10px;
+  margin: 12px;
   border-bottom: 1px solid black;
 }
 TEI[xml|lang='de'] publicationStmt::before {
@@ -676,7 +701,7 @@ TEI[xml|lang='fr'] publicationStmt::before {
 }
 publicationStmt publisher {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 q::before {
   content: "«";
@@ -701,7 +726,7 @@ editorialDecl ref {
 }
 repository {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang='de'] repository::before {
   content: "Archiv: ";
@@ -713,11 +738,11 @@ TEI[xml|lang='fr'] repository::before {
 }
 resp {
   display: inline-block;
-  margin-left: 10px;
+  margin-left: 12px;
 }
 respStmt {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang='de'] respStmt::before {
   content: "Verantwortlich: ";
@@ -730,15 +755,15 @@ TEI[xml|lang='fr'] respStmt::before {
 row {
   display: table-row;
 }
-row:nth-child(even) {
+row:nth-of-type(even) {
   background-color: #92a8d1;
 }
-row:nth-child(odd) {
+row:nth-of-type(odd) {
   background-color: #f2f2f2;
 }
 seal {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang="de"] seal {
   content: attr("n") ": Erhaltungszustand (" attr("condition") "), Befestigung (" attr("attachment") "), " "Form (" attr("shape") "), Material (" attr("material") "), Ort (" attr("place") "), " "Faksimile (" attr("facs") ")";
@@ -750,7 +775,7 @@ TEI[xml|lang="fr"] seal {
 }
 sealDesc {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang="de"] sealDesc::before {
   content: "Angaben zu den Siegeln";
@@ -768,7 +793,7 @@ seg::before {
 }
 seriesStmt {
   display: block;
-  margin: 10px;
+  margin: 12px;
   border-bottom: 1px solid black;
 }
 TEI[xml|lang='de'] seriesStmt::before {
@@ -785,7 +810,7 @@ TEI[xml|lang='fr'] seriesStmt::before {
 }
 settlement {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang='de'] settlement::before {
   content: "Archivstandort: ";
@@ -806,7 +831,7 @@ signed {
 }
 sourceDesc {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang='de'] sourceDesc::before {
   content: "Quellenbeschreibung";
@@ -846,12 +871,13 @@ support {
 }
 supportDesc {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 table {
   display: table;
   border: 1px solid black;
-  margin: 10px;
+  border-collapse: collapse;
+  margin: 12px 12px 24px 12px;
 }
 TEI {
   display: block;
@@ -862,9 +888,16 @@ TEI {
 teiHeader {
   border: 1px solid black;
   border-collapse: collapse;
-  border-radius: 5px;
+  border-radius: 6px;
   background-color: #ffffff;
   margin-bottom: 20px;
+}
+teiHeader::before {
+  content: "teiHeader";
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+  margin-left: 12px;
 }
 term {
   color: #ff0000;
@@ -872,8 +905,7 @@ term {
 keywords term {
   color: #000000;
   display: list-item;
-  padding: 5px;
-  margin-bottom: 5px;
+  padding: 6px;
 }
 keywords term::after {
   content: " (" attr("ref") ")";
@@ -889,7 +921,7 @@ text {
 }
 textClass {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang="de"] textClass::before {
   content: "Angaben zum Textprofil";
@@ -922,11 +954,11 @@ title {
   display: block;
   font-size: 20px;
   width: 90%;
-  margin: 10px;
+  margin: 12px;
 }
 titleStmt {
   display: block;
-  margin: 10px;
+  margin: 12px;
   border-bottom: 1px solid black;
 }
 TEI[xml|lang='de'] titleStmt::before {
@@ -947,7 +979,7 @@ unclear {
 width {
   content: attr(quantity) " " attr(unit);
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang="de"] width::before {
   content: "Breite: ";
@@ -959,5 +991,5 @@ TEI[xml|lang="fr"] width::before {
 }
 witness {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }

@@ -1,6 +1,7 @@
 cell {
   display: table-cell;
   padding: 5px;
+  border-right: 1px solid black;
 }
 cell[role='label'] {
   font-weight: bold;
@@ -8,4 +9,7 @@ cell[role='label'] {
 }
 cell[rend='align-bottom'] {
   vertical-align: bottom;
+}
+cell::last-of-type {
+  border-right: none;
 }
