@@ -3,3 +3,7 @@
 num {
     color: @num-text-color;
 }
+
+num::hover::after {
+    content: " (value: " attr("value") ")";
+}

@@ -271,10 +271,29 @@
                     <head>Entitäten</head>
                     <p>Beispiel für eine Person: <persName ref="per123456"
                             >Hartmann von Aue</persName> war ein Autor. </p>
-                    <p>Beispiel für eine Organisation: <orgName ref="org123456">Der Rat von
-                        Zürich</orgName>.</p>
-                    <p>Beispiel für einen Ort: <placeName ref="loc123456">Brixen</placeName> ist eine Stadt.</p>
-                    <p>Beispiel für ein Lemma: Die <term ref="lem123456">Strafe</term> ist fällig.</p>
+                    <p>Beispiel für eine Organisation: <orgName ref="org123456"
+                            >Der Rat von Zürich</orgName>.</p>
+                    <p>Beispiel für einen Ort: <placeName ref="loc123456"
+                        >Brixen</placeName> ist eine Stadt.</p>
+                    <p>Beispiel für ein Lemma: Die <term ref="lem123456"
+                        >Strafe</term> ist fällig.</p>
+                </div>
+                <div type="section" n="4">
+                    <head>Inhaltliche Auszeichnungen</head>
+                    <p>Beispiel für eine Massangabe: <measure type="currency" unit="fl"
+                            quantity="1">1 fl.</measure>
+                    </p>
+                    <p>Beispiel für eine Massangabe mit origin:
+                        <measure type="currency" unit="fl" quantity="1" origin="BE">1 fl.</measure>
+                    </p>
+                    <p>Beispiel für eine Massangabe mit commodity:
+                        <measure type="currency" unit="fl" quantity="1" commodity="apple">1 fl. an
+                            Äpfeln.</measure>
+                    </p>
+                    <p>Beispiel für eine Massangabe mit commodity und origin:
+                        <measure type="currency" unit="fl" quantity="1" commodity="apple" origin="BE">1 fl. an
+                            Berner Äpfeln.</measure>
+                    </p>
                 </div>
             </div>
             <ab type="address" place="above">Das ist ein ab.</ab>

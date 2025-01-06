@@ -492,6 +492,18 @@ TEI[xml|lang="fr"] material::before {
 measure {
   color: #ff1493;
 }
+measure::after {
+  content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ")";
+}
+measure[origin]::after {
+  content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ", origin: " attr(origin) ")";
+}
+measure[commodity]::after {
+  content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ", commodity: " attr(commodity) ")";
+}
+measure[origin][commodity]::after {
+  content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ", origin: " attr(origin) ", commodity: " attr(commodity) ")";
+}
 measureGrp {
   display: inline;
 }
@@ -538,7 +550,10 @@ msItem {
   margin: 12px;
 }
 num {
-  color: #ffd700;
+  color: #9a8100;
+}
+num::hover::after {
+  content: " (value: " attr("value") ")";
 }
 objectDesc {
   display: block;
@@ -946,7 +961,25 @@ TEI[xml|lang='fr'] textLang::before {
   font-style: italic;
 }
 time {
-  color: #808080;
+  color: #ff8800;
+}
+time[period]::after {
+  content: " (period: " attr("period") ")";
+}
+time[dur-iso]::after {
+  content: " (dur-iso: " attr("dur-iso") ")";
+}
+time[when-custom]::after {
+  content: " (when-custom: " attr("when-custom") ")";
+}
+time[from-custom]::after {
+  content: " (from-custom: " attr("from-custom") ", to-custom: " attr("to-custom") ")";
+}
+time[notBefore-custom]::after {
+  content: " (notBefore-custom: " attr("notBefore-custom") ")";
+}
+time[notAfter-custom]::after {
+  content: " (notAfter-custom: " attr("notAfter-custom") ")";
 }
 title {
   display: block;
