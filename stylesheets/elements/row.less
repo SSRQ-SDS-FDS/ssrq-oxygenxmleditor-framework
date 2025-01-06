@@ -4,6 +4,10 @@ row {
     display: table-row;
 }
 
+row:has(> measureGrp) {
+    display: table-row-group;
+}
+
 row:nth-of-type(even) {
     background-color: @row-even-background-color;
 }

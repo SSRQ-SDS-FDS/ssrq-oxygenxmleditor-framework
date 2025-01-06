@@ -496,6 +496,9 @@ measureGrp {
   display: inline;
   color: #ff1493;
 }
+row > measureGrp {
+  display: table-row;
+}
 msContents {
   display: block;
 }
@@ -755,6 +758,9 @@ TEI[xml|lang='fr'] respStmt::before {
 }
 row {
   display: table-row;
+}
+row:has(> measureGrp) {
+  display: table-row-group;
 }
 row:nth-of-type(even) {
   background-color: #92a8d1;

@@ -1,6 +1,9 @@
 row {
   display: table-row;
 }
+row:has(> measureGrp) {
+  display: table-row-group;
+}
 row:nth-of-type(even) {
   background-color: #92a8d1;
 }
