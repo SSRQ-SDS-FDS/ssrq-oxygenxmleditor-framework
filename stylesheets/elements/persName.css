@@ -1,6 +1,9 @@
 persName {
   color: #0000ff;
 }
-persName[ref]::after {
-  content: " (ID " attr("ref") ")";
+TEI[xml|lang="de"] persName[ref]::after {
+  content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/persons/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
+}
+TEI[xml|lang="fr"] persName[ref]::after {
+  content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/persons/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
 }

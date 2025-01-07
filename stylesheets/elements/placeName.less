@@ -4,12 +4,12 @@ placeName {
     color: @placeName-text-color;
 }
 
-TEI[xml|lang = "de"] placeName[ref]:hover::after {
+TEI[xml|lang = "de"] placeName[ref]::after {
     // ToDo: Finale API-URL einfügen!
     content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
 }
 
-TEI[xml|lang = "fr"] placeName[ref]:hover::after {
+TEI[xml|lang = "fr"] placeName[ref]::after {
     // ToDo: Finale API-URL einfügen!
     content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
 }

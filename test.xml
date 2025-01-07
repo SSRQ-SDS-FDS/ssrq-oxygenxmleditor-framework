@@ -103,12 +103,11 @@
                     <history>
                         <origin>
                             <origDate type="document" calendar="gregorian"
-                                notBefore-custom="2000-01-01">Foo</origDate>
+                                notBefore-custom="2000-01-01">Irgendwann</origDate>
                             <origDate type="content" calendar="gregorian" when-custom="1000-01-01"
-                                >Bar</origDate>
-                            <origPlace type="content" ref="loc123456">Bern</origPlace>
-                            <origPlace type="document" ref="loc000157" cert="high"
-                                >Bern</origPlace>
+                                >einmal</origDate>
+                            <origPlace type="content" ref="loc000157">Bern</origPlace>
+                            <origPlace type="document" ref="loc000157" cert="high">Bern</origPlace>
                         </origin>
                     </history>
                     <additional>
@@ -144,10 +143,10 @@
         <profileDesc>
             <textClass>
                 <keywords>
-                    <term ref="key123456">Foo</term>
-                    <term ref="key123457">Bar</term>
-                    <term ref="key123458">Baz</term>
-                    <term ref="key123459">Foobar</term>
+                    <term ref="key000905">Strafe</term>
+                    <term ref="key000184">Busse</term>
+                    <term ref="key000364">Rat der Stadt Zürich</term>
+                    <term ref="key000307">Allmend</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -270,29 +269,29 @@
                 <div type="section" n="3">
                     <head>Entitäten</head>
                     <p>Beispiel für eine Person: <persName ref="per037611a"
-                        >Lorenz</persName> wohnte in <placeName ref="loc015889">Törbel</placeName>. </p>
+                            >Lorenz</persName> wohnte in <placeName ref="loc015889"
+                            >Törbel</placeName>. </p>
                     <p>Beispiel für eine Organisation: <orgName ref="org123456"
                             >Der Rat von Zürich</orgName>.</p>
-                    <p>Beispiel für einen Ort: <placeName ref="loc123456"
+                    <p>Beispiel für einen Ort: <placeName ref="loc011580"
                         >Brixen</placeName> ist eine Stadt.</p>
-                    <p>Beispiel für ein Lemma: Die <term ref="lem123456"
-                        >Strafe</term> ist fällig.</p>
+                    <p>Beispiel für ein Lemma: Die <term ref="lem000345"
+                            >Strafe</term> ist fällig.</p>
                 </div>
                 <div type="section" n="4">
                     <head>Inhaltliche Auszeichnungen</head>
-                    <p>Beispiel für eine Massangabe: <measure type="currency" unit="fl"
-                            quantity="1">1 fl.</measure>
+                    <p>Beispiel für eine Massangabe: <measure type="currency" unit="fl" quantity="1"
+                            >1 fl.</measure>
                     </p>
-                    <p>Beispiel für eine Massangabe mit origin:
-                        <measure type="currency" unit="fl" quantity="1" origin="BE">1 fl.</measure>
+                    <p>Beispiel für eine Massangabe mit origin: <measure type="currency" unit="fl"
+                            quantity="1" origin="BE">1 fl.</measure>
                     </p>
-                    <p>Beispiel für eine Massangabe mit commodity:
-                        <measure type="currency" unit="fl" quantity="1" commodity="apple">1 fl. an
-                            Äpfeln.</measure>
+                    <p>Beispiel für eine Massangabe mit commodity: <measure type="currency"
+                            unit="fl" quantity="1" commodity="apple">1 fl. an Äpfeln.</measure>
                     </p>
-                    <p>Beispiel für eine Massangabe mit commodity und origin:
-                        <measure type="currency" unit="fl" quantity="1" commodity="apple" origin="BE">1 fl. an
-                            Berner Äpfeln.</measure>
+                    <p>Beispiel für eine Massangabe mit commodity und origin: <measure
+                            type="currency" unit="fl" quantity="1" commodity="apple" origin="BE"
+                            >1 fl. an Berner Äpfeln.</measure>
                     </p>
                 </div>
             </div>
