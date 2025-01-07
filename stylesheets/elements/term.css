@@ -22,16 +22,16 @@
 term {
   color: #ff0000;
 }
-TEI[xml|lang="de"] term[ref^="key"]::after {
+TEI[xml|lang="de"] term[ref^="key"]:hover::after {
   content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/keywords/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
 }
-TEI[xml|lang="fr"] term[ref^="key"]::after {
+TEI[xml|lang="fr"] term[ref^="key"]:hover::after {
   content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/keywords/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
 }
-TEI[xml|lang="de"] term[ref^="lem"]::after {
+TEI[xml|lang="de"] term[ref^="lem"]:hover::after {
   content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/lemmata/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
 }
-TEI[xml|lang="fr"] term[ref^="lem"]::after {
+TEI[xml|lang="fr"] term[ref^="lem"]:hover::after {
   content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/lemmata/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
 }
 keywords term {

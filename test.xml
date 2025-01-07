@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de">
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -268,7 +268,7 @@
                 </div>
                 <div type="section" n="3">
                     <head>Entitäten</head>
-                    <p>Beispiel für eine Person: <persName ref="per037611a"
+                    <p>Beispiel für eine Person: <persName ref="per123456"
                             >Lorenz</persName> wohnte in <placeName ref="loc015889"
                             >Törbel</placeName>. </p>
                     <p>Beispiel für eine Organisation: <orgName ref="org123456"
@@ -276,7 +276,7 @@
                     <p>Beispiel für einen Ort: <placeName ref="loc011580"
                         >Brixen</placeName> ist eine Stadt.</p>
                     <p>Beispiel für ein Lemma: Die <term ref="lem000345"
-                            >Strafe</term> ist fällig.</p>
+                        >Strafe</term> ist fällig.</p>
                 </div>
                 <div type="section" n="4">
                     <head>Inhaltliche Auszeichnungen</head>

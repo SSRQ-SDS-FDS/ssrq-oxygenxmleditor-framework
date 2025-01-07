@@ -21,10 +21,11 @@
   padding: 6px;
 }
 ab {
-  background-color: #93a5f5;
   display: block;
   margin: 12px;
-  width: 90%;
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 6px;
 }
 ab::before {
   content: "Anonymer Block [" attr(type) ", " attr(place) "]:\A";
@@ -416,10 +417,10 @@ keywords {
   list-style-type: none;
 }
 lb[break="no"]::before {
-  content: "-/\n";
+  content: "-/\A";
 }
 lb::before {
-  content: "/\n";
+  content: "/\A";
 }
 lem::after {
   content: " ";
@@ -669,10 +670,10 @@ pb {
 persName {
   color: #0000ff;
 }
-TEI[xml|lang="de"] persName[ref]::after {
+TEI[xml|lang="de"] persName[ref]:hover::after {
   content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/persons/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
 }
-TEI[xml|lang="fr"] persName[ref]::after {
+TEI[xml|lang="fr"] persName[ref]:hover::after {
   content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/persons/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
 }
 physDesc {
@@ -689,10 +690,10 @@ TEI[xml|lang="fr"] physDesc::before {
 placeName {
   color: #00b300;
 }
-TEI[xml|lang="de"] placeName[ref]::after {
+TEI[xml|lang="de"] placeName[ref]:hover::after {
   content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
 }
-TEI[xml|lang="fr"] placeName[ref]::after {
+TEI[xml|lang="fr"] placeName[ref]:hover::after {
   content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
 }
 profileDesc {
@@ -922,16 +923,16 @@ teiHeader::before {
 term {
   color: #ff0000;
 }
-TEI[xml|lang="de"] term[ref^="key"]::after {
+TEI[xml|lang="de"] term[ref^="key"]:hover::after {
   content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/keywords/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
 }
-TEI[xml|lang="fr"] term[ref^="key"]::after {
+TEI[xml|lang="fr"] term[ref^="key"]:hover::after {
   content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/keywords/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
 }
-TEI[xml|lang="de"] term[ref^="lem"]::after {
+TEI[xml|lang="de"] term[ref^="lem"]:hover::after {
   content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/lemmata/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
 }
-TEI[xml|lang="fr"] term[ref^="lem"]::after {
+TEI[xml|lang="fr"] term[ref^="lem"]:hover::after {
   content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/lemmata/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
 }
 keywords term {

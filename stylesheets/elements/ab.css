@@ -1,16 +1,30 @@
 .bordered {
   border: 1px solid black;
   border-collapse: collapse;
+  border-radius: 6px;
 }
 .margin-block {
   display: block;
-  margin: 10px;
+  margin: 12px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+}
+.smart-list-item {
+  display: list-item;
+  padding: 6px;
 }
 ab {
-  background-color: #93a5f5;
   display: block;
-  margin: 10px;
-  width: 90%;
+  margin: 12px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 6px;
 }
 ab::before {
   content: "Anonymer Block [" attr(type) ", " attr(place) "]:\A";

@@ -1,6 +1,6 @@
 lb[break="no"]::before {
-  content: "-/\n";
+  content: "-/\A";
 }
 lb::before {
-  content: "/\n";
+  content: "/\A";
 }
