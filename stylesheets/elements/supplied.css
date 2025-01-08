@@ -1,9 +1,0 @@
-supplied {
-    font-weight: bold;
-}
-supplied::before {
-    content: "[";
-}
-supplied::after {
-    content: "] ";
-}

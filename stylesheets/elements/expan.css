@@ -1,6 +1,0 @@
-expan {
-  color: #a9a9a9;
-}
-expan::before {
-  content: " ";
-}

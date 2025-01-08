@@ -1,6 +1,0 @@
-del {
-    text-decoration: line-through;
-}
-subst > del::after {
-    content: " ";
-}

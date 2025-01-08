@@ -1,6 +1,0 @@
-lb[break="no"]::before {
-  content: "-/\A";
-}
-lb::before {
-  content: "/\A";
-}

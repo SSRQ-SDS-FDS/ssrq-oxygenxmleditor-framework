@@ -1,6 +1,0 @@
-num {
-  color: #9a8100;
-}
-num::hover::after {
-  content: " (value: " attr("value") ")";
-}

@@ -1,6 +1,0 @@
-measureGrp {
-  display: inline;
-}
-row > measureGrp {
-  display: table-row;
-}
