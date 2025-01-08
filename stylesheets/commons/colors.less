@@ -1,28 +1,48 @@
-@back-background-color: #FFFFFF;
-@body-background-color: #FFFFFF;
-@item-odd-background-color: #F2F2F2;
-@item-even-background-color:  #92A8D1;
-@row-odd-background-color:  #F2F2F2;
-@row-even-background-color: #92A8D1;
-@teiHeader-background-color: #FFFFFF;
+/* background colors */
 
-@abbr-text-color: #FF0000;
-@add-text-color: #0000FF;
-@app-text-color: #7B68EE;
-@corr-text-color: #A9A9A9;
-@damage-text-color: #008000;
-@date-text-color: #FFA500;
-@default-text-color: #000000;
-@expan-text-color: #A9A9A9;
-@foreign-text-color: #FFD700;
-@measure-text-color: #FF1493;
-@num-text-color: #9A8100;
-@orgName-text-color: #9400D3;
-@origDate-text-color: #40E0D0;
-@origPlace-text-color: #008000;
-@persName-text-color: #0000FF;
-@placeName-text-color: #00B300;
-@sic-text-color: #FF00FF;
-@term-text-color: #FF0000;
-@time-text-color: #FF8800;
-@unclear-text-color: #008080;
+/* major blocks */
+@back-background-color: white;
+@body-background-color: white;
+@teiHeader-background-color: white;
+
+/* list items and table rows */
+@even-background-color:  #dddddd;
+@odd-background-color: #eeeeee;
+
+/* text colors */
+
+@default-text-color: black;
+
+/* entities */
+@person-text-color: blue;
+@organisation-text-color: purple;
+@place-text-color: green;
+@term-text-color: fuchsia;
+
+/* semantically relevant content */
+@semantic-text-color: orange;
+@date-text-color: @semantic-text-color;
+@time-text-color: @semantic-text-color;
+@num-text-color: @semantic-text-color;
+@measure-text-color: @semantic-text-color;
+
+/* textcritical content */
+@textcritical-text-color: red;
+@abbr-text-color: @textcritical-text-color;
+@expan-text-color: @textcritical-text-color;
+@sic-text-color: @textcritical-text-color;
+@corr-text-color: @textcritical-text-color;
+@addition-text-color: @textcritical-text-color;
+@deletion-text-color: @textcritical-text-color;
+@damage-text-color: @textcritical-text-color;
+@substitution-text-color: @textcritical-text-color;
+@unclear-text-color: @textcritical-text-color;
+@space-text-color: @textcritical-text-color;
+@apparatus-text-color: @textcritical-text-color;
+@note-text-color: @textcritical-text-color;
+
+/* other special parts of the text*/
+@special-text-color: olive;
+@quotation-text-color: @special-text-color;
+@foreign-text-color: @special-text-color;
+@orig-text-color: @special-text-color;

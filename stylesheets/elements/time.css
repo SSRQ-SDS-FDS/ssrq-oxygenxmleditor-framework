@@ -1,21 +1,29 @@
+/* background colors */
+/* major blocks */
+/* list items and table rows */
+/* text colors */
+/* entities */
+/* semantically relevant content */
+/* textcritical content */
+/* other special parts of the text*/
 time {
-  color: #ff8800;
+  color: #ff00ff;
 }
-time[period]::after {
-  content: " (period: " attr("period") ")";
+time[period]:hover::after {
+  content: " (period: " attr(period) ")";
 }
-time[dur-iso]::after {
-  content: " (dur-iso: " attr("dur-iso") ")";
+time[dur-iso]:hover::after {
+  content: " (dur-iso: " attr(dur-iso) ")";
 }
-time[when-custom]::after {
-  content: " (when-custom: " attr("when-custom") ")";
+time[when-custom]:hover::after {
+  content: " (when-custom: " attr(when-custom) ")";
 }
-time[from-custom]::after {
-  content: " (from-custom: " attr("from-custom") ", to-custom: " attr("to-custom") ")";
+time[from-custom]:hover::after {
+  content: " (from-custom: " attr(from-custom) ", to-custom: " attr(to-custom) ")";
 }
-time[notBefore-custom]::after {
-  content: " (notBefore-custom: " attr("notBefore-custom") ")";
+time[notBefore-custom]:hover::after {
+  content: " (notBefore-custom: " attr(notBefore-custom) ")";
 }
-time[notAfter-custom]::after {
-  content: " (notAfter-custom: " attr("notAfter-custom") ")";
+time[notAfter-custom]:hover::after {
+  content: " (notAfter-custom: " attr(notAfter-custom) ")";
 }

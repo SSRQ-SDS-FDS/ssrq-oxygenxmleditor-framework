@@ -30,11 +30,19 @@ ab {
 ab::before {
   content: "Anonymer Block [" attr(type) ", " attr(place) "]:\A";
 }
+/* background colors */
+/* major blocks */
+/* list items and table rows */
+/* text colors */
+/* entities */
+/* semantically relevant content */
+/* textcritical content */
+/* other special parts of the text*/
 abbr {
   color: #ff0000;
 }
 add {
-  color: #0000ff;
+  color: #ff0000;
 }
 additional {
   display: block;
@@ -46,7 +54,7 @@ altIdentifier {
   display: inline;
 }
 app {
-  color: #7b68ee;
+  color: #ff0000;
 }
 author {
   display: block;
@@ -85,10 +93,10 @@ listBibl bibl {
   padding: 6px;
 }
 listBibl bibl:nth-of-type(even) {
-  background-color: #92a8d1;
+  background-color: #dddddd;
 }
 listBibl bibl:nth-of-type(odd) {
-  background-color: #f2f2f2;
+  background-color: #eeeeee;
 }
 bindingDesc {
   display: block;
@@ -125,6 +133,8 @@ TEI[xml|lang="fr"] body::before {
 }
 cell {
   display: table-cell;
+  min-width: 15%;
+  max-width: 75%;
   padding: 6px;
   border-right: 1px solid black;
 }
@@ -151,7 +161,7 @@ TEI[xml|lang="fr"] condition::before {
   font-style: italic;
 }
 corr {
-  color: #a9a9a9;
+  color: #ff0000;
 }
 corr::before {
   content: " ";
@@ -174,7 +184,7 @@ TEI[xml|lang="fr"] custodialHist::before {
 }
 damage {
   content: "[_] ";
-  color: #008000;
+  color: #ff0000;
 }
 date {
   color: #ffa500;
@@ -290,7 +300,7 @@ encodingDesc {
   border-bottom: 1px solid black;
 }
 expan {
-  color: #a9a9a9;
+  color: #ff0000;
 }
 expan::before {
   content: " ";
@@ -307,7 +317,7 @@ foliation {
   display: block;
 }
 foreign {
-  color: #ffd700;
+  color: #808000;
 }
 gap {
   content: "[...] ";
@@ -341,14 +351,14 @@ head[resp]::after {
   content: "]";
 }
 msDesc head {
-  margin-bottom: 12px;
+  margin-bottom: 10px;
 }
 list head {
-  margin-left: -24px;
-  margin-bottom: 6px;
+  margin: 0px 0px 10px -24px;
 }
 table head {
   display: table-caption;
+  margin-bottom: 10px;
 }
 height {
   content: attr(quantity) " " attr(unit);
@@ -405,10 +415,10 @@ item {
   padding: 6px;
 }
 item:nth-of-type(even) {
-  background-color: #92a8d1;
+  background-color: #dddddd;
 }
 item:nth-of-type(odd) {
-  background-color: #f2f2f2;
+  background-color: #eeeeee;
 }
 keywords {
   display: block;
@@ -491,18 +501,18 @@ TEI[xml|lang="fr"] material::before {
   font-style: italic;
 }
 measure {
-  color: #ff1493;
+  color: #ffa500;
 }
-measure::after {
+measure:hover::after {
   content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ")";
 }
-measure[origin]::after {
+measure[origin]:hover::after {
   content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", origin: " attr(origin) ")";
 }
-measure[commodity]::after {
+measure[commodity]:hover::after {
   content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", commodity: " attr(commodity) ")";
 }
-measure[origin][commodity]::after {
+measure[origin][commodity]:hover::after {
   content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", origin: " attr(origin) ", commodity: " attr(commodity) ")";
 }
 measureGrp {
@@ -550,8 +560,12 @@ msItem {
   display: block;
   margin: 12px;
 }
+note {
+  color: #ff0000;
+  font-style: italic;
+}
 num {
-  color: #9a8100;
+  color: #ffa500;
 }
 num:hover::after {
   content: " (value: " attr(value) ")";
@@ -560,22 +574,25 @@ objectDesc {
   display: block;
 }
 orgName {
-  color: #9400d3;
+  color: #800080;
 }
-orgName[ref]::after {
+orgName[ref]:hover::after {
   content: " (ID " attr(ref) ")";
 }
 origin orgName {
   display: block;
   margin: 12px;
 }
-origin orgName::before {
+origin orgName:hover::before {
   content: "Organisation (" attr(ref) ") ";
   font-style: italic;
 }
-origin orgName[role]::before {
+origin orgName[role]:hover::before {
   content: "Organisation (" attr(ref) ") (" attr(role) ") ";
   font-style: italic;
+}
+orig {
+  color: #808000;
 }
 orig::before {
   content: "«";
@@ -586,6 +603,7 @@ orig::after {
 origDate {
   display: block;
   margin: 12px;
+  color: #ffa500;
 }
 TEI[xml|lang="de"] origDate[when-custom]::before {
   content: "Datierung (" attr(type) ") " attr(when-custom) " (" attr(calendar) ") ";
@@ -642,6 +660,7 @@ TEI[xml|lang="fr"] origin::before {
 origPlace {
   display: block;
   margin: 12px;
+  color: #008000;
 }
 TEI[xml|lang="de"] origPlace::before {
   content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") ";
@@ -688,7 +707,7 @@ TEI[xml|lang="fr"] physDesc::before {
   font-style: italic;
 }
 placeName {
-  color: #00b300;
+  color: #008000;
 }
 TEI[xml|lang="de"] placeName[ref]:hover::after {
   content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
@@ -721,11 +740,17 @@ publicationStmt publisher {
   display: block;
   margin: 12px;
 }
+q {
+  color: #808000;
+}
 q::before {
   content: "«";
 }
 q::after {
   content: "»";
+}
+quote {
+  color: #808000;
 }
 quote::before {
   content: "«";
@@ -777,10 +802,10 @@ row:has(> measureGrp) {
   display: table-row-group;
 }
 row:nth-of-type(even) {
-  background-color: #92a8d1;
+  background-color: #dddddd;
 }
 row:nth-of-type(odd) {
-  background-color: #f2f2f2;
+  background-color: #eeeeee;
 }
 seal {
   display: block;
@@ -842,7 +867,7 @@ TEI[xml|lang='fr'] settlement::before {
   font-style: italic;
 }
 sic {
-  color: #ff00ff;
+  color: #ff0000;
 }
 sic::after {
   content: " [sic]";
@@ -921,7 +946,7 @@ teiHeader::before {
   margin-left: 12px;
 }
 term {
-  color: #ff0000;
+  color: #ff00ff;
 }
 TEI[xml|lang="de"] term[ref^="key"]:hover::after {
   content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/keywords/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
@@ -940,10 +965,10 @@ keywords term {
   padding: 6px;
 }
 keywords term:nth-of-type(even) {
-  background-color: #92a8d1;
+  background-color: #dddddd;
 }
 keywords term:nth-of-type(odd) {
-  background-color: #f2f2f2;
+  background-color: #eeeeee;
 }
 text {
   display: block;
@@ -977,24 +1002,24 @@ TEI[xml|lang='fr'] textLang::before {
   font-style: italic;
 }
 time {
-  color: #ff8800;
+  color: #ffa500;
 }
-time[period]::after {
+time[period]:hover::after {
   content: " (period: " attr(period) ")";
 }
-time[dur-iso]::after {
+time[dur-iso]:hover::after {
   content: " (dur-iso: " attr(dur-iso) ")";
 }
-time[when-custom]::after {
+time[when-custom]:hover::after {
   content: " (when-custom: " attr(when-custom) ")";
 }
-time[from-custom]::after {
+time[from-custom]:hover::after {
   content: " (from-custom: " attr(from-custom) ", to-custom: " attr(to-custom) ")";
 }
-time[notBefore-custom]::after {
+time[notBefore-custom]:hover::after {
   content: " (notBefore-custom: " attr(notBefore-custom) ")";
 }
-time[notAfter-custom]::after {
+time[notAfter-custom]:hover::after {
   content: " (notAfter-custom: " attr(notAfter-custom) ")";
 }
 title {
@@ -1021,7 +1046,7 @@ TEI[xml|lang='fr'] titleStmt::before {
   font-size: 20px;
 }
 unclear {
-  color: #008080;
+  color: #ff0000;
 }
 width {
   content: attr(quantity) " " attr(unit);

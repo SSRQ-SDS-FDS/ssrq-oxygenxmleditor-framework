@@ -2,10 +2,10 @@
 @import "../commons/colors.less";
 
 orgName {
-    color: @orgName-text-color;
+    color: @organisation-text-color;
 }
 
-orgName[ref]::after {
+orgName[ref]:hover::after {
     content: " (ID " attr(ref) ")";
 }
 
@@ -13,12 +13,12 @@ origin orgName {
     .margin-block;
 }
 
-origin orgName::before {
+origin orgName:hover::before {
     content: "Organisation (" attr(ref) ") ";
     .additional-text;
 }
 
-origin orgName[role]::before {
+origin orgName[role]:hover::before {
     content: "Organisation (" attr(ref) ") (" attr(role) ") ";
     .additional-text;
 }

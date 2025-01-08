@@ -19,8 +19,16 @@
   display: list-item;
   padding: 6px;
 }
+/* background colors */
+/* major blocks */
+/* list items and table rows */
+/* text colors */
+/* entities */
+/* semantically relevant content */
+/* textcritical content */
+/* other special parts of the text*/
 term {
-  color: #ff0000;
+  color: #00ff00;
 }
 TEI[xml|lang="de"] term[ref^="key"]:hover::after {
   content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/keywords/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";

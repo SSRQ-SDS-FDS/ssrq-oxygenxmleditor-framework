@@ -1,15 +1,15 @@
 measure {
   color: #ff1493;
 }
-measure::after {
-  content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ")";
+measure:hover::after {
+  content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ")";
 }
-measure[origin]::after {
-  content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ", origin: " attr(origin) ")";
+measure[origin]:hover::after {
+  content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", origin: " attr(origin) ")";
 }
-measure[commodity]::after {
-  content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ", commodity: " attr(commodity) ")";
+measure[commodity]:hover::after {
+  content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", commodity: " attr(commodity) ")";
 }
-measure[origin][commodity]::after {
-  content: " (" attr("quantity") " " attr("unit") ", type: " attr("type") ", origin: " attr(origin) ", commodity: " attr(commodity) ")";
+measure[origin][commodity]:hover::after {
+  content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", origin: " attr(origin) ", commodity: " attr(commodity) ")";
 }

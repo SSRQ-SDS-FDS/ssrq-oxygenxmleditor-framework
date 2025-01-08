@@ -19,21 +19,29 @@
   display: list-item;
   padding: 6px;
 }
+/* background colors */
+/* major blocks */
+/* list items and table rows */
+/* text colors */
+/* entities */
+/* semantically relevant content */
+/* textcritical content */
+/* other special parts of the text*/
 orgName {
   color: #9400d3;
 }
-orgName[ref]::after {
-  content: " (ID " attr("ref") ")";
+orgName[ref]:hover::after {
+  content: " (ID " attr(ref) ")";
 }
 origin orgName {
   display: block;
   margin: 12px;
 }
-origin orgName::before {
-  content: "Organisation (" attr("ref") ") ";
+origin orgName:hover::before {
+  content: "Organisation (" attr(ref) ") ";
   font-style: italic;
 }
-origin orgName[role]::before {
-  content: "Organisation (" attr("ref") ") (" attr("role") ") ";
+origin orgName[role]:hover::before {
+  content: "Organisation (" attr(ref) ") (" attr(role) ") ";
   font-style: italic;
 }

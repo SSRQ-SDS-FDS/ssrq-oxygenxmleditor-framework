@@ -4,26 +4,26 @@ time {
     color: @time-text-color;
 }
 
-time[period]::after {
+time[period]:hover::after {
     content: " (period: " attr(period) ")";
 }
 
-time[dur-iso]::after {
+time[dur-iso]:hover::after {
     content: " (dur-iso: " attr(dur-iso) ")";
 }
 
-time[when-custom]::after {
+time[when-custom]:hover::after {
     content: " (when-custom: " attr(when-custom) ")";
 }
 
-time[from-custom]::after {
-    content: " (from-custom: " attr(from-custom) ", to-custom: " attr(to-custom)  ")";
+time[from-custom]:hover::after {
+    content: " (from-custom: " attr(from-custom) ", to-custom: " attr(to-custom) ")";
 }
 
-time[notBefore-custom]::after {
+time[notBefore-custom]:hover::after {
     content: " (notBefore-custom: " attr(notBefore-custom) ")";
 }
 
-time[notAfter-custom]::after {
+time[notAfter-custom]:hover::after {
     content: " (notAfter-custom: " attr(notAfter-custom) ")";
 }

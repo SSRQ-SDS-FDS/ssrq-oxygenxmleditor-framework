@@ -1,11 +1,11 @@
 .bordered {
   border: 1px solid black;
   border-collapse: collapse;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 .margin-block {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 .additional-text {
   font-style: italic;
@@ -13,21 +13,27 @@
 .additional-heading {
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
 }
 .smart-list-item {
   display: list-item;
-  padding: 5px;
-  margin-bottom: 5px;
+  padding: 6px;
 }
+/* background colors */
+/* major blocks */
+/* list items and table rows */
+/* text colors */
+/* entities */
+/* semantically relevant content */
+/* textcritical content */
+/* other special parts of the text*/
 listBibl bibl {
   display: list-item;
-  padding: 5px;
-  margin-bottom: 5px;
+  padding: 6px;
 }
 listBibl bibl:nth-of-type(even) {
-  background-color: #f2f2f2;
+  background-color: #92a8d1;
 }
 listBibl bibl:nth-of-type(odd) {
-  background-color: #92a8d1;
+  background-color: #f2f2f2;
 }

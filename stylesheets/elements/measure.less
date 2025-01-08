@@ -4,21 +4,21 @@ measure {
     color: @measure-text-color;
 }
 
-measure::after {
+measure:hover::after {
     content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ")", 
 }
 
-measure[origin]::after {
+measure[origin]:hover::after {
     content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", origin: "
  attr(origin) ")";
 }
 
-measure[commodity]::after {
+measure[commodity]:hover::after {
     content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", commodity: "
  attr(commodity) ")";
 }
 
-measure[origin][commodity]::after {
+measure[origin][commodity]:hover::after {
     content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ", origin: "
  attr(origin) ", commodity: " attr(commodity) ")";
 }
