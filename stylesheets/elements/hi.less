@@ -1,5 +1,61 @@
+@import "../commons/classes.less";
+@import "../commons/sizes.less";
+
+hi {
+    display: inline;
+}
+
+hi[rend = "center"] {
+    text-align: center;
+    width: 100%;
+}
+
+hi[rend = "font_change"] {
+    font-family: Monospaced;
+}
+
+hi[rend = "framed"] {
+    display: inline-block;
+    .bordered;
+}
+
+hi[rend = "italic"] {
+    font-style: italic;
+}
+
+hi[rend = "left"] {
+    text-align: left;
+    width: 100%;
+}
+
+hi[rend = "right"] {
+    text-align: right;
+    width: 100%;
+}
+
+hi[rend = "outdent"] {
+    text-indent: -@normal-size;
+    margin-left: @normal-size;
+}
+
+hi[rend="rotated_90"]:hover::after {
+    content: " (rotated 90°) ";
+}
+
+hi[rend="rotated_180"]:hover::after {
+    content: " (rotated 180°) ";
+}
+
+hi[rend="rotated_270"]:hover::after {
+    content: " (rotated 270°) ";
+}
+
+hi[rend = "rubricated"] {
+    color: red;
+}
+
 hi[rend = "sup"] {
-    vertical-align: super;
+    .superscript;
 }
 
 hi[rend = "underline"] {

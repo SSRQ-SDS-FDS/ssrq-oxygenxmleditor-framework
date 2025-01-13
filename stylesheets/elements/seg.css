@@ -1,6 +1,42 @@
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 6px;
+}
+.margin-block {
+  display: block;
+  margin: 12px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+}
+.smart-list-item {
+  display: list-item;
+  padding: 6px;
+}
+.superscript {
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
+}
+.additional-superscript {
+  font-style: italic;
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
+}
 seg {
   display: block;
+  margin: 12px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 6px;
 }
-seg::before {
+seg[n]::before {
   content: "[" attr(n) "]";
 }

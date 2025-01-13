@@ -1,6 +1,12 @@
+/* background colors */
+/* major blocks */
+/* list items and table rows */
+/* text colors */
+/* entities */
+/* semantically relevant content */
+/* textcritical content */
+/* other special parts of the text*/
 del {
-    text-decoration: line-through;
-}
-subst > del::after {
-    content: " ";
+  color: #ff0000;
+  text-decoration: line-through;
 }

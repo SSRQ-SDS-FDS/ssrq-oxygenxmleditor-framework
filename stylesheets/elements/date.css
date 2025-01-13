@@ -1,11 +1,19 @@
+/* background colors */
+/* major blocks */
+/* list items and table rows */
+/* text colors */
+/* entities */
+/* semantically relevant content */
+/* textcritical content */
+/* other special parts of the text*/
 .bordered {
   border: 1px solid black;
   border-collapse: collapse;
-  border-radius: 5px;
+  border-radius: 6px;
 }
 .margin-block {
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 .additional-text {
   font-style: italic;
@@ -13,7 +21,22 @@
 .additional-heading {
   font-style: italic;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 20px;
+}
+.smart-list-item {
+  display: list-item;
+  padding: 6px;
+}
+.superscript {
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
+}
+.additional-superscript {
+  font-style: italic;
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
 }
 date {
   color: #ffa500;
@@ -21,7 +44,7 @@ date {
 publicationStmt date {
   color: #000000;
   display: block;
-  margin: 10px;
+  margin: 12px;
 }
 TEI[xml|lang='de'] publicationStmt date[type='electronic'] {
   content: "Publikationsdatum (elektronisch): " attr(when-custom);
@@ -38,4 +61,28 @@ TEI[xml|lang='de'] publicationStmt date[type='print'] {
 TEI[xml|lang='fr'] publicationStmt date[type='print'] {
   content: "Date de publication (imprimé) : " attr(when-custom);
   font-style: italic;
+}
+date[dur-iso]:hover::after {
+  content: " (dur-iso: " attr(dur-iso) ")";
+}
+date[period]:hover::after {
+  content: " (period: " attr(period) ")";
+}
+date[dur-iso][period]:hover::after {
+  content: " (dur-iso: " attr(dur-iso) ", period:" attr(period) ")";
+}
+date[when-custom]:hover::after {
+  content: " (when-custom: " attr(when-custom) " " attr(calendar) ")";
+}
+date[from-custom]:hover::after {
+  content: " (from-custom: " attr(from-custom) ", to-custom: " attr(to-custom) " " attr(calendar) ")";
+}
+date[notBefore-custom]:hover::after {
+  content: " (notBefore-custom: " attr(notBefore-custom) " " attr(calendar) ")";
+}
+date[notAfter-custom]:hover::after {
+  content: " (notAfter-custom: " attr(notAfter-custom) " " attr(calendar) ")";
+}
+date[notAfter-custom][notBefore-custom]:hover::after {
+  content: " (notBefore-custom: " attr(notBefore-custom) " & notAfter-custom: " attr(notAfter-custom) " " attr(calendar) ")";
 }

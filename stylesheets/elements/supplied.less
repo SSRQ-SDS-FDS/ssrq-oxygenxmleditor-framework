@@ -1,11 +1,15 @@
+@import "../commons/colors.less";
+
 supplied {
-    font-weight: bold;
+    color: @supplied-text-color;
 }
 
 supplied::before {
+    color: @supplied-text-color;
     content: "[";
 }
 
 supplied::after {
+    color: @supplied-text-color;
     content: "] ";
 }

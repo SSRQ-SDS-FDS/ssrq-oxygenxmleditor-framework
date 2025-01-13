@@ -1,7 +1,14 @@
+@import "../commons/colors.less";
+@import "../commons/classes.less";
+
 subst::before {
+    color: @substitution-text-color;
     content: "*";
+    .superscript;
 }
 
 subst::after {
+    color: @substitution-text-color;
     content: "*";
+    .superscript;
 }

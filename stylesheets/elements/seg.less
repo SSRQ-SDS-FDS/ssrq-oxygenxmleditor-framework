@@ -1,7 +1,10 @@
+@import "../commons/classes.less";
+
 seg {
-    display: block;
+    .margin-block;
+    .bordered;
 }
 
-seg::before {
+seg[n]::before {
     content: "[" attr(n) "]";
 }

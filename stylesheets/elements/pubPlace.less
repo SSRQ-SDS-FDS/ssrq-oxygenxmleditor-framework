@@ -1,2 +1,15 @@
+@import "../commons/colors.less";
+
 pubPlace {
+    color: @place-text-color;
+}
+
+TEI[xml|lang = "de"] pubPlace[ref]:hover::after {
+    // ToDo: Finale API-URL einfügen!
+    content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
+}
+
+TEI[xml|lang = "fr"] pubPlace[ref]:hover::after {
+    // ToDo: Finale API-URL einfügen!
+    content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
 }

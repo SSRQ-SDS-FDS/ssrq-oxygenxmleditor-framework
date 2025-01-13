@@ -1,0 +1,6 @@
+TEI[xml|lang="de"] cb {
+  content: "\A // [Spalte: " attr(n) "] ";
+}
+TEI[xml|lang="fr"] cb {
+  content: "\A // [Colonne : " attr(n) "] ";
+}

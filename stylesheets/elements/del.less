@@ -1,7 +1,6 @@
-del {
-    text-decoration: line-through;
-}
+@import "../commons/colors.less";
 
-subst > del::after {
-    content: " ";
+del {
+    color: @deletion-text-color;
+    text-decoration: line-through;
 }

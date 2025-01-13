@@ -19,6 +19,17 @@
   display: list-item;
   padding: 6px;
 }
+.superscript {
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
+}
+.additional-superscript {
+  font-style: italic;
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
+}
 ab {
   display: block;
   margin: 12px;
@@ -27,5 +38,5 @@ ab {
   border-radius: 6px;
 }
 ab::before {
-  content: "Anonymer Block [" attr(type) ", " attr(place) "]:\A";
+  content: "ab [" attr(type) ", " attr(place) "]:\A";
 }

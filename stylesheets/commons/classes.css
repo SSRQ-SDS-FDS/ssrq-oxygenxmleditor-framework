@@ -19,3 +19,14 @@
   display: list-item;
   padding: 6px;
 }
+.superscript {
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
+}
+.additional-superscript {
+  font-style: italic;
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
+}

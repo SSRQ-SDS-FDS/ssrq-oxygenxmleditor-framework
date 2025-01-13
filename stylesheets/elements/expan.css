@@ -1,6 +1,17 @@
+/* background colors */
+/* major blocks */
+/* list items and table rows */
+/* text colors */
+/* entities */
+/* semantically relevant content */
+/* textcritical content */
+/* other special parts of the text*/
 expan {
-  color: #a9a9a9;
+  color: #ff0000;
 }
 expan::before {
-  content: " ";
+  content: "[= ";
+}
+expan::after {
+  content: "]";
 }

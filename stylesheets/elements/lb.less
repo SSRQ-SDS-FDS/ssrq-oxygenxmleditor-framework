@@ -1,7 +1,15 @@
+lb::before {
+    content: "/\A";
+}
+
 lb[break = "no"]::before {
     content: "-/\A";
 }
 
-lb::before {
-    content: "/\A";
+head lb::before {
+    content: " / ";
+}
+
+lb:first-of-type::before {
+    content: "";
 }

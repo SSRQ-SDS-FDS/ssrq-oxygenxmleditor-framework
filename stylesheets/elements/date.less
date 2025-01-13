@@ -29,3 +29,37 @@ TEI[xml|lang = 'fr'] publicationStmt date[type = 'print'] {
     content: "Date de publication (imprimé) : " attr(when-custom);
     .additional-text;
 }
+
+date[dur-iso]:hover::after {
+    content: " (dur-iso: " attr(dur-iso) ")";
+}
+
+date[period]:hover::after {
+    content: " (period: " attr(period) ")";
+}
+
+date[dur-iso][period]:hover::after {
+    content: " (dur-iso: " attr(dur-iso) ", period:" attr(period) ")";
+}
+
+date[when-custom]:hover::after {
+        content: " (when-custom: " attr(when-custom) " " attr(calendar) ")";
+}
+
+date[from-custom]:hover::after {
+        content: " (from-custom: " attr(from-custom) ", to-custom: " attr(to-custom) " "
+        attr(calendar) ")";
+}
+
+date[notBefore-custom]:hover::after {
+        content: " (notBefore-custom: " attr(notBefore-custom) " "attr(calendar) ")";
+}
+
+date[notAfter-custom]:hover::after {
+        content: " (notAfter-custom: " attr(notAfter-custom) " "attr(calendar) ")";
+}
+
+date[notAfter-custom][notBefore-custom]:hover::after {
+        content: " (notBefore-custom: " attr(notBefore-custom) " & notAfter-custom: "
+        attr(notAfter-custom) " " attr(calendar) ")";
+}

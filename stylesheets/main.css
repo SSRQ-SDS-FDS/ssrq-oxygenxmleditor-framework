@@ -20,6 +20,17 @@
   display: list-item;
   padding: 6px;
 }
+.superscript {
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
+}
+.additional-superscript {
+  font-style: italic;
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
+}
 ab {
   display: block;
   margin: 12px;
@@ -28,7 +39,7 @@ ab {
   border-radius: 6px;
 }
 ab::before {
-  content: "Anonymer Block [" attr(type) ", " attr(place) "]:\A";
+  content: "ab [" attr(type) ", " attr(place) "]:\A";
 }
 /* background colors */
 /* major blocks */
@@ -54,7 +65,23 @@ altIdentifier {
   display: inline;
 }
 app {
+  display: inline;
   color: #ff0000;
+  counter-increment: app-counter;
+}
+app::before {
+  content: counter(app-counter, lower-alpha) "-";
+  font-style: italic;
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
+}
+app::after {
+  content: "-" counter(app-counter, lower-alpha);
+  font-style: italic;
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
 }
 author {
   display: block;
@@ -87,6 +114,9 @@ TEI[xml|lang="fr"] back::before {
   font-style: italic;
   font-weight: bold;
   font-size: 20px;
+}
+bibl[xml|id]::after {
+  content: " [xml:id = " attr("xml|id") "]";
 }
 listBibl bibl {
   display: list-item;
@@ -131,6 +161,12 @@ TEI[xml|lang="fr"] body::before {
   font-weight: bold;
   font-size: 20px;
 }
+TEI[xml|lang="de"] cb {
+  content: "\A // [Spalte: " attr(n) "] ";
+}
+TEI[xml|lang="fr"] cb {
+  content: "\A // [Colonne : " attr(n) "] ";
+}
 cell {
   display: table-cell;
   min-width: 15%;
@@ -148,6 +184,9 @@ cell[rend='align-bottom'] {
 cell::last-of-type {
   border-right: none;
 }
+choice {
+  display: contents;
+}
 condition {
   content: " (" attr(agent) ")";
   display: block;
@@ -163,8 +202,8 @@ TEI[xml|lang="fr"] condition::before {
 corr {
   color: #ff0000;
 }
-corr::before {
-  content: " ";
+corr::after {
+  content: " [corr]";
 }
 custEvent {
   display: block;
@@ -183,7 +222,6 @@ TEI[xml|lang="fr"] custodialHist::before {
   font-style: italic;
 }
 damage {
-  content: "[_] ";
   color: #ff0000;
 }
 date {
@@ -210,13 +248,32 @@ TEI[xml|lang='fr'] publicationStmt date[type='print'] {
   content: "Date de publication (imprimé) : " attr(when-custom);
   font-style: italic;
 }
+date[dur-iso]:hover::after {
+  content: " (dur-iso: " attr(dur-iso) ")";
+}
+date[period]:hover::after {
+  content: " (period: " attr(period) ")";
+}
+date[dur-iso][period]:hover::after {
+  content: " (dur-iso: " attr(dur-iso) ", period:" attr(period) ")";
+}
+date[when-custom]:hover::after {
+  content: " (when-custom: " attr(when-custom) " " attr(calendar) ")";
+}
+date[from-custom]:hover::after {
+  content: " (from-custom: " attr(from-custom) ", to-custom: " attr(to-custom) " " attr(calendar) ")";
+}
+date[notBefore-custom]:hover::after {
+  content: " (notBefore-custom: " attr(notBefore-custom) " " attr(calendar) ")";
+}
+date[notAfter-custom]:hover::after {
+  content: " (notAfter-custom: " attr(notAfter-custom) " " attr(calendar) ")";
+}
+date[notAfter-custom][notBefore-custom]:hover::after {
+  content: " (notBefore-custom: " attr(notBefore-custom) " & notAfter-custom: " attr(notAfter-custom) " " attr(calendar) ")";
+}
 del {
-  text-decoration: line-through;
-}
-subst > del::after {
-  content: " ";
-}
-delSpan {
+  color: #ff0000;
   text-decoration: line-through;
 }
 dimensions {
@@ -265,6 +322,10 @@ div[type][n]::before {
   font-weight: bold;
   font-size: 20px;
 }
+docImprint {
+  display: block;
+  margin: 12px;
+}
 editor {
   display: block;
   margin: 12px;
@@ -303,10 +364,25 @@ expan {
   color: #ff0000;
 }
 expan::before {
-  content: " ";
+  content: "[= ";
+}
+expan::after {
+  content: "]";
 }
 extent {
   display: block;
+}
+figure {
+  content: "[figure: " attr(type) "]";
+}
+figure[hand] {
+  content: "[figure: " attr(type) " " attr(hand) "]";
+}
+figure[place] {
+  content: "[figure: " attr(type) " " attr(place) "]";
+}
+figure[hand][place] {
+  content: "[figure: " attr(type) " " attr(hand) " " attr(place) "]";
 }
 fileDesc {
   display: block;
@@ -319,8 +395,17 @@ foliation {
 foreign {
   color: #808000;
 }
+fw {
+  color: #808000;
+}
 gap {
-  content: "[...] ";
+  content: " [...] ";
+  color: #ff0000;
+}
+graphic {
+  content: attr(url, url);
+  max-width: 75%;
+  max-heigh: 75%;
 }
 handDesc {
   display: block;
@@ -338,6 +423,11 @@ handNote {
   content: attr("xml:id");
   display: block;
   margin: 12px;
+}
+handShift {
+  content: "[" attr(hand) "]";
+  font-style: italic;
+  color: #ff0000;
 }
 head {
   display: block;
@@ -373,8 +463,53 @@ TEI[xml|lang="fr"] height::before {
   content: "Hauteur : ";
   font-style: italic;
 }
+hi {
+  display: inline;
+}
+hi[rend="center"] {
+  text-align: center;
+  width: 100%;
+}
+hi[rend="font_change"] {
+  font-family: Monospaced;
+}
+hi[rend="framed"] {
+  display: inline-block;
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 6px;
+}
+hi[rend="italic"] {
+  font-style: italic;
+}
+hi[rend="left"] {
+  text-align: left;
+  width: 100%;
+}
+hi[rend="right"] {
+  text-align: right;
+  width: 100%;
+}
+hi[rend="outdent"] {
+  text-indent: -12px;
+  margin-left: 12px;
+}
+hi[rend="rotated_90"]:hover::after {
+  content: " (rotated 90°) ";
+}
+hi[rend="rotated_180"]:hover::after {
+  content: " (rotated 180°) ";
+}
+hi[rend="rotated_270"]:hover::after {
+  content: " (rotated 270°) ";
+}
+hi[rend="rubricated"] {
+  color: red;
+}
 hi[rend="sup"] {
-  vertical-align: super;
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
 }
 hi[rend="underline"] {
   text-decoration: underline;
@@ -426,14 +561,23 @@ keywords {
   padding: 12px 12px 12px 24px;
   list-style-type: none;
 }
-lb[break="no"]::before {
-  content: "-/\A";
+label {
+  color: #808000;
 }
 lb::before {
   content: "/\A";
 }
-lem::after {
-  content: " ";
+lb[break="no"]::before {
+  content: "-/\A";
+}
+head lb::before {
+  content: " / ";
+}
+lb:first-of-type::before {
+  content: "";
+}
+lem {
+  text-decoration: underline;
 }
 licence {
   display: block;
@@ -683,8 +827,7 @@ p {
   margin: 12px;
 }
 pb {
-  page-break-after: always;
-  content: "\n//[" attr(n) "] ";
+  content: "\A // [" attr(n) "] ";
 }
 persName {
   color: #0000ff;
@@ -715,6 +858,12 @@ TEI[xml|lang="de"] placeName[ref]:hover::after {
 TEI[xml|lang="fr"] placeName[ref]:hover::after {
   content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
 }
+precision {
+  content: "";
+}
+precision:hover::after {
+  content: "(precision: " attr(match) " = " attr(precision) ")";
+}
 profileDesc {
   display: block;
   margin: 12px;
@@ -740,6 +889,15 @@ publicationStmt publisher {
   display: block;
   margin: 12px;
 }
+pubPlace {
+  color: #008000;
+}
+TEI[xml|lang="de"] pubPlace[ref]:hover::after {
+  content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
+}
+TEI[xml|lang="fr"] pubPlace[ref]:hover::after {
+  content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
+}
 q {
   color: #808000;
 }
@@ -758,11 +916,17 @@ quote::before {
 quote::after {
   content: "»";
 }
-rdg {
-  font-style: italic;
+rdg::before {
+  content: "[";
 }
 rdg::after {
-  content: " ";
+  content: "]";
+}
+ref {
+  display: inline;
+}
+ref[target]::hover:after {
+  content: " (" attr(target) ")";
 }
 editorialDecl ref {
   content: attr(target);
@@ -833,8 +997,12 @@ TEI[xml|lang="fr"] sealDesc::before {
 }
 seg {
   display: block;
+  margin: 12px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 6px;
 }
-seg::before {
+seg[n]::before {
   content: "[" attr(n) "]";
 }
 seriesStmt {
@@ -873,7 +1041,14 @@ sic::after {
   content: " [sic]";
 }
 signed {
-  content: "\n";
+  display: block;
+  margin: 12px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 6px;
+}
+signed::before {
+  content: "signed\A";
 }
 sourceDesc {
   display: block;
@@ -892,24 +1067,35 @@ TEI[xml|lang='fr'] sourceDesc::before {
   font-size: 20px;
 }
 space {
-  content: "..";
+  content: "...";
+  color: #ff0000;
 }
 subst::before {
+  color: #ff0000;
   content: "*";
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
 }
 subst::after {
+  color: #ff0000;
   content: "*";
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
 }
 summary {
   display: block;
 }
 supplied {
-  font-weight: bold;
+  color: #ff0000;
 }
 supplied::before {
+  color: #ff0000;
   content: "[";
 }
 supplied::after {
+  color: #ff0000;
   content: "] ";
 }
 support {
@@ -930,6 +1116,7 @@ TEI {
   margin: 10px;
   font-family: "Lexia Fontes, Libertinus Serif";
   font-size: 16px;
+  counter-reset: app-counter;
 }
 teiHeader {
   border: 1px solid black;

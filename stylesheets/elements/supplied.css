@@ -1,9 +1,19 @@
+/* background colors */
+/* major blocks */
+/* list items and table rows */
+/* text colors */
+/* entities */
+/* semantically relevant content */
+/* textcritical content */
+/* other special parts of the text*/
 supplied {
-    font-weight: bold;
+  color: #ff0000;
 }
 supplied::before {
-    content: "[";
+  color: #ff0000;
+  content: "[";
 }
 supplied::after {
-    content: "] ";
+  color: #ff0000;
+  content: "] ";
 }

@@ -1,6 +1,83 @@
-hi[rend = "sup"] {
-    vertical-align: super;
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 6px;
 }
-hi[rend = "underline"] {
-    text-decoration: underline;
+.margin-block {
+  display: block;
+  margin: 12px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+}
+.smart-list-item {
+  display: list-item;
+  padding: 6px;
+}
+.superscript {
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
+}
+.additional-superscript {
+  font-style: italic;
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
+}
+hi {
+  display: inline;
+}
+hi[rend="center"] {
+  text-align: center;
+  width: 100%;
+}
+hi[rend="font_change"] {
+  font-family: Monospaced;
+}
+hi[rend="framed"] {
+  display: inline-block;
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 6px;
+}
+hi[rend="italic"] {
+  font-style: italic;
+}
+hi[rend="left"] {
+  text-align: left;
+  width: 100%;
+}
+hi[rend="right"] {
+  text-align: right;
+  width: 100%;
+}
+hi[rend="outdent"] {
+  text-indent: -12px;
+  margin-left: 12px;
+}
+hi[rend="rotated_90"]:hover::after {
+  content: " (rotated 90°) ";
+}
+hi[rend="rotated_180"]:hover::after {
+  content: " (rotated 180°) ";
+}
+hi[rend="rotated_270"]:hover::after {
+  content: " (rotated 270°) ";
+}
+hi[rend="rubricated"] {
+  color: red;
+}
+hi[rend="sup"] {
+  vertical-align: text-top;
+  font-size: 75%;
+  font-weight: bold;
+}
+hi[rend="underline"] {
+  text-decoration: underline;
 }

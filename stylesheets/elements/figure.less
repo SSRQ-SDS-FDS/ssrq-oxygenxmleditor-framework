@@ -1,2 +1,15 @@
 figure {
+    content: "[figure: " attr(type) "]";
+}
+
+figure[hand] {
+    content: "[figure: " attr(type) " " attr(hand) "]";
+}
+
+figure[place] {
+    content: "[figure: " attr(type) " " attr(place) "]";
+}
+
+figure[hand][place] {
+    content: "[figure: " attr(type) " " attr(hand) " " attr(place) "]";
 }

@@ -27,13 +27,16 @@
 /* semantically relevant content */
 /* textcritical content */
 /* other special parts of the text*/
+bibl[xml|id]::after {
+  content: " [xml:id = " attr("xml|id") "]";
+}
 listBibl bibl {
   display: list-item;
   padding: 6px;
 }
 listBibl bibl:nth-of-type(even) {
-  background-color: #92a8d1;
+  background-color: #dddddd;
 }
 listBibl bibl:nth-of-type(odd) {
-  background-color: #f2f2f2;
+  background-color: #eeeeee;
 }

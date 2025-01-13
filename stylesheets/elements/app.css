@@ -6,6 +6,50 @@
 /* semantically relevant content */
 /* textcritical content */
 /* other special parts of the text*/
+.bordered {
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 6px;
+}
+.margin-block {
+  display: block;
+  margin: 12px;
+}
+.additional-text {
+  font-style: italic;
+}
+.additional-heading {
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+}
+.smart-list-item {
+  display: list-item;
+  padding: 6px;
+}
+.superscript {
+  vertical-align: text-top;
+  font-size: 75%;
+}
+.additional-superscript {
+  font-style: italic;
+  vertical-align: text-top;
+  font-size: 75%;
+}
 app {
+  display: inline;
   color: #ff0000;
+  counter-increment: app-counter;
+}
+app::before {
+  content: counter(app-counter, lower-alpha) "-";
+  font-style: italic;
+  vertical-align: text-top;
+  font-size: 75%;
+}
+app::after {
+  content: "-" counter(app-counter, lower-alpha);
+  font-style: italic;
+  vertical-align: text-top;
+  font-size: 75%;
 }

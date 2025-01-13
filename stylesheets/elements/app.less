@@ -1,5 +1,18 @@
 @import "../commons/colors.less";
+@import "../commons/classes.less";
 
 app {
+    display: inline;
     color: @apparatus-text-color;
+    counter-increment: app-counter;
+}
+
+app::before {
+    content: counter(app-counter, lower-alpha) "-";
+    .additional-superscript;
+}
+
+app::after {
+    content: "-" counter(app-counter, lower-alpha);
+    .additional-superscript;
 }
