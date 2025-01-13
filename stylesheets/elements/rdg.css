@@ -1,6 +1,0 @@
-rdg::before {
-  content: "[";
-}
-rdg::after {
-  content: "]";
-}

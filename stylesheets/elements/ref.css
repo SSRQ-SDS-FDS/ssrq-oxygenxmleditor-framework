@@ -1,9 +1,0 @@
-ref {
-  display: inline;
-}
-ref[target]::hover:after {
-  content: " (" attr(target) ")";
-}
-editorialDecl ref {
-  content: attr(target);
-}

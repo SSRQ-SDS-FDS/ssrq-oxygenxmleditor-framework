@@ -1,6 +1,0 @@
-precision {
-  content: "";
-}
-precision:hover::after {
-  content: "(precision: " attr(match) " = " attr(precision) ")";
-}
