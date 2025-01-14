@@ -31,17 +31,65 @@
             <xsl:if test="exists($result)">
                 <xsl:for-each select="$result?*">
                     <xsl:sort select="completion:get-entity-name(., $context, $doc-lang)"></xsl:sort>
-                    <xsl:sequence select="completion:create-item-from-result(.?id, completion:get-entity-name(., $context, $doc-lang))"/>
+                    <xsl:sequence select="completion:create-item-from-result(.?id, completion:create-tooltip($context, ., $doc-lang))"/>
                 </xsl:for-each>
             </xsl:if>
         </items>
     </xsl:template>
     
+    <xsl:function name="completion:create-tooltip" as="xs:string">
+        <xsl:param name="context" as="element()"/>
+        <xsl:param name="data" as="map(*)"/>
+        <xsl:param name="lang" as="xs:string"/>
+        <xsl:sequence>
+            <xsl:variable name="name" select="completion:get-entity-name($data, $context, $lang)"/>
+            <xsl:choose>
+                <xsl:when test="$context/self::tei:persName">
+                    <xsl:variable name="date-start" as="xs:string?" select="
+                        if (exists($data?birth)) 
+                        then 
+                            '*' || $data?birth 
+                        else if (exists($data?first_mention)) 
+                        then 
+                            $data?first_mention 
+                        else ()"/>
+                    <xsl:variable name="date-end" as="xs:string?" select="
+                        if (exists($data?death)) 
+                        then 
+                        '†' || $data?death 
+                        else if (exists($data?last_mention)) 
+                        then 
+                        $data?last_mention 
+                        else ()"/>
+                    <xsl:choose>
+                        <xsl:when test="$date-start or $date-end">
+                            <xsl:value-of select="string-join(($name, $data?sex), ', ') || ' (' || string-join(($date-start, $date-end), '-') || ')'"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                            <xsl:value-of select="string-join(($name, $data?sex), ', ')"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:when>
+                <xsl:when test="$context/self::tei:placeName">
+                    <xsl:variable name="place-type" select="($data($lang || '_place_types'), $data?de_place_types, $data?fr_place_types)[1]"/>
+                    <xsl:value-of select="$name || ' (' || string-join($place-type, ', ') || ')'"/>
+                </xsl:when>
+                <xsl:when test="$context/self::tei:term">
+                    <xsl:variable name="definition" select="($data($lang || '_definition'), $data?de_definition, $data?fr_definition)[1]"/>
+                    <xsl:value-of select="$name || ' (' || $definition || ')'"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="$name"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </xsl:sequence>
+    </xsl:function>
+    
     <xsl:function name="completion:create-item-from-result" as="element()">
         <xsl:param name="id" as="xs:string"/>
-        <xsl:param name="name" as="xs:string"/>
+        <xsl:param name="tooltip" as="xs:string"/>
         <xsl:sequence>
-            <item value="{$id}" annotation="{$name}"/>
+            <item value="{$id}" annotation="{$tooltip}"/>
         </xsl:sequence>
     </xsl:function>
     
