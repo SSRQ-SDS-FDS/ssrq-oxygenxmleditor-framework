@@ -1,2 +1,17 @@
+@import "../commons/colors.less";
+
 anchor {
+    content: "]";
+}
+
+anchor[xml|id ^= "add"] {
+    color: @addition-text-color;
+}
+
+anchor[xml|id ^= "del"] {
+    color: @deletion-text-color;
+}
+
+anchor[xml|id ^= "damage"] {
+    color: @damage-text-color;
 }

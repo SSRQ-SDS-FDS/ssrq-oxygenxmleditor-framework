@@ -58,11 +58,27 @@ add {
 additional {
   display: block;
 }
+addSpan {
+  content: "[";
+  color: #ff0000;
+}
 adminInfo {
   display: block;
 }
 altIdentifier {
   display: inline;
+}
+anchor {
+  content: "]";
+}
+anchor[xml|id^="add"] {
+  color: #ff0000;
+}
+anchor[xml|id^="del"] {
+  color: #ff0000;
+}
+anchor[xml|id^="damage"] {
+  color: #ff0000;
 }
 app {
   display: inline;
@@ -224,6 +240,10 @@ TEI[xml|lang="fr"] custodialHist::before {
 damage {
   color: #ff0000;
 }
+damageSpan {
+  content: "[";
+  color: #ff0000;
+}
 date {
   color: #ffa500;
 }
@@ -275,6 +295,10 @@ date[notAfter-custom][notBefore-custom]:hover::after {
 del {
   color: #ff0000;
   text-decoration: line-through;
+}
+delSpan {
+  content: "[";
+  color: #ff0000;
 }
 dimensions {
   display: block;
