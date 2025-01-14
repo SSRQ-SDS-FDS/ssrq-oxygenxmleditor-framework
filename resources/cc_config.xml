@@ -16,6 +16,10 @@
         <insertAttribute name="xml:id" value="id-ssrq-${uuid}"/>
     </elementProposals>
     
+    <valueProposals path="*/@hand">
+        <xslt href="../xsl/propose_ids.xsl" useCache="false" action="append"/>
+    </valueProposals>
+    
     <valueProposals path="tei:listBibl/tei:bibl/@xml:id">
         <xslt href="../xsl/create_uuid.xsl" useCache="false" action="replace"/>
     </valueProposals>
