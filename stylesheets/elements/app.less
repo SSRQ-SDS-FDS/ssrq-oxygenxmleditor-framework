@@ -8,11 +8,11 @@ app {
 }
 
 app::before {
-    content: counter(app-counter, lower-alpha) "-";
+    content: "app-";
     .additional-superscript;
 }
 
 app::after {
-    content: "-" counter(app-counter, lower-alpha);
+    content: "-app";
     .additional-superscript;
 }
