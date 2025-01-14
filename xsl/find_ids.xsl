@@ -89,7 +89,7 @@
                     <xsl:value-of select="'persons'"/>
                 </xsl:when>
                 <xsl:when test="$context[self::tei:term]">
-                    <xsl:value-of select="('keywords', 'lemmata')"/>
+                    <xsl:sequence select="('keywords', 'lemmata')"/>
                 </xsl:when>
                 <xsl:otherwise>
                     <xsl:value-of
@@ -102,7 +102,6 @@
 
     <xsl:function name="url:get-results-from-api" as="array(map(*))?">
         <xsl:param name="urls" as="xs:string+"/>
-        <xsl:message select="'Performing requests to endpoints: ' || $urls"></xsl:message>
         <xsl:try>
             <xsl:sequence select="($urls ! json-doc(.)) => array:join()"/>
             <xsl:catch>
