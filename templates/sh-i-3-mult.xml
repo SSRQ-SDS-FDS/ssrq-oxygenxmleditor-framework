@@ -121,7 +121,9 @@
    <text type="transcript">
       <body>
          <div>
-            <p/>
+            <p>
+               <lb/>
+            </p>
          </div>
       </body>
    </text>
