@@ -11,8 +11,19 @@
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  xmlns:tei="http://www.tei-c.org/ns/1.0"
     xsi:schemaLocation="http://www.oxygenxml.com/ns/ccfilter/config http://www.oxygenxml.com/ns/ccfilter/config/ccConfigSchemaFilter.xsd"
     xmlns="http://www.oxygenxml.com/ns/ccfilter/config">
-
-
+    
+    <elementProposals path="tei:witness">
+        <insertAttribute name="xml:id" value="id-ssrq-${uuid}"/>
+    </elementProposals>
+    
+    <valueProposals path="*/@hand">
+        <xslt href="../xsl/propose_ids.xsl" useCache="false" action="append"/>
+    </valueProposals>
+    
+    <valueProposals path="tei:listBibl/tei:bibl/@xml:id">
+        <xslt href="../xsl/create_uuid.xsl" useCache="false" action="replace"/>
+    </valueProposals>
+    
     <valueProposals path="tei:placeName/@ref">
         <xslt href="../xsl/find_ids.xsl" useCache="false" action="replace"/>
     </valueProposals>
@@ -24,6 +35,7 @@
     <valueProposals path="tei:term/@ref">
         <xslt href="../xsl/find_ids.xsl" useCache="false" action="replace"/>
     </valueProposals>
+    
 
 
 </config>
