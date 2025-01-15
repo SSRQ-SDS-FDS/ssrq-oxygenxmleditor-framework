@@ -305,7 +305,7 @@
                             >Der Rat von Zürich</orgName>.</p>
                     <p>Beispiel für ein Lemma: Die <term ref="lem000345"
                         >Strafe</term> ist fällig.</p>
-                    <p>Beispiel für Entitäten ohne IDs: <placeName>Bern</placeName>, <persName>Hans Müller</persName> <term>gericht</term></p>
+                    <p>Beispiel für Entitäten ohne IDs: <placeName>Bern</placeName>, <persName>Hans Müller</persName></p>
                 </div>
                 <div type="section" n="4">
                     <head>Inhaltliche Auszeichnungen</head>
