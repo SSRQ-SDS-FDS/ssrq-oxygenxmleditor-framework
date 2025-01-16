@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
-<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
-<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de">
+<?xml version="1.0" encoding="UTF-8"?><?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?><TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de">
     <teiHeader>
         <fileDesc>
             <titleStmt>
@@ -31,8 +28,7 @@
                 <date type="electronic" when-custom="0000-01-01"/>
                 <date type="print" when-custom="0000-01-01"/>
                 <availability>
-                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/"
-                        >Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) </licence>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) </licence>
                 </availability>
             </publicationStmt>
             <seriesStmt>
@@ -91,21 +87,15 @@
                         <bindingDesc>
                             <p>Das hier ist der Inhalt der bindingDesc.</p>
                         </bindingDesc>
-                        <handDesc>
-                            <handNote xml:id="otherHand"/>
-                        </handDesc>
                         <sealDesc>
-                            <seal n="1" condition="polished" shape="heart-shaped" material="wax"
-                                attachment="applied" place="end" facs="1r"/>
+                            <seal n="1" condition="polished" shape="heart-shaped" material="wax" attachment="applied" place="end" facs="1r"/>
                             <seal n="2" condition="absent"/>
                         </sealDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origDate type="document" calendar="gregorian"
-                                notBefore-custom="2000-01-01">Irgendwann</origDate>
-                            <origDate type="content" calendar="gregorian" when-custom="1000-01-01"
-                                >einmal</origDate>
+                            <origDate type="document" calendar="gregorian" notBefore-custom="2000-01-01">Irgendwann</origDate>
+                            <origDate type="content" calendar="gregorian" when-custom="1000-01-01">einmal</origDate>
                             <origPlace type="content" ref="loc000157">Bern</origPlace>
                             <origPlace type="document" ref="loc000157" cert="high">Bern</origPlace>
                         </origin>
@@ -113,8 +103,7 @@
                     <additional>
                         <adminInfo>
                             <custodialHist>
-                                <custEvent type="lost"
-                                    > Das Manuskript ging am XX.XX.1900 verloren.</custEvent>
+                                <custEvent type="lost"> Das Manuskript ging am XX.XX.1900 verloren.</custEvent>
                             </custodialHist>
                         </adminInfo>
                         <listBibl type="edition">
@@ -156,7 +145,7 @@
             <div type="chapter" n="1">
                 <div type="section" n="1">
                     <head>Textkritische Auszeichnungen</head>
-                    <p>Beispiel für eine Abkürzung mit Auflösung: Es kostet <choice>
+                    <p><add place="above" hand="per123456">foo</add> Beispiel für eine Abkürzung mit Auflösung: Es kostet <choice>
                             <abbr>ca</abbr>
                             <expan>circa</expan>
                         </choice> 5 Gulden. </p>
@@ -172,8 +161,7 @@
                             <lem>dort</lem>
                             <rdg wit="id-ssrq-ad28656b-5c8d-459c-afb4-3e6ddf70810d">hier</rdg>
                         </app>. </p>
-                    <p> Beispiel für einen Wechsel der Hand <handShift hand="otherHand"
-                        />, in diesem Fall auf "otherHand". </p>
+                    <p> Beispiel für einen Wechsel der Hand <handShift hand="otherHand"/>, in diesem Fall auf "otherHand". </p>
                     <p> Beispiele für Hinzufügungen: <add place="above">Einfache Hinzufügung</add>
                         <addSpan spanTo="add1"/> Hier noch ein addSpan. <anchor xml:id="add1"/>
                     </p>
@@ -183,18 +171,14 @@
                     <p> Beispiele für Beschädigungen: <damage agent="cancelled">
                             <supplied resp="CS">Einfache Beschädigung</supplied>
                         </damage>
-                        <damageSpan spanTo="damage1" agent="clipping"
-                            /> Hier noch ein damageSpan <anchor xml:id="damage1"/>
+                        <damageSpan spanTo="damage1" agent="clipping"/> Hier noch ein damageSpan <anchor xml:id="damage1"/>
                     </p>
                     <p> Beispiele für Ersetzungen: <subst>
                             <del>Das wird ersetzt.</del>
                             <add place="above">Das hier ersetzt.</add>
                         </subst>
                     </p>
-                    <p>Beispiele für bestimmte Leerräume und Lücken: Hier ein gap in der Quelle: <gap
-                            reason="illegible" unit="cm" quantity="1"/> Und hier ein space: <space
-                            quantity="1" unit="cm"/> Das hier ist eine aufgefüllte <supplied
-                            resp="CS">Lücke</supplied>. </p>
+                    <p>Beispiele für bestimmte Leerräume und Lücken: Hier ein gap in der Quelle: <gap reason="illegible" unit="cm" quantity="1"/> Und hier ein space: <space quantity="1" unit="cm"/> Das hier ist eine aufgefüllte <supplied resp="CS">Lücke</supplied>. </p>
                     <p>Hier eine <unclear>unklare Passage</unclear>.</p>
                 </div>
                 <div type="section" n="2">
@@ -223,8 +207,7 @@
                         <row>
                             <cell role="label">Spaltenüberschrift links</cell>
                             <cell role="label">Spaltenüberschrift mitte</cell>
-                            <cell role="label"
-                                >Spaltenüberschrift rechts mit einem sehr langen Text, so dass die Spalten unterschiedlich lang sind</cell>
+                            <cell role="label">Spaltenüberschrift rechts mit einem sehr langen Text, so dass die Spalten unterschiedlich lang sind</cell>
                         </row>
                         <row>
                             <cell>oben links</cell>
@@ -250,8 +233,7 @@
                                     <measure type="currency" unit="fl" quantity="1">1 fl</measure>
                                 </cell>
                                 <cell>
-                                    <measure type="currency" unit="Dukat" quantity="12"
-                                        >12 d</measure>
+                                    <measure type="currency" unit="Dukat" quantity="12">12 d</measure>
                                 </cell>
                             </measureGrp>
                         </row>
@@ -261,8 +243,7 @@
                                     <measure type="currency" unit="fl" quantity="1">2 fl</measure>
                                 </cell>
                                 <cell>
-                                    <measure type="currency" unit="Dukat" quantity="12"
-                                        >24 d</measure>
+                                    <measure type="currency" unit="Dukat" quantity="12">24 d</measure>
                                 </cell>
                             </measureGrp>
                         </row>
@@ -298,57 +279,38 @@
                 </div>
                 <div type="section" n="3">
                     <head>Entitäten</head>
-                    <p>Beispiel für eine Person und einen Ort: <persName ref="per019227"
-                            >Lorenz</persName> wohnte in <placeName ref="loc015889"
-                            >Törbel</placeName>. </p>
-                    <p>Beispiel für eine Organisation: <orgName ref="org123456"
-                            >Der Rat von Zürich</orgName>.</p>
-                    <p>Beispiel für ein Lemma: Die <term ref="lem000345"
-                        >Strafe</term> ist fällig.</p>
+                    <p>Beispiel für eine Person und einen Ort: <persName ref="per019227">Lorenz</persName> wohnte in <placeName ref="loc015889">Törbel</placeName>. </p>
+                    <p>Beispiel für eine Organisation: <orgName ref="org123456">Der Rat von Zürich</orgName>.</p>
+                    <p>Beispiel für ein Lemma: Die <term ref="lem000345">Strafe</term> ist fällig.</p>
                     <p>Beispiel für Entitäten ohne IDs: <placeName>Bern</placeName>, <persName>Hans Müller</persName></p>
                 </div>
                 <div type="section" n="4">
                     <head>Inhaltliche Auszeichnungen</head>
                     <p>Beispiel für Zahlen: <num value="0.33">Ein Drittel</num>
                     </p>
-                    <p>Beispiel für eine Massangabe: <measure type="currency" unit="fl" quantity="1"
-                            >1 fl.</measure>
+                    <p>Beispiel für eine Massangabe: <measure type="currency" unit="fl" quantity="1">1 fl.</measure>
                     </p>
-                    <p>Beispiel für eine Massangabe mit origin: <measure type="currency" unit="fl"
-                            quantity="1" origin="BE">1 fl.</measure>
+                    <p>Beispiel für eine Massangabe mit origin: <measure type="currency" unit="fl" quantity="1" origin="BE">1 fl.</measure>
                     </p>
-                    <p>Beispiel für eine Massangabe mit commodity: <measure type="currency"
-                            unit="fl" quantity="1" commodity="apple">1 fl. an Äpfeln.</measure>
+                    <p>Beispiel für eine Massangabe mit commodity: <measure type="currency" unit="fl" quantity="1" commodity="apple">1 fl. an Äpfeln.</measure>
                     </p>
-                    <p>Beispiel für eine Massangabe mit commodity und origin: <measure
-                            type="currency" unit="fl" quantity="1" commodity="apple" origin="BE"
-                            >1 fl. an Berner Äpfeln.</measure>
+                    <p>Beispiel für eine Massangabe mit commodity und origin: <measure type="currency" unit="fl" quantity="1" commodity="apple" origin="BE">1 fl. an Berner Äpfeln.</measure>
                     </p>
-                    <p>Beispiel für Zeitangabe: Um <time when-custom="12:00:00"
-                            >12 Uhr mittags</time>. </p>
+                    <p>Beispiel für Zeitangabe: Um <time when-custom="12:00:00">12 Uhr mittags</time>. </p>
                     <p>Beispiele für Datumsangaben: <lb/><date dur-iso="P5D">Fünf Tage lang.</date>
                         <lb/><date period="P1WD">Sonntag.</date>
                         <lb/><date period="P1WD" dur-iso="P5W">Fünf Wochen lang am Sonntag.</date>
                         <lb/><date when-custom="2000-01-01" calendar="gregorian">Am 1.1.2000.</date>
-                        <lb/><date from-custom="2000-01-01" to-custom="2000-12-31"
-                            calendar="gregorian">Das Jahr 2000.</date>
-                        <lb/><date notBefore-custom="2000-01-01" calendar="gregorian"
-                            >Nicht vor 2000.</date>
-                        <lb/><date notAfter-custom="2000-01-01" calendar="gregorian"
-                            >Nicht nach 2000.</date>
-                        <lb/><date notBefore-custom="2000-01-01" notAfter-custom="2020-01-01"
-                            calendar="gregorian">Nicht vor 2000 und nicht nach 2020.</date>
-                        <lb/><date when-custom="2000-01-01" calendar="gregorian"
-                                >Ungefähr 1.1.2000 <precision match="@when-custom" precision="high"
-                            /></date>
+                        <lb/><date from-custom="2000-01-01" to-custom="2000-12-31" calendar="gregorian">Das Jahr 2000.</date>
+                        <lb/><date notBefore-custom="2000-01-01" calendar="gregorian">Nicht vor 2000.</date>
+                        <lb/><date notAfter-custom="2000-01-01" calendar="gregorian">Nicht nach 2000.</date>
+                        <lb/><date notBefore-custom="2000-01-01" notAfter-custom="2020-01-01" calendar="gregorian">Nicht vor 2000 und nicht nach 2020.</date>
+                        <lb/><date when-custom="2000-01-01" calendar="gregorian">Ungefähr 1.1.2000 <precision match="@when-custom" precision="high"/></date>
                     </p>
                 </div>
                 <div type="section" n="5">
                     <head>Sonstige Auszeichnungen</head>
-                    <p> Fremdsprachlicher Text: <foreign xml:lang="la"
-                            >Lingua latina, id es lingua aliena.</foreign> gefolgt von <orig
-                            xml:lang="de"
-                            >einem Text in Originalsprache</orig> und einem <quote>quote-Element</quote>
+                    <p> Fremdsprachlicher Text: <foreign xml:lang="la">Lingua latina, id es lingua aliena.</foreign> gefolgt von <orig xml:lang="de">einem Text in Originalsprache</orig> und einem <quote>quote-Element</quote>
                         <note>Quelle unbekannt.</note> sowie einem <q>q-Element</q>. </p>
                     <p> Hier kommen verschiedene Hervorhebungen: <lb/><hi rend="center">center</hi>
                         <lb/><hi rend="font_change">font change</hi>
@@ -361,11 +323,9 @@
                         <lb/><hi rend="rotated_90">rotated 90°</hi>
                         <lb/><hi rend="rotated_180">rotated 180°</hi>
                         <lb/><hi rend="rotated_270">rotated 270°</hi>
-                        <lb/>Das ist <hi rend="sup">sup</hi>er. <lb/><hi rend="underline"
-                            >underline</hi>
+                        <lb/>Das ist <hi rend="sup">sup</hi>er. <lb/><hi rend="underline">underline</hi>
                     </p>
-                    <p> Beispiele für Umbrüche: <lb/>lb ist klar,doch jetzt kommen Seiten- und Spaltenumbrüche: <pb
-                            n="1v"/>
+                    <p> Beispiele für Umbrüche: <lb/>lb ist klar,doch jetzt kommen Seiten- und Spaltenumbrüche: <pb n="1v"/>
                         <pb n="2r"/>
                         <cb n="a"/> Neue Spalte <cb n="b"/> Noch eine neue Spalte </p>
                     <p> Beispiel für eine Figure: <figure type="drawing"/>
