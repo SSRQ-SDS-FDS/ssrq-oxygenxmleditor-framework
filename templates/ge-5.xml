@@ -54,10 +54,10 @@
                         <repository xml:lang="de"/>
                         <idno xml:lang="de"/>
                     </msIdentifier>
-                    <head/>
+                    <head></head>
                     <msContents>
                         <summary xml:lang="fr">
-                            <p/>
+                            <p></p>
                         </summary>
                         <msItem>
                             <textLang xml:lang="fr"/>
@@ -69,8 +69,17 @@
                                 <support>
                                     <material type="paper"/>
                                 </support>
+                                <extent>
+                                    <dimensions type="leaves">
+                                        <width quantity="" unit=""/>
+                                        <height quantity="" unit=""/>
+                                    </dimensions>
+                                </extent>
                             </supportDesc>
                         </objectDesc>
+                        <bindingDesc>
+                            <p></p>
+                        </bindingDesc>
                     </physDesc>
                     <history>
                         <origin>

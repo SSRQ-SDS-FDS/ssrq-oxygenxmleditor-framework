@@ -53,10 +53,10 @@
                         <repository xml:lang="de">Staatsarchiv Graubünden</repository>
                         <idno xml:lang="de">StAGR <!--Hier die Archivsignatur--></idno>
                     </msIdentifier>
-                    <head/>
+                    <head></head>
                     <msContents>
                         <summary xml:lang="de">
-                            <p/>
+                            <p></p>
                         </summary>
                         <msItem>
                             <textLang xml:lang="de"/>
@@ -68,8 +68,17 @@
                                 <support>
                                     <material type="paper"/>
                                 </support>
+                                <extent>
+                                    <dimensions type="leaves">
+                                        <width quantity="" unit=""/>
+                                        <height quantity="" unit=""/>
+                                    </dimensions>
+                                </extent>
                             </supportDesc>
                         </objectDesc>
+                        <bindingDesc>
+                            <p></p>
+                        </bindingDesc>
                     </physDesc>
                     <history>
                         <origin>
