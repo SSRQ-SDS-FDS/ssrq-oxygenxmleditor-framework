@@ -9,6 +9,7 @@
     <xsl:template name="start">
         <xsl:variable name="document" select="doc($documentSystemID)"/>
         <xsl:variable name="witnesses" as="element(tei:witness)*" select="$document//tei:witness"/>
+        <xsl:variable name="editions" as="element(tei:bibl)*" select="$document//tei:listBibl[@type = 'edition']/tei:bibl[@xml:id]"/>
         <xsl:if test="exists($witnesses)">
             <items>
                 <!-- 
@@ -17,6 +18,9 @@
                  -->
                 <xsl:for-each select="sort($witnesses, (), function($wit) {$wit/@n}) => subsequence(2)">
                     <item value="{./@xml:id}" annotation="{.//tei:msIdentifier/tei:idno/text()}"/>
+                </xsl:for-each>
+                <xsl:for-each select="$editions">
+                    <item value="{./@xml:id}" annotation="{./string() => normalize-space()}"/>
                 </xsl:for-each>
             </items>
         </xsl:if>
