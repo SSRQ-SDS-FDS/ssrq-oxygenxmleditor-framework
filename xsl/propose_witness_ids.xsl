@@ -13,7 +13,7 @@
             <items>
                 <!-- 
                      Sort the witnesses and use only those with an index gt 1; the first should always
-                     be the current documen
+                     be the current document
                  -->
                 <xsl:for-each select="sort($witnesses, (), function($wit) {$wit/@n}) => subsequence(2)">
                     <item value="{./@xml:id}" annotation="{.//tei:msIdentifier/tei:idno/text()}"/>
