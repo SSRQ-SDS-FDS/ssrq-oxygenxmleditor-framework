@@ -40,7 +40,7 @@
             <seriesStmt>
                 <title>Sammlung Schweizerischer Rechtsquellen</title>
                 <respStmt>
-                    <orgName>Rechtsquellenstiftung des Schweizerischen Juristenvereins</orgName>
+                    <orgName>Rechtsquellenstiftung der Schweizerischen Juristischen Gesellschaft</orgName>
                     <resp>Herausgabe</resp>
                 </respStmt>
                 <idno>SSRQ-GR-C_1-0-1</idno>
@@ -53,10 +53,10 @@
                         <repository xml:lang="de">Staatsarchiv Graubünden</repository>
                         <idno xml:lang="de">StAGR <!--Hier die Archivsignatur--></idno>
                     </msIdentifier>
-                    <head></head>
+                    <head/>
                     <msContents>
                         <summary xml:lang="de">
-                            <p></p>
+                            <p/>
                         </summary>
                         <msItem>
                             <textLang xml:lang="de"/>
@@ -77,7 +77,7 @@
                             </supportDesc>
                         </objectDesc>
                         <bindingDesc>
-                            <p></p>
+                            <p/>
                         </bindingDesc>
                     </physDesc>
                     <history>
