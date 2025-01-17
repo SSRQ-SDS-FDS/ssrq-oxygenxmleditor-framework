@@ -10,7 +10,7 @@
         <xsl:variable name="document" select="doc($documentSystemID)"/>
         <xsl:variable name="witnesses" as="element(tei:witness)*" select="$document//tei:witness"/>
         <xsl:variable name="editions" as="element(tei:bibl)*" select="$document//tei:listBibl[@type = 'edition']/tei:bibl[@xml:id]"/>
-        <xsl:if test="exists($witnesses)">
+        <xsl:if test="exists($witnesses) or exists($editions)">
             <items>
                 <!-- 
                      Sort the witnesses and use only those with an index gt 1; the first should always
