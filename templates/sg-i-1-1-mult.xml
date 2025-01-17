@@ -42,7 +42,7 @@
          <seriesStmt>
             <title>Sammlung Schweizerischer Rechtsquellen</title>
             <respStmt>
-               <orgName>Rechtsquellenstiftung des Schweizerischen Juristenvereins</orgName>
+               <orgName>Rechtsquellenstiftung der Schweizerischen Juristischen Gesellschaft</orgName>
                <resp>Herausgabe</resp>
             </respStmt>
             <idno>SSRQ-SG-I_1_1-0-1</idno>
@@ -57,10 +57,10 @@
                         <repository xml:lang="de">Stiftsarchiv St. Gallen</repository>
                         <idno xml:lang="de">StiASG, <!--Hier der Rest der Signatur--></idno>
                      </msIdentifier>
-                     <head></head>
+                     <head/>
                      <msContents>
                         <summary xml:lang="de">
-                           <p></p>
+                           <p/>
                         </summary>
                         <msItem>
                            <textLang xml:lang="de"/>
@@ -81,7 +81,7 @@
                            </supportDesc>
                         </objectDesc>
                         <bindingDesc>
-                           <p></p>
+                           <p/>
                         </bindingDesc>
                      </physDesc>
                      <history>
@@ -98,10 +98,10 @@
                         <repository xml:lang="de">Stiftsarchiv St. Gallen</repository>
                         <idno xml:lang="de">StiASG, <!--Hier der Rest der Signatur--></idno>
                      </msIdentifier>
-                     <head></head>
+                     <head/>
                      <msContents>
                         <summary xml:lang="de">
-                           <p></p>
+                           <p/>
                         </summary>
                         <msItem>
                            <textLang xml:lang="de"/>
@@ -122,7 +122,7 @@
                            </supportDesc>
                         </objectDesc>
                         <bindingDesc>
-                           <p></p>
+                           <p/>
                         </bindingDesc>
                      </physDesc>
                      <history>
