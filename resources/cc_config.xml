@@ -20,6 +20,22 @@
     <valueProposals path="*/@hand">
         <xslt href="../xsl/propose_handnote_ids.xsl" useCache="false" action="append"/>
     </valueProposals>
+    
+    <valueProposals path="tei:addSpan/@spanTo">
+        <xslt href="../xsl/propose_spans.xsl" useCache="false" action="replace"/>
+    </valueProposals>
+    
+    <valueProposals path="tei:anchor/@xml:id">
+        <xslt href="../xsl/propose_spans.xsl" useCache="false" action="replace"/>
+    </valueProposals>
+    
+    <valueProposals path="tei:damageSpan/@spanTo">
+        <xslt href="../xsl/propose_spans.xsl" useCache="false" action="replace"/>
+    </valueProposals>
+    
+    <valueProposals path="tei:delSpan/@spanTo">
+        <xslt href="../xsl/propose_spans.xsl" useCache="false" action="replace"/>
+    </valueProposals>
 
     <valueProposals path="tei:listBibl/tei:bibl/@xml:id">
         <xslt href="../xsl/create_uuid.xsl" useCache="false" action="replace"/>
@@ -37,16 +53,5 @@
         <xslt href="../xsl/find_db_ids.xsl" useCache="false" action="replace"/>
     </valueProposals>
     
-    <valueProposals path="tei:addSpan/@spanTo">
-        <xslt href="../xsl/propose_addSpan.xsl" useCache="false" action="replace"/>
-    </valueProposals>
-    
-    <valueProposals path="tei:delSpan/@spanTo">
-        <xslt href="../xsl/propose_delSpan.xsl" useCache="false" action="replace"/>
-    </valueProposals>
-    
-    <valueProposals path="tei:damageSpan/@spanTo">
-        <xslt href="../xsl/propose_damageSpan.xsl" useCache="false" action="replace"/>
-    </valueProposals>
     
 </config>
