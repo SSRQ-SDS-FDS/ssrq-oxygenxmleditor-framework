@@ -1,0 +1,3 @@
+[submodule "stylesheets/fonts/Lexia"]
+	path = stylesheets/fonts/Lexia
+	url = https://github.com/SSRQ-SDS-FDS/ssrq-lexia.git

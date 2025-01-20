@@ -1,4 +1,12 @@
 @namespace xml "https://www.w3.org/TR/xml/";
+@font-face {
+  font-family: "Lexia Fontes";
+  src: url("fonts/Lexia/src/LexiaFontes_Rg.ttf");
+}
+@font-face {
+  font-family: "Libertinus Serif";
+  src: url("fonts/LibertinusSerif-Regular.otf");
+}
 .bordered {
   border: 1px solid black;
   border-collapse: collapse;
@@ -949,7 +957,7 @@ rdg::after {
 ref {
   display: inline;
 }
-ref[target]::hover:after {
+ref[target]:hover::after {
   content: " (" attr(target) ")";
 }
 editorialDecl ref {
