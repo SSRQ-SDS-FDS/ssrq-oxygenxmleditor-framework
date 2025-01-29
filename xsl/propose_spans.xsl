@@ -24,11 +24,21 @@
         <xsl:variable 
             name="maximum" 
             as="xs:double?"
-            select="
-            $doc//tei:*[./name() = $context-name]/replace(@spanTo, '\w+(\d)+', '$1')
-            => max()
-            => number()
-            "/>
+            >
+            <xsl:variable 
+                name="spans" 
+                as="xs:string*" 
+                select=" $doc//tei:*[./name() = $context-name][matches(@spanTo, '\w+(\d)+')]/replace(@spanTo, '\w+(\d)+', '$1')"
+            />
+            <xsl:if test="$spans">
+                <xsl:sequence 
+                    select="
+                    $spans
+                    => max()
+                    => number()"
+                />
+            </xsl:if>
+        </xsl:variable>
         <xsl:variable name="prefix" select="$context-name => substring-before('Span')"/>
         <items>
             <item value="{if (exists($maximum)) then $prefix || $maximum + 1 else $prefix || '1'}"/>
