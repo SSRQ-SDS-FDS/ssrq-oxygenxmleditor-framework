@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xsl:stylesheet 
+<xsl:stylesheet
     xmlns:hands="http://ssrq-sds-fds.ch/xsl/oxyframework/functions/hands"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:uuid="java:java.util.UUID"
@@ -9,10 +9,10 @@
     xmlns="http://www.tei-c.org/ns/1.0"
     exclude-result-prefixes="#all"
     version="3.0">
- 
+    
     <xsl:mode on-no-match="shallow-copy" name="notes"/>
     <xsl:mode on-no-match="shallow-copy" name="hands"/>
-   
+    
     
     <xsl:template match="/">
         <xsl:variable name="tei-with-hand-notes" as="node()+">
@@ -21,7 +21,7 @@
         <xsl:apply-templates select="$tei-with-hand-notes" mode="hands"/>
     </xsl:template>
     
-    <xsl:template match="tei:handDesc" mode="notes"> 
+    <xsl:template match="tei:handDesc" mode="notes">
         <xsl:variable name="hands" as="xs:string*" select="sort(distinct-values(./ancestor::tei:TEI//@hand))"/>
         <xsl:variable name="ids" as="xs:string+" select="sort(./tei:handNote/@xml:id)"/>
         <handDesc>
@@ -39,7 +39,7 @@
         </handDesc>
     </xsl:template>
     
-    <xsl:template match="tei:physDesc[ancestor::tei:TEI//tei:*[@hand]][not(tei:handDesc)]" mode="notes"> 
+    <xsl:template match="tei:physDesc[ancestor::tei:TEI//tei:*[@hand]][not(tei:handDesc)][not(preceding::tei:physDesc)]" mode="notes">
         <xsl:variable name="hands" as="xs:string*" select="sort(distinct-values(./ancestor::tei:TEI//@hand))"/>
         <xsl:variable name="desc" as="element(tei:handDesc)">
             <handDesc>
@@ -84,5 +84,5 @@
         <xsl:sequence select="filter($hand-references, function($ref) {empty($hand-notes[./@scribe = $ref or ./@xml:id = $ref])})"/>
     </xsl:function>
     
-
+    
 </xsl:stylesheet>
