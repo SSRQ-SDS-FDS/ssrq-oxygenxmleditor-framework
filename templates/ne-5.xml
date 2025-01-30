@@ -5,8 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>XXI<hi rend="sup"
-                        >e</hi> partie<pc>:</pc> Les sources du droit du Canton de Neuchâtel, 
+                <title>XXI<hi rend="sup">e</hi> partie<pc>:</pc> Les sources du droit du Canton de Neuchâtel, 
                     Tome 5<pc>:</pc> Principauté de Neuchâtel<pc>:</pc> Les sources du droit du gouvernement 
                     à distance 1707-1729</title>
                 <editor>
@@ -54,15 +53,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <settlement xml:lang="de" ref="loc007786">Neuchâtel</settlement>
-                        <repository xml:lang="de">Archives de l'État de Neuchâtel</repository>
-                        <idno xml:lang="de"
-                            >AEN <!--Voici le reste de la signature de l'archive--></idno>
+                        <settlement xml:lang="fr" ref="loc007786">Neuchâtel</settlement>
+                        <repository xml:lang="fr">Archives de l'État de Neuchâtel</repository>
+                        <idno xml:lang="fr">AEN <!--Voici le reste de la signature de l'archive--></idno>
                     </msIdentifier>
-                    <head></head>
+                    <head/>
                     <msContents>
                         <summary xml:lang="fr">
-                            <p></p>
+                            <p/>
                         </summary>
                         <msItem>
                             <textLang xml:lang="fr"/>
@@ -83,7 +81,7 @@
                             </supportDesc>
                         </objectDesc>
                         <bindingDesc>
-                            <p></p>
+                            <p/>
                         </bindingDesc>
                     </physDesc>
                     <history>

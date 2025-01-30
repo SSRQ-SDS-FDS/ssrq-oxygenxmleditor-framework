@@ -50,14 +50,14 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <settlement xml:lang="de" ref="loc007646">Genève</settlement>
-                        <repository xml:lang="de"/>
-                        <idno xml:lang="de"/>
+                        <settlement xml:lang="fr" ref="loc007646">Genève</settlement>
+                        <repository xml:lang="fr"/>
+                        <idno xml:lang="fr"/>
                     </msIdentifier>
-                    <head></head>
+                    <head/>
                     <msContents>
                         <summary xml:lang="fr">
-                            <p></p>
+                            <p/>
                         </summary>
                         <msItem>
                             <textLang xml:lang="fr"/>
@@ -78,7 +78,7 @@
                             </supportDesc>
                         </objectDesc>
                         <bindingDesc>
-                            <p></p>
+                            <p/>
                         </bindingDesc>
                     </physDesc>
                     <history>

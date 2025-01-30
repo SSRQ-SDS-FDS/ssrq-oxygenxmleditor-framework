@@ -78,10 +78,10 @@
                                         </extent>
                                     </supportDesc>
                                 </objectDesc>
+                                <bindingDesc>
+                                    <p/>
+                                </bindingDesc>
                             </physDesc>
-                            <bindingDesc>
-                                <p/>
-                            </bindingDesc>
                             <history>
                                 <origin>
                                     <origDate type="document" calendar="" when-custom=""/>
