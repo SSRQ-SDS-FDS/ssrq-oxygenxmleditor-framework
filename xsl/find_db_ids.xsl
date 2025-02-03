@@ -23,7 +23,7 @@
         </xsl:apply-templates>
     </xsl:template>
 
-    <xsl:template match="tei:persName | tei:placeName | tei:term">
+    <xsl:template match="tei:orgName  | tei:persName | tei:placeName | tei:term">
         <xsl:param name="doc-lang" as="xs:string"/>
         <xsl:param name="context" as="element()" select="."/>
         <xsl:variable name="result" select="url:get-results-from-api(url:create-api-urls($api-base-url, $context, ./text()))" as="array(map(*))?"/>
@@ -44,6 +44,26 @@
         <xsl:sequence>
             <xsl:variable name="name" select="completion:get-entity-name($data, $context, $lang)"/>
             <xsl:choose>
+                <xsl:when test="$context/self::tei:orgName">
+                    <xsl:variable name="date-start" as="xs:string?" select="
+                        if (exists($data?first_mention)) 
+                        then 
+                        $data?first_mention 
+                        else ()"/>
+                    <xsl:variable name="date-end" as="xs:string?" select="
+                        if (exists($data?last_mention)) 
+                        then 
+                        $data?last_mention 
+                        else ()"/>
+                    <xsl:choose>
+                        <xsl:when test="$date-start or $date-end">
+                            <xsl:value-of select="$name || ' (' || string-join(($date-start, $date-end), '-') || ')'"/>
+                        </xsl:when>
+                        <xsl:otherwise>
+                           <xsl:value-of select="$name"/>
+                        </xsl:otherwise>
+                    </xsl:choose>
+                </xsl:when>
                 <xsl:when test="$context/self::tei:persName">
                     <xsl:variable name="date-start" as="xs:string?" select="
                         if (exists($data?birth)) 
@@ -130,6 +150,10 @@
         <xsl:param name="context" as="element()"/>
         <xsl:sequence>
             <xsl:choose>
+                <!-- ToDo: Support for orgs -->
+                <xsl:when test="$context[self::tei:orgName]">
+                    <xsl:value-of select="'families'"/>
+                </xsl:when>
                 <xsl:when test="$context[self::tei:placeName]">
                     <xsl:value-of select="'places'"/>
                 </xsl:when>
