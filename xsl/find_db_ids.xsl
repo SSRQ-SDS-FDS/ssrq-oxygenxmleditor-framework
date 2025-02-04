@@ -1,5 +1,6 @@
 <xsl:stylesheet xmlns:array="http://www.w3.org/2005/xpath-functions/array"
     xmlns:completion="http://ssrq-sds-fds.ch/xsl/oxyframework/functions/completion"
+    xmlns:map="http://www.w3.org/2005/xpath-functions/map"
     xmlns:tei="http://www.tei-c.org/ns/1.0"
     xmlns:url="http://ssrq-sds-fds.ch/xsl/oxyframework/functions/url"
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:xs="http://www.w3.org/2001/XMLSchema"
@@ -45,22 +46,23 @@
             <xsl:variable name="name" select="completion:get-entity-name($data, $context, $lang)"/>
             <xsl:choose>
                 <xsl:when test="$context/self::tei:orgName">
-                    <xsl:variable name="date-start" as="xs:string?" select="
-                        if (exists($data?first_mention)) 
-                        then 
-                        $data?first_mention 
-                        else ()"/>
-                    <xsl:variable name="date-end" as="xs:string?" select="
-                        if (exists($data?last_mention)) 
-                        then 
-                        $data?last_mention 
-                        else ()"/>
                     <xsl:choose>
-                        <xsl:when test="$date-start or $date-end">
-                            <xsl:value-of select="$name || ' (' || string-join(($date-start, $date-end), '-') || ')'"/>
+                        <!-- If the result is an info about an org, the map contains a key 'de_types' -->
+                        <xsl:when test="'de_types' = map:keys($data)">
+                            <xsl:variable name="org-types" as="array(xs:string)">
+                                <xsl:choose>
+                                    <xsl:when test="$lang = 'fr'">
+                                        <xsl:sequence select="$data?fr_types"/>
+                                    </xsl:when>
+                                    <xsl:otherwise>
+                                        <xsl:sequence select="$data?de_types"/>
+                                    </xsl:otherwise>
+                                </xsl:choose>
+                            </xsl:variable>
+                            <xsl:value-of select="$name || ' (' || string-join($org-types, ', ') || ')'"/>
                         </xsl:when>
                         <xsl:otherwise>
-                           <xsl:value-of select="$name"/>
+                            <xsl:value-of select="$name || '(' || (if ($lang = 'fr') then 'famille' else 'Familie') || ')'"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:when>
@@ -150,9 +152,8 @@
         <xsl:param name="context" as="element()"/>
         <xsl:sequence>
             <xsl:choose>
-                <!-- ToDo: Support for orgs -->
                 <xsl:when test="$context[self::tei:orgName]">
-                    <xsl:value-of select="'families'"/>
+                    <xsl:sequence select="('families', 'organizations')"/>
                 </xsl:when>
                 <xsl:when test="$context[self::tei:placeName]">
                     <xsl:value-of select="'places'"/>
