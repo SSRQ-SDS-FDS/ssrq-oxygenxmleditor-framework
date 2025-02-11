@@ -71,17 +71,31 @@
                                     <height quantity="" unit=""/>
                                  </dimensions>
                               </extent>
+                              <foliation>
+                                 <p></p>
+                              </foliation>
+                              <condition agent="">
+                                 <p></p>
+                              </condition>
                            </supportDesc>
                         </objectDesc>
                         <bindingDesc>
                            <p/>
                         </bindingDesc>
+                        <sealDesc>
+                           <seal condition="" n=""/>
+                        </sealDesc>
                      </physDesc>
                      <history>
                         <origin>
                            <origDate type="document" calendar="" when-custom=""/>
                         </origin>
                      </history>
+                     <additional>
+                        <listBibl type="">
+                           <bibl></bibl>
+                        </listBibl>
+                     </additional>
                   </msDesc>
                </witness>
                <witness n="B" xml:id="id-ssrq-${uuid}">
@@ -112,17 +126,31 @@
                                     <height quantity="" unit=""/>
                                  </dimensions>
                               </extent>
+                              <foliation>
+                                 <p></p>
+                              </foliation>
+                              <condition agent="">
+                                 <p></p>
+                              </condition>
                            </supportDesc>
                         </objectDesc>
                         <bindingDesc>
                            <p/>
                         </bindingDesc>
+                        <sealDesc>
+                           <seal condition="" n=""/>
+                        </sealDesc>
                      </physDesc>
                      <history>
                         <origin>
                            <origDate type="document" calendar="" when-custom=""/>
                         </origin>
                      </history>
+                     <additional>
+                        <listBibl type="">
+                           <bibl></bibl>
+                        </listBibl>
+                     </additional>
                   </msDesc>
                </witness>
             </listWit>

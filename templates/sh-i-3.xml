@@ -69,17 +69,31 @@
                               <height quantity="" unit=""/>
                            </dimensions>
                         </extent>
+                        <foliation>
+                           <p/>
+                        </foliation>
+                        <condition agent="">
+                           <p/>
+                        </condition>
                      </supportDesc>
                   </objectDesc>
                   <bindingDesc>
                      <p/>
                   </bindingDesc>
+                  <sealDesc>
+                     <seal condition="" n=""></seal>
+                  </sealDesc>
                </physDesc>
                <history>
                   <origin>
                      <origDate type="document" calendar="" when-custom=""/>
                   </origin>
                </history>
+               <additional>
+                  <listBibl type="">
+                     <bibl></bibl>
+                  </listBibl>
+               </additional>
             </msDesc>
          </sourceDesc>
       </fileDesc>
