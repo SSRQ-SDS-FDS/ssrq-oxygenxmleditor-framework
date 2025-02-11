@@ -175,11 +175,16 @@
 
     <xsl:function name="url:get-results-from-api" as="array(map(*))?">
         <xsl:param name="urls" as="xs:string+"/>
-        <xsl:try>
-            <xsl:sequence select="($urls ! json-doc(.)) => array:join()"/>
-            <xsl:catch>
-                <xsl:sequence select="()"/>
-            </xsl:catch>
-        </xsl:try>
+        <xsl:variable name="results" as="array(map(*))*">
+            <xsl:for-each select="$urls">
+                <xsl:try>
+                    <xsl:sequence select="json-doc(.)"/>
+                    <xsl:catch>
+                        <xsl:sequence select="()"/>
+                    </xsl:catch>
+                </xsl:try>
+            </xsl:for-each>
+        </xsl:variable>
+        <xsl:sequence select="if (exists($results)) then $results => array:join() else $results"/>
     </xsl:function>
 </xsl:stylesheet>
