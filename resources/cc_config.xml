@@ -53,6 +53,10 @@
         <xslt href="../xsl/find_db_ids.xsl" useCache="false" action="replace"/>
     </valueProposals>
     
+    <valueProposals path="tei:rdg/@wit">
+        <xslt href="../xsl/propose_witness_ids.xsl" useCache="false" action="replace"/>
+    </valueProposals>
+    
     <valueProposals path="tei:supplied/@source">
         <xslt href="../xsl/propose_witness_ids.xsl" useCache="false" action="replace"/>
     </valueProposals>

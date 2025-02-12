@@ -17,7 +17,7 @@
                      be the current document
                  -->
                 <xsl:for-each select="sort($witnesses, (), function($wit) {$wit/@n}) => subsequence(2)">
-                    <item value="{./@xml:id}" annotation="{.//tei:msIdentifier/tei:idno/text()}"/>
+                    <item value="{./@xml:id}" annotation="{./@n || ': ' || .//tei:msIdentifier/tei:idno/text()}"/>
                 </xsl:for-each>
                 <xsl:for-each select="$editions">
                     <item value="{./@xml:id}" annotation="{./string() => normalize-space()}"/>
