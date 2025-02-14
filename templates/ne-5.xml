@@ -5,7 +5,7 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>XXI<hi rend="sup">e</hi> partie<pc>:</pc> Les sources du droit du Canton de Neuchâtel, 
+                <title>XXI<hi rend="sup">e</hi> partie<pc>:</pc> Les sources du droit du Canton de Neuchâtel,
                     Tome 5<pc>:</pc> Principauté de Neuchâtel<pc>:</pc> Les sources du droit du gouvernement 
                     à distance 1707-1729</title>
                 <editor>
@@ -99,6 +99,13 @@
                 </p>
             </editorialDecl>
         </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords>
+                    <term ref=""/>
+                </keywords>
+            </textClass>
+        </profileDesc>
     </teiHeader>
     <text type="transcript">
         <body>
