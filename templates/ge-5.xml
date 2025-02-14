@@ -96,6 +96,13 @@
                 </p>
             </editorialDecl>
         </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords>
+                    <term ref=""/>
+                </keywords>
+            </textClass>
+        </profileDesc>
     </teiHeader>
     <text type="transcript">
         <body>
