@@ -5,9 +5,9 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>XXI<hi rend="sup">e</hi> partie<pc>:</pc> Les sources du droit du Canton de Neuchâtel,
-                    Tome 5<pc>:</pc> Principauté de Neuchâtel<pc>:</pc> Les sources du droit du gouvernement 
-                    à distance 1707-1729</title>
+                <title>XXI<hi rend="sup">e</hi> partie<pc>:</pc> Les sources du droit du Canton de
+                    Neuchâtel, Tome 5<pc>:</pc> Principauté de Neuchâtel<pc>:</pc> Les sources du
+                    droit du gouvernement à distance 1707-1729</title>
                 <editor>
                     <persName>Arnaud Besson</persName>
                 </editor>
@@ -74,8 +74,8 @@
                                 </support>
                                 <extent>
                                     <dimensions type="leaves">
-                                        <width quantity="" unit=""/>
-                                        <height quantity="" unit=""/>
+                                        <width quantity="" unit="cm"/>
+                                        <height quantity="" unit="cm"/>
                                     </dimensions>
                                 </extent>
                             </supportDesc>

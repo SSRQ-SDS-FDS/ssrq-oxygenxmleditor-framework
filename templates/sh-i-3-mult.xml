@@ -67,15 +67,15 @@
                               </support>
                               <extent>
                                  <dimensions type="leaves">
-                                    <width quantity="" unit=""/>
-                                    <height quantity="" unit=""/>
+                                    <width quantity="" unit="cm"/>
+                                    <height quantity="" unit="cm"/>
                                  </dimensions>
                               </extent>
                               <foliation>
-                                 <p></p>
+                                 <p/>
                               </foliation>
                               <condition agent="">
-                                 <p></p>
+                                 <p/>
                               </condition>
                            </supportDesc>
                         </objectDesc>
@@ -93,7 +93,7 @@
                      </history>
                      <additional>
                         <listBibl type="">
-                           <bibl></bibl>
+                           <bibl/>
                         </listBibl>
                      </additional>
                   </msDesc>
@@ -122,15 +122,15 @@
                               </support>
                               <extent>
                                  <dimensions type="leaves">
-                                    <width quantity="" unit=""/>
-                                    <height quantity="" unit=""/>
+                                    <width quantity="" unit="cm"/>
+                                    <height quantity="" unit="cm"/>
                                  </dimensions>
                               </extent>
                               <foliation>
-                                 <p></p>
+                                 <p/>
                               </foliation>
                               <condition agent="">
-                                 <p></p>
+                                 <p/>
                               </condition>
                            </supportDesc>
                         </objectDesc>
@@ -148,7 +148,7 @@
                      </history>
                      <additional>
                         <listBibl type="">
-                           <bibl></bibl>
+                           <bibl/>
                         </listBibl>
                      </additional>
                   </msDesc>

@@ -72,8 +72,8 @@
                                         </support>
                                         <extent>
                                             <dimensions type="leaves">
-                                                <width quantity="" unit=""/>
-                                                <height quantity="" unit=""/>
+                                                <width quantity="" unit="cm"/>
+                                                <height quantity="" unit="cm"/>
                                             </dimensions>
                                         </extent>
                                     </supportDesc>
@@ -113,8 +113,8 @@
                                         </support>
                                         <extent>
                                             <dimensions type="leaves">
-                                                <width quantity="" unit=""/>
-                                                <height quantity="" unit=""/>
+                                                <width quantity="" unit="cm"/>
+                                                <height quantity="" unit="cm"/>
                                             </dimensions>
                                         </extent>
                                     </supportDesc>
