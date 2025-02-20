@@ -83,7 +83,8 @@
                     </physDesc>
                     <history>
                         <origin>
-                            <origDate type="document" calendar="" when-custom=""/>
+                            <origDate type="document" calendar="gregorian" when-custom=""/>
+                            <origPlace type="document" ref="loc007646">Genève</origPlace>
                         </origin>
                     </history>
                 </msDesc>
