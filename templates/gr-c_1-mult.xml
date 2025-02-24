@@ -96,7 +96,6 @@
                                 <repository xml:lang="de">Staatsarchiv Graubünden</repository>
                                 <idno xml:lang="de">StAGR <!--Hier die Archivsignatur--></idno>
                             </msIdentifier>
-                            <head/>
                             <msContents>
                                 <summary xml:lang="de">
                                     <p/>

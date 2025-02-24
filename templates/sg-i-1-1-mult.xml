@@ -98,7 +98,6 @@
                         <repository xml:lang="de">Stiftsarchiv St. Gallen</repository>
                         <idno xml:lang="de">StiASG, <!--Hier der Rest der Signatur--></idno>
                      </msIdentifier>
-                     <head/>
                      <msContents>
                         <summary xml:lang="de">
                            <p/>
@@ -160,7 +159,7 @@
       </body>
       <back>
          <div>
-            <p></p>
+            <p/>
          </div>
       </back>
    </text>
