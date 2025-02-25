@@ -605,13 +605,13 @@ lb::before {
   content: "/\A";
 }
 lb[break="no"]::before {
-  content: "-/\A";
+  content: "-/\A" !important;
 }
 head lb::before {
   content: " / ";
 }
 lb:first-of-type::before {
-  content: "";
+  content: oxy_xpath("if (string-join(preceding-sibling::text()) => normalize-space() => string-length() > 0) then '/\A' else ''");
 }
 lem {
   text-decoration: underline;
