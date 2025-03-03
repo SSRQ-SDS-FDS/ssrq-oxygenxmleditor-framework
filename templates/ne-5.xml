@@ -21,12 +21,12 @@
                     <persName>Adrien Wyssbrod</persName>
                 </editor>
                 <respStmt>
-                    <persName/>
+                    <persName/><!-- à renseigner -->
                     <resp>Transcription</resp>
                     <resp>Encodage XML de la transcription</resp>
                 </respStmt>
                 <respStmt>
-                    <persName/>
+                    <persName/><!-- à renseigner -->
                     <persName>Pascale Sutter</persName>
                     <resp>Contrôle de qualité</resp>
                 </respStmt>
@@ -55,7 +55,13 @@
                     <msIdentifier>
                         <settlement xml:lang="fr" ref="loc007786">Neuchâtel</settlement>
                         <repository xml:lang="fr">Archives de l'État de Neuchâtel</repository>
-                        <idno xml:lang="fr">AEN <!--Voici le reste de la signature de l'archive--></idno>
+                        <idno xml:lang="fr">CH NE AEN</idno>
+                        <!-- À renseigner /// DE GStA PK -->
+                        <!-- Schéma Option : pour des anciennes cotes
+                            <altIdentifier>
+                               <idno></idno>
+                            </altIdentifier>
+                        -->
                     </msIdentifier>
                     <head/>
                     <msContents>
@@ -64,6 +70,13 @@
                         </summary>
                         <msItem>
                             <textLang xml:lang="fr"/>
+                            <!-- Attention à indiquer si il y a d'autres langues présentes
+                                 dans le document -->
+                            <!-- Schéma Option : si on le connaît
+                                <author>
+                                    <persName ref="" role="scribe"></persName>
+                                </author>
+                              -->
                         </msItem>
                     </msContents>
                     <physDesc>
@@ -78,10 +91,22 @@
                                         <height quantity="" unit="cm"/>
                                     </dimensions>
                                 </extent>
+                                <!-- Schéma Option : Foliation can be added here
+                                    <foliation>
+                                        <p xml:lang="fr">Description of the original foliation as free prose ...</p>
+                                        <p xml:lang="fr">Description of another foliation as free prose...</p>
+                                    </foliation>
+                                -->
+                                <!-- Schéma Option : Condition can be added here
+                                    <condition agent="">
+                                        <p></p>
+                                    </condition>
+                                -->
                             </supportDesc>
                         </objectDesc>
                         <bindingDesc>
                             <p/>
+                            <!-- Description : registre relié, lettre pliée, lettre dépliée -->
                         </bindingDesc>
                     </physDesc>
                     <history>
