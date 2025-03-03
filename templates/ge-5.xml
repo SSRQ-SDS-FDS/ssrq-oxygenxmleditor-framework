@@ -16,7 +16,7 @@
                 <respStmt>
                     <persName/>
                     <resp>Transcription</resp>
-                    <resp>Codage XML du transcript</resp>
+                    <resp>Encodage XML de la transcription</resp>
                 </respStmt>
                 <respStmt>
                     <persName/>
@@ -25,7 +25,7 @@
                 </respStmt>
                 <respStmt>
                     <orgName/>
-                    <resp>Création d'un fac-similé</resp>
+                    <resp>Création d’un fac-similé</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
