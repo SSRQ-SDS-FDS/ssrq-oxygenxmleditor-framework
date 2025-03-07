@@ -6,8 +6,16 @@ head {
     font-weight: bold;
 }
 
+head[n]::before {
+    content: attr(n) ". ";
+}
+
 head[resp]::before {
     content: "[";
+}
+
+head[n][resp]::before {
+    content: "[" attr(n) ". ";
 }
 
 head[resp]::after {
