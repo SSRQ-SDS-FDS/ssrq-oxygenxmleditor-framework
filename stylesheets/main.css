@@ -875,12 +875,12 @@ pb {
 TEI[xml|lang="de"] pb[facs]:hover::after {
   content: "Faksimile «" attr(facs) "» öffnen";
   -oxy-link: "https://facsimiles.ssrq-sds-fds.ch/iiif/2/" attr(facs) ".ptif/full/full/0/default.jpg";
-  text-decoration: underline;
+  font-style: italic;
 }
 TEI[xml|lang="fr"] pb[facs]:hover::after {
   content: "Ouvrez le fac-similé « " attr(facs) " »";
   -oxy-link: "https://facsimiles.ssrq-sds-fds.ch/iiif/2/" attr(facs) ".ptif/full/full/0/default.jpg";
-  text-decoration: underline;
+  font-style: italic;
 }
 persName {
   color: #0000ff;
