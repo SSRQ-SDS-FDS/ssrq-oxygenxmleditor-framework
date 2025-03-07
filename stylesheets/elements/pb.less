@@ -1,3 +1,16 @@
 pb {
     content: "\A // [" attr(n) "] ";
 }
+
+TEI[xml|lang = "de"] pb[facs]:hover::after {
+    content: "Faksimile «" attr(facs) "» öffnen";
+    -oxy-link: "https://facsimiles.ssrq-sds-fds.ch/iiif/2/" attr(facs) ".ptif/full/full/0/default.jpg";
+    text-decoration: underline;
+}
+
+TEI[xml|lang = "fr"] pb[facs]:hover::after {
+    content: "Ouvrez le fac-similé « " attr(facs) " »";
+    -oxy-link: "https://facsimiles.ssrq-sds-fds.ch/iiif/2/" attr(facs) ".ptif/full/full/0/default.jpg";
+    text-decoration: underline;
+}
+
