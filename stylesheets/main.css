@@ -1062,6 +1062,7 @@ seg {
 }
 seg[n]::before {
   content: "[" attr(n) "]";
+  margin-right: 6px;
 }
 seriesStmt {
   display: block;
