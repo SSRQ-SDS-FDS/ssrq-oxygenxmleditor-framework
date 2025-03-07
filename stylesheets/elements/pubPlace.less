@@ -7,9 +7,11 @@ pubPlace {
 TEI[xml|lang = "de"] pubPlace[ref]:hover::after {
     // ToDo: Finale API-URL einfügen!
     content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
+    -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
 }
 
 TEI[xml|lang = "fr"] pubPlace[ref]:hover::after {
     // ToDo: Finale API-URL einfügen!
     content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
+    -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
 }
