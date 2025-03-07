@@ -588,6 +588,11 @@ TEI[xml|lang='fr'] altIdentifier idno::before {
   content: "Signature alternative : ";
   font-style: italic;
 }
+msIdentifier idno[source]:hover::after,
+altIdentifier idno[source]:hover::after {
+  content: " (" attr(source) ")";
+  -oxy-link: attr(source);
+}
 item {
   display: list-item;
   padding: 6px;
