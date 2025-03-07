@@ -33,3 +33,8 @@ TEI[xml|lang = 'fr'] altIdentifier idno::before {
     content: "Signature alternative : ";
     .additional-text;
 }
+
+msIdentifier idno[source]:hover::after, altIdentifier idno[source]:hover::after {
+    content: " (" attr(source) ")";
+    -oxy-link: attr(source);
+}

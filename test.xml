@@ -362,6 +362,9 @@
                             /></date>
                     </p>
                 </div>
+                <div>
+                    <p><lb/>Test für einen Abschnitt mit Line<lb break="no"/>beginning und break 'no'.</p>
+                </div>
                 <div type="section" n="5">
                     <head>Sonstige Auszeichnungen</head>
                     <p> Fremdsprachlicher Text: <foreign xml:lang="la"

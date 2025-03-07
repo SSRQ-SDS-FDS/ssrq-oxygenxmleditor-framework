@@ -471,8 +471,14 @@ head {
   font-size: 20px;
   font-weight: bold;
 }
+head[n]::before {
+  content: attr(n) ". ";
+}
 head[resp]::before {
   content: "[";
+}
+head[n][resp]::before {
+  content: "[" attr(n) ". ";
 }
 head[resp]::after {
   content: "]";
@@ -581,6 +587,11 @@ TEI[xml|lang='de'] altIdentifier idno::before {
 TEI[xml|lang='fr'] altIdentifier idno::before {
   content: "Signature alternative : ";
   font-style: italic;
+}
+msIdentifier idno[source]:hover::after,
+altIdentifier idno[source]:hover::after {
+  content: " (" attr(source) ")";
+  -oxy-link: attr(source);
 }
 item {
   display: list-item;
@@ -845,18 +856,22 @@ origPlace {
 }
 TEI[xml|lang="de"] origPlace::before {
   content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") ";
+  -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
   font-style: italic;
 }
 TEI[xml|lang="fr"] origPlace::before {
   content: "Lieu d'exposition (" attr(type) ") (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") ";
+  -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
   font-style: italic;
 }
 TEI[xml|lang="de"] origPlace[cert]::before {
   content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") [" attr(cert) "] ";
+  -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
   font-style: italic;
 }
 TEI[xml|lang="fr"] origPlace[cert]::before {
   content: "Lieu d'exposition (" attr(type) ") (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") [" attr(cert) "] ";
+  -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
   font-style: italic;
 }
 p {
@@ -866,14 +881,26 @@ p {
 pb {
   content: "\A // [" attr(n) "] ";
 }
+TEI[xml|lang="de"] pb[facs]:hover::after {
+  content: "Faksimile «" attr(facs) "» öffnen";
+  -oxy-link: "https://facsimiles.ssrq-sds-fds.ch/iiif/2/" attr(facs) ".ptif/full/full/0/default.jpg";
+  font-style: italic;
+}
+TEI[xml|lang="fr"] pb[facs]:hover::after {
+  content: "Ouvrez le fac-similé « " attr(facs) " »";
+  -oxy-link: "https://facsimiles.ssrq-sds-fds.ch/iiif/2/" attr(facs) ".ptif/full/full/0/default.jpg";
+  font-style: italic;
+}
 persName {
   color: #0000ff;
 }
 TEI[xml|lang="de"] persName[ref]:hover::after {
   content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/persons/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
+  -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
 }
 TEI[xml|lang="fr"] persName[ref]:hover::after {
   content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/persons/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
+  -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
 }
 physDesc {
   display: block;
@@ -891,9 +918,11 @@ placeName {
 }
 TEI[xml|lang="de"] placeName[ref]:hover::after {
   content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
+  -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
 }
 TEI[xml|lang="fr"] placeName[ref]:hover::after {
   content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
+  -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
 }
 precision {
   content: "";
@@ -931,9 +960,11 @@ pubPlace {
 }
 TEI[xml|lang="de"] pubPlace[ref]:hover::after {
   content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
+  -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
 }
 TEI[xml|lang="fr"] pubPlace[ref]:hover::after {
   content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
+  -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
 }
 q {
   color: #808000;
@@ -1041,6 +1072,7 @@ seg {
 }
 seg[n]::before {
   content: "[" attr(n) "]";
+  margin-right: 6px;
 }
 seriesStmt {
   display: block;
@@ -1173,15 +1205,19 @@ term {
 }
 TEI[xml|lang="de"] term[ref^="key"]:hover::after {
   content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/keywords/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
+  -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
 }
 TEI[xml|lang="fr"] term[ref^="key"]:hover::after {
   content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/keywords/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
+  -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
 }
 TEI[xml|lang="de"] term[ref^="lem"]:hover::after {
   content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/lemmata/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
+  -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
 }
 TEI[xml|lang="fr"] term[ref^="lem"]:hover::after {
   content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/lemmata/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
+  -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
 }
 keywords term {
   display: list-item;

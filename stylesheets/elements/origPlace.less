@@ -9,23 +9,27 @@ origPlace {
 TEI[xml|lang = "de"] origPlace::before {
     // ToDo: Finale API-URL einfügen!
     content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") ";
+    -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
     .additional-text;
 }
 
 TEI[xml|lang = "fr"] origPlace::before {
     // ToDo: Finale API-URL einfügen!
     content: "Lieu d'exposition (" attr(type) ") (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") ";
+    -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
     .additional-text;
 }
 
 TEI[xml|lang = "de"] origPlace[cert]::before {
     // ToDo: Finale API-URL einfügen!
     content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") [" attr(cert) "] ";
+    -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
     .additional-text;
 }
 
 TEI[xml|lang = "fr"] origPlace[cert]::before {
     // ToDo: Finale API-URL einfügen!
     content: "Lieu d'exposition (" attr(type) ") (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") [" attr(cert) "] ";
+    -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
     .additional-text;
 }
