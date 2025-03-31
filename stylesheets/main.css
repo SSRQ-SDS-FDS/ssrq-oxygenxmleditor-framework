@@ -996,6 +996,10 @@ ref {
 ref[target]:hover::after {
   content: " (" attr(target) ")";
 }
+ref[target^="http"]:hover::after {
+  content: " (" attr(target) ")";
+  -oxy-link: attr(source);
+}
 editorialDecl ref {
   content: attr(target);
 }
