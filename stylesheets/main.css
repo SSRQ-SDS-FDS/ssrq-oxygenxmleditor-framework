@@ -998,7 +998,7 @@ ref[target]:hover::after {
 }
 ref[target^="http"]:hover::after {
   content: " (" attr(target) ")";
-  -oxy-link: attr(source);
+  -oxy-link: attr(target);
 }
 editorialDecl ref {
   content: attr(target);
