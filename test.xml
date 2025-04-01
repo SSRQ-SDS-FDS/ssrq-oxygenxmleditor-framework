@@ -403,7 +403,8 @@
         </body>
         <back>
             <div>
-                <p> Foo </p>
+                <p> Foo <bibl><ref target="http://www.google.de"
+                            >Beispiel für einen klickbaren Link mit einer URL als Inhalt</ref></bibl>.</p>
             </div>
         </back>
     </text>
