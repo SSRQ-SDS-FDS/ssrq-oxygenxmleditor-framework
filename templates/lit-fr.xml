@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Lit.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Lit.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="fr">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Liste des sources non imprimées</title>
+                <editor>
+                    <persName></persName>
+                </editor>
+                <respStmt>
+                    <persName></persName>
+                    <resp>Encodage XML</resp>
+                </respStmt>
+                <respStmt>
+                    <persName>Pascale Sutter</persName>
+                    <resp>Contrôle de qualité</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>SSRQ-SDS-FDS</publisher>
+                <date type="electronic" when-custom="0000-01-01"/>
+                <date type="print" when-custom="0000-01-01"/>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <seriesStmt>
+                <title>Collection des sources du droit suisse</title>
+                <respStmt>
+                    <orgName>Fondation des sources du droit de la Société suisse des juristes</orgName>
+                    <resp>Publication</resp>
+                </respStmt>
+                <idno>SDS-XYZ-lit</idno>
+                <idno type="uuid">${uuid}</idno>
+            </seriesStmt>
+            <sourceDesc>
+                <p>Born digital.</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text type="literature">
+        <body>
+            <div>
+                <head></head>
+                <listBibl>
+                    <head></head>
+                    <bibl></bibl>
+                </listBibl>
+            </div>
+            <!-- Exemple 1 : Bibliothèques
+            <div>
+                <head>Bibliothèques</head>
+                <listBibl>
+                    <head>Bibliothèque 1</head>
+                    <bibl>Source 1</bibl>
+                    <bibl>Source 2</bibl>
+                </listBibl>
+                 <listBibl>
+                    <head>Bibliothèque 2</head>
+                    <bibl>Source 1</bibl>
+                </listBibl>
+            </div>
+            <!-- Exemple 2 : Archive avec sous-groupement
+                <div>
+                <head>Archives</head>
+                <listBibl>
+                    <head>Archive 1</head>
+                    <listBibl>
+                        <head>Département 1</head>
+                        <bibl>Source 1</bibl>
+                        <bibl>Source 2</bibl>
+                    </listBibl>
+                    <listBibl>
+                        <head>Département 2</head>
+                        <bibl>Source 1</bibl>
+                        <bibl>Source 2</bibl>
+                    </listBibl>
+                </listBibl>
+            </div>
+            -->
+        </body>
+    </text>
+</TEI>
