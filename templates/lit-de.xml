@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Lit.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Lit.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xml:lang="de">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>Verzeichnis der ungedruckten Quellen</title>
+                <editor>
+                    <persName></persName>
+                </editor>
+                <respStmt>
+                    <persName></persName>
+                    <resp>XML-Codierung</resp>
+                </respStmt>
+                <respStmt>
+                    <persName>Pascale Sutter</persName>
+                    <resp>Qualitätskontrolle</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>SSRQ-SDS-FDS</publisher>
+                <date type="electronic" when-custom="0000-01-01"/>
+                <date type="print" when-custom="0000-01-01"/>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <seriesStmt>
+                <title>Sammlung Schweizerischer Rechtsquellen</title>
+                <respStmt>
+                    <orgName>Rechtsquellenstiftung der Schweizerischen Juristischen Gesellschaft</orgName>
+                    <resp>Herausgabe</resp>
+                </respStmt>
+                <idno>SSRQ-XYZ-lit</idno>
+                <idno type="uuid">${uuid}</idno>
+            </seriesStmt>
+            <sourceDesc>
+                <p>Born digital.</p>
+            </sourceDesc>
+        </fileDesc>
+    </teiHeader>
+    <text type="literature">
+        <body>
+            <div>
+                <head></head>
+                <listBibl>
+                    <head></head>
+                    <bibl></bibl>
+                </listBibl>
+            </div>
+            <!-- Beispiel 1: Bibliotheken
+            <div>
+                <head>Bibliotheken</head>
+                <listBibl>
+                    <head>Bibliothek Nr. 1</head>
+                    <bibl>Signatur Nr. 1</bibl>
+                    <bibl>Signatur Nr. 2</bibl>
+                </listBibl>
+                 <listBibl>
+                    <head>Bibliothek Nr. 2</head>
+                    <bibl>Signatur Nr. 1</bibl>
+                </listBibl>
+            </div>
+            <!-- Beispiel 2: Ein Archiv mit Untergruppierung der Quellen in Akten und Urkunden
+                <div>
+                <head>Archive</head>
+                <listBibl>
+                    <head>Kantonalarchiv XY</head>
+                    <listBibl>
+                        <head>Akten</head>
+                        <bibl>Akte Nr. 1</bibl>
+                        <bibl>Akte Nr. 2</bibl>
+                    </listBibl>
+                    <listBibl>
+                        <head>Urkunden</head>
+                        <bibl>Urkunde Nr. 1</bibl>
+                        <bibl>Urlunde Nr. 2</bibl>
+                    </listBibl>
+                </listBibl>
+            </div>
+            -->
+        </body>
+    </text>
+</TEI>
