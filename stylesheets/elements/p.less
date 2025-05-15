@@ -3,3 +3,8 @@
 p {
     .margin-block;
 }
+
+p[n]::before {
+    content: "[" attr(n) "]";
+    margin-right: @tiny-size;
+}

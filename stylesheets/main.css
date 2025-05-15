@@ -581,11 +581,11 @@ TEI[xml|lang='fr'] msIdentifier idno::before {
   font-style: italic;
 }
 TEI[xml|lang='de'] altIdentifier idno::before {
-  content: "Alternative Signatur: ";
+  content: "Alte Signatur: ";
   font-style: italic;
 }
 TEI[xml|lang='fr'] altIdentifier idno::before {
-  content: "Signature alternative : ";
+  content: "Signature ancienne : ";
   font-style: italic;
 }
 msIdentifier idno[source]:hover::after,
@@ -877,6 +877,10 @@ TEI[xml|lang="fr"] origPlace[cert]::before {
 p {
   display: block;
   margin: 12px;
+}
+p[n]::before {
+  content: "[" attr(n) "]";
+  margin-right: 6px;
 }
 pb {
   content: "\A // [" attr(n) "] ";
