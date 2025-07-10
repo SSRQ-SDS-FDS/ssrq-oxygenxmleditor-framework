@@ -62,7 +62,7 @@
                             <xsl:value-of select="$name || ' (' || string-join($org-types, ', ') || ')'"/>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:value-of select="$name || '(' || (if ($lang = 'fr') then 'famille' else 'Familie') || ')'"/>
+                            <xsl:value-of select="$name || ' (' || (if ($lang = 'fr') then 'famille' else 'Familie') || ')'"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:when>
@@ -85,10 +85,10 @@
                         else ()"/>
                     <xsl:choose>
                         <xsl:when test="$date-start or $date-end">
-                            <xsl:value-of select="string-join(($name, $data?sex), ', ') || ' (' || string-join(($date-start, $date-end), '-') || ')'"/>
+                            <xsl:value-of select="string-join(($name, $data?sex => lower-case()), ', ') || ' (' || string-join(($date-start, $date-end), '-') || ')'"/>
                         </xsl:when>
                         <xsl:otherwise>
-                            <xsl:value-of select="string-join(($name, $data?sex), ', ')"/>
+                            <xsl:value-of select="string-join(($name, $data?sex => lower-case()), ', ')"/>
                         </xsl:otherwise>
                     </xsl:choose>
                 </xsl:when>
