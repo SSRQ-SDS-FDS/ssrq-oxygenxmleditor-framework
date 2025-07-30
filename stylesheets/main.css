@@ -862,22 +862,22 @@ origPlace {
   color: #008000;
 }
 TEI[xml|lang="de"] origPlace::before {
-  content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") ";
+  content: "Ausstellungsort (" attr(type) ") (" oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'de']})?output => normalize-space()") ") ";
   -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
   font-style: italic;
 }
 TEI[xml|lang="fr"] origPlace::before {
-  content: "Lieu d'exposition (" attr(type) ") (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") ";
+  content: "Lieu d'exposition (" attr(type) ") (" oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'fr']})?output => normalize-space()") ") ";
   -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
   font-style: italic;
 }
 TEI[xml|lang="de"] origPlace[cert]::before {
-  content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") [" attr(cert) "] ";
+  content: "Ausstellungsort (" attr(type) ")  (" oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'de']})?output => normalize-space()") ") [" attr(cert) "] ";
   -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
   font-style: italic;
 }
 TEI[xml|lang="fr"] origPlace[cert]::before {
-  content: "Lieu d'exposition (" attr(type) ") (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") [" attr(cert) "] ";
+  content: "Lieu d'exposition (" attr(type) ") (" oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'fr']})?output => normalize-space()") ") [" attr(cert) "] ";
   -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
   font-style: italic;
 }
@@ -974,12 +974,14 @@ pubPlace {
   color: #008000;
 }
 TEI[xml|lang="de"] pubPlace[ref]:hover::after {
-  content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
+  content: oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'de']})?output");
   -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
+  font-style: italic;
 }
 TEI[xml|lang="fr"] pubPlace[ref]:hover::after {
-  content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
+  content: oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'fr']})?output");
   -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
+  font-style: italic;
 }
 q {
   color: #808000;
