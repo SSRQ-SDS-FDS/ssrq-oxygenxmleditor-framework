@@ -1,7 +1,18 @@
+@import "../commons/classes.less";
 @import "../commons/colors.less";
 
 time {
     color: @time-text-color;
+}
+
+time[period],
+time[dur-iso],
+time[when-custom],
+time[from-custom],
+time[to-custom],
+time[notBefore-custom],
+time[notAfter-custom] {
+    .dotted;
 }
 
 time[period]:hover::after {

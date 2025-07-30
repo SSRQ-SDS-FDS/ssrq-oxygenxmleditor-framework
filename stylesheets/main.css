@@ -17,6 +17,10 @@
   border-collapse: collapse;
   border-radius: 6px;
 }
+.dotted {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
 .margin-block {
   display: block;
   margin: 12px;
@@ -259,6 +263,16 @@ damageSpan {
 }
 date {
   color: #ffa500;
+}
+date[period],
+date[dur-iso],
+date[when-custom],
+date[from-custom],
+date[to-custom],
+date[notBefore-custom],
+date[notAfter-custom] {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 publicationStmt date {
   color: #000000;
@@ -537,6 +551,10 @@ hi[rend="outdent"] {
   text-indent: -12px;
   margin-left: 12px;
 }
+hi[rend^="rotated_"] {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
 hi[rend="rotated_90"]:hover::after {
   content: " (rotated 90°) ";
 }
@@ -587,6 +605,11 @@ TEI[xml|lang='de'] altIdentifier idno::before {
 TEI[xml|lang='fr'] altIdentifier idno::before {
   content: "Signature ancienne : ";
   font-style: italic;
+}
+msIdentifier idno[source],
+altIdentifier idno[source] {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 msIdentifier idno[source]:hover::after,
 altIdentifier idno[source]:hover::after {
@@ -694,6 +717,8 @@ TEI[xml|lang="fr"] material::before {
 }
 measure {
   color: #ffa500;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 measure:hover::after {
   content: " (" attr(quantity) " " attr(unit) ", type: " attr(type) ")";
@@ -758,6 +783,8 @@ note {
 }
 num {
   color: #ffa500;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 num:hover::after {
   content: " (value: " attr(value) ")";
@@ -767,6 +794,10 @@ objectDesc {
 }
 orgName {
   color: #800080;
+}
+orgName[ref] {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 TEI[xml|lang="de"] orgName[ref]:hover::after {
   content: oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'de']})?output");
@@ -862,22 +893,22 @@ origPlace {
   color: #008000;
 }
 TEI[xml|lang="de"] origPlace::before {
-  content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") ";
+  content: "Ausstellungsort (" attr(type) ") (" oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'de']})?output => normalize-space()") ") ";
   -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
   font-style: italic;
 }
 TEI[xml|lang="fr"] origPlace::before {
-  content: "Lieu d'exposition (" attr(type) ") (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") ";
+  content: "Lieu d'exposition (" attr(type) ") (" oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'fr']})?output => normalize-space()") ") ";
   -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
   font-style: italic;
 }
 TEI[xml|lang="de"] origPlace[cert]::before {
-  content: "Ausstellungsort (" attr(type) ") (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ") [" attr(cert) "] ";
+  content: "Ausstellungsort (" attr(type) ")  (" oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'de']})?output => normalize-space()") ") [" attr(cert) "] ";
   -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
   font-style: italic;
 }
 TEI[xml|lang="fr"] origPlace[cert]::before {
-  content: "Lieu d'exposition (" attr(type) ") (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ") [" attr(cert) "] ";
+  content: "Lieu d'exposition (" attr(type) ") (" oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'fr']})?output => normalize-space()") ") [" attr(cert) "] ";
   -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
   font-style: italic;
 }
@@ -892,6 +923,10 @@ p[n]::before {
 pb {
   content: "\A // [" attr(n) "] ";
 }
+pb[facs] {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
 TEI[xml|lang="de"] pb[facs]:hover::after {
   content: "Faksimile «" attr(facs) "» öffnen";
   -oxy-link: "https://facsimiles.ssrq-sds-fds.ch/iiif/2/" attr(facs) ".ptif/full/full/0/default.jpg";
@@ -904,6 +939,10 @@ TEI[xml|lang="fr"] pb[facs]:hover::after {
 }
 persName {
   color: #0000ff;
+}
+persName[ref] {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 TEI[xml|lang="de"] persName[ref]:hover::after {
   content: oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'de']})?output");
@@ -929,6 +968,10 @@ TEI[xml|lang="fr"] physDesc::before {
 placeName {
   color: #008000;
 }
+placeName[ref] {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
 TEI[xml|lang="de"] placeName[ref]:hover::after {
   content: oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'de']})?output");
   -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
@@ -941,6 +984,8 @@ TEI[xml|lang="fr"] placeName[ref]:hover::after {
 }
 precision {
   content: "";
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 precision:hover::after {
   content: "(precision: " attr(match) " = " attr(precision) ")";
@@ -973,13 +1018,19 @@ publicationStmt publisher {
 pubPlace {
   color: #008000;
 }
+pubPlace[ref] {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
 TEI[xml|lang="de"] pubPlace[ref]:hover::after {
-  content: " (ID: " attr(ref) "; Standardname: " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=de')") ")";
+  content: oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'de']})?output");
   -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
+  font-style: italic;
 }
 TEI[xml|lang="fr"] pubPlace[ref]:hover::after {
-  content: " (ID : " attr(ref) "; Nom standard : " oxy_xpath("json-doc('https://staging.editio.ssrq-online.ch/api/v1/entities/places/' || substring(./@ref, 1, 9) || '/name?lang=fr')") ")";
+  content: oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'fr']})?output");
   -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
+  font-style: italic;
 }
 q {
   color: #808000;
@@ -1007,6 +1058,10 @@ rdg::after {
 }
 ref {
   display: inline;
+}
+ref[target] {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 ref[target]:hover::after {
   content: " (" attr(target) ")";
@@ -1222,6 +1277,10 @@ teiHeader::before {
 term {
   color: #ff00ff;
 }
+term[ref] {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
 TEI[xml|lang="de"] term[ref]:hover::after {
   content: oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'de']})?output");
   -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
@@ -1275,6 +1334,16 @@ TEI[xml|lang='fr'] textLang::before {
 }
 time {
   color: #ffa500;
+}
+time[period],
+time[dur-iso],
+time[when-custom],
+time[from-custom],
+time[to-custom],
+time[notBefore-custom],
+time[notAfter-custom] {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
 }
 time[period]:hover::after {
   content: " (period: " attr(period) ")";

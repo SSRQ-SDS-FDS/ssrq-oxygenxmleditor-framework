@@ -38,6 +38,10 @@ hi[rend = "outdent"] {
     margin-left: @normal-size;
 }
 
+hi[rend^="rotated_"] {
+    .dotted;
+}
+
 hi[rend="rotated_90"]:hover::after {
     content: " (rotated 90°) ";
 }
