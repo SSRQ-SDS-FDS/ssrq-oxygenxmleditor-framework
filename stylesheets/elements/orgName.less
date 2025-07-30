@@ -5,6 +5,10 @@ orgName {
     color: @organisation-text-color;
 }
 
+orgName[ref] {
+    .dotted;
+}
+
 TEI[xml|lang = "de"] orgName[ref]:hover::after { 
     content: oxy_xpath(
         "transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'de']})?output"

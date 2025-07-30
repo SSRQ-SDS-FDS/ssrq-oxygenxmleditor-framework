@@ -1,5 +1,11 @@
+@import "../commons/classes.less";
+
 pb {
     content: "\A // [" attr(n) "] ";
+}
+
+pb[facs] {
+    .dotted;
 }
 
 TEI[xml|lang = "de"] pb[facs]:hover::after {

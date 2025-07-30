@@ -1,19 +1,26 @@
+@import "../commons/classes.less";
 @import "../commons/colors.less";
 
 pubPlace {
     color: @place-text-color;
 }
 
+pubPlace[ref] {
+    .dotted;
+}
+
 TEI[xml|lang="de"] pubPlace[ref]:hover::after {
-    content: oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'de']})?output"
-    );
+    content: oxy_xpath(
+        "transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'de']})?output"
+        );
     -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
     font-style: italic;
 }
 
 TEI[xml|lang="fr"] pubPlace[ref]:hover::after {
-    content: oxy_xpath("transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'fr']})?output"
-    );
+     content: oxy_xpath(
+        "transform(map{'stylesheet-location': '${frameworkDir}/xsl/entity_infos.xsl', 'initial-function': QName('http://ssrq-sds-fds.ch/xsl/oxyframework/functions/info', 'create-entity-info'), 'function-params': [., 'fr']})?output"
+        );
     -oxy-link: "https://p.ssrq-sds-fds.ch/" oxy_xpath("substring(./@ref, 1, 9)");
     font-style: italic;
 }

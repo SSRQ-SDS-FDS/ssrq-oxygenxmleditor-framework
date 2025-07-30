@@ -34,6 +34,10 @@ TEI[xml|lang = 'fr'] altIdentifier idno::before {
     .additional-text;
 }
 
+msIdentifier idno[source], altIdentifier idno[source] {
+    .dotted;
+}
+
 msIdentifier idno[source]:hover::after, altIdentifier idno[source]:hover::after {
     content: " (" attr(source) ")";
     -oxy-link: attr(source);

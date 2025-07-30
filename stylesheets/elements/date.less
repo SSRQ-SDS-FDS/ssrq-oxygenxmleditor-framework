@@ -5,6 +5,17 @@ date {
     color: @date-text-color;
 }
 
+date[period],
+date[dur-iso],
+date[when-custom],
+date[from-custom],
+date[to-custom],
+date[notBefore-custom],
+date[notAfter-custom] {
+    .dotted;
+}
+
+
 publicationStmt date {
     color: @default-text-color;
     .margin-block;
