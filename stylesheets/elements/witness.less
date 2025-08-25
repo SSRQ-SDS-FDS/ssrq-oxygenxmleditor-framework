@@ -2,4 +2,15 @@
 
 witness {
     .margin-block;
+    .bordered
+}
+
+TEI[xml|lang = 'de'] witness::before {
+    content: "Textzeuge: " attr(n) ;
+    .additional-heading;
+}
+
+TEI[xml|lang = 'fr'] witness::before {
+    content: "Témoin: " attr(n) ;
+    .additional-heading;
 }

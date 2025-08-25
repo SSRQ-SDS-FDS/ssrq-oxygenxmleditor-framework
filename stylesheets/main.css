@@ -1405,4 +1405,19 @@ TEI[xml|lang="fr"] width::before {
 witness {
   display: block;
   margin: 12px;
+  border: 1px solid black;
+  border-collapse: collapse;
+  border-radius: 6px;
+}
+TEI[xml|lang='de'] witness::before {
+  content: "Textzeuge: " attr(n);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
+}
+TEI[xml|lang='fr'] witness::before {
+  content: "Témoin: " attr(n);
+  font-style: italic;
+  font-weight: bold;
+  font-size: 20px;
 }
