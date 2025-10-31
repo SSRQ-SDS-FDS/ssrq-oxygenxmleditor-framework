@@ -19,11 +19,13 @@
                <persName>Pascale Sutter</persName>
                <resp>Qualitätskontrolle</resp>
             </respStmt>
+             <respStmt>
+                 <orgName>Staatsarchiv Solothurn</orgName>
+                 <resp>Erstellung Faksimile</resp>
+             </respStmt>
          </titleStmt>
          <publicationStmt>
             <publisher>SSRQ-SDS-FDS</publisher>
-            <date type="electronic" when-custom="0000-01-01"/>
-            <date type="print" when-custom="0000-01-01"/>
             <availability>
                <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                   Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
@@ -36,7 +38,7 @@
                <orgName>Rechtsquellenstiftung der Schweizerischen Juristischen Gesellschaft</orgName>
                <resp>Herausgabe</resp>
             </respStmt>
-            <idno>SSRQ-SO-I_3-0-1</idno>
+            <idno>SSRQ-SO-I_3-1.X-1</idno>
             <idno type="uuid">${uuid}</idno>
          </seriesStmt>
          <sourceDesc>
@@ -44,7 +46,7 @@
                <msIdentifier>
                    <settlement xml:lang="de" ref="loc000738">Solothurn</settlement>
                     <repository xml:lang="de">Staatsarchiv Solothurn</repository>
-                    <idno xml:lang="de">StASO <!-- hier Signatur ergänzen--></idno>
+                   <idno xml:lang="de">StASO P Stadtrecht Bd. 3, fol. <!--Stellenangabe--></idno>
                </msIdentifier>
                <head/>
                <msContents>
@@ -63,26 +65,29 @@
                         </support>
                         <extent>
                            <dimensions type="leaves">
-                              <width quantity="" unit="cm"/>
-                              <height quantity="" unit="cm"/>
+                              <width quantity="32.5" unit="cm"/>
+                              <height quantity="21.5" unit="cm"/>
                            </dimensions>
                         </extent>
                      </supportDesc>
                   </objectDesc>
                   <bindingDesc>
-                     <p/>
+                     <p>
+                         Eintrag
+                     </p>
                   </bindingDesc>
                </physDesc>
                <history>
                   <origin>
-                     <origDate type="document" calendar="" when-custom=""/>
+                      <origDate calendar="gregorian" from-custom="1604-01-01" to-custom="1604-12-31" type="document"/>
+                      <origPlace type="document" ref="loc000738">Solothurn</origPlace>
                   </origin>
                </history>
-               <additional>
-                  <listBibl type="">
-                     <bibl/>
-                  </listBibl>
-               </additional>
+                <additional>
+                    <listBibl type="literature">
+                        <bibl><ref>Aerni 1974</ref></bibl>
+                    </listBibl>
+                </additional>
             </msDesc>
          </sourceDesc>
       </fileDesc>
@@ -93,17 +98,12 @@
             </p>
          </editorialDecl>
       </encodingDesc>
-      <profileDesc>
-         <textClass>
-            <keywords>
-               <term ref=""/>
-            </keywords>
-         </textClass>
-      </profileDesc>
    </teiHeader>
    <text type="transcript">
       <body>
          <div>
+             <pb n=""/>
+             <head type="title"/>
             <p>
                <lb/>
             </p>
