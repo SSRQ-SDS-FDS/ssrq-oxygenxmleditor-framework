@@ -30,7 +30,11 @@ list head {
     margin: 0px 0px @small-size -@huge-size;
 }
 
-table head {
+table > head {
+    display: none;
+}
+
+table > head:first-of-type {
     display: table-caption;
     margin-bottom: @small-size;
 }
