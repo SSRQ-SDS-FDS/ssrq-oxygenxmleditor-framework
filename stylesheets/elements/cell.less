@@ -1,3 +1,4 @@
+@import "../commons/colors.less";
 @import "../commons/sizes.less";
 
 cell {
@@ -19,4 +20,22 @@ cell[rend = 'align-bottom'] {
 
 cell:last-of-type {
     border-right: none;
+}
+
+row:nth-of-type(even) > cell {
+    background-color: @even-background-color;
+}
+
+row:nth-of-type(odd) > cell {
+    background-color: @odd-background-color;
+}
+
+/* show a serialized version of heads inside a table,
+ * which are not the first head (this is displayed as
+ * a table caption) of the table. Implemented as tables
+ * only support a single table-caption. */
+row > cell:first-of-type:before {
+  color: red;
+  content: oxy_xpath("if (parent::row/preceding-sibling::*[1][self::head and not(. is ancestor::table/head[1])]) then concat(serialize(parent::row/preceding-sibling::*[1]), '\a ') else ''");
+  margin: @small-size 0px @small-size 0px;
 }
