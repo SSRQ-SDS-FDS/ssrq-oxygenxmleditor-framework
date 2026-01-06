@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xml:lang="de" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>V. Abteilung: Die Rechtsquellen des Kantons Schwyz, Erster Teil: Die Rechtsquellen der Abtei Einsiedeln, Band 1: Die allgemeinden
+                Rechtsquellen des Klosters Einsiedeln</title>
+                <editor>
+                    <persName>Larissa Achermann</persName>
+                </editor>
+                <editor>
+                    <persName>Silvia Stamm</persName>
+                </editor>
+                <respStmt>
+                     <!--Informationen hier ergänzen-->
+                    <persName/>
+                    <resp>Transkription</resp>
+                    <resp>XML-Codierung der Transkription</resp>
+                </respStmt>
+                <respStmt>
+                    <persName>Pascale Sutter</persName>
+                    <resp>Qualitätskontrolle</resp>
+                </respStmt>
+                <respStmt>
+                    <orgName>Klosterarchiv Einsiedeln</orgName>
+                    <resp>Erstellung Faksimile</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>SSRQ-SDS-FDS</publisher>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <seriesStmt>
+                <title>Sammlung Schweizerischer Rechtsquellen</title>
+                <respStmt>
+                    <orgName>Rechtsquellenstiftung der Schweizerischen Juristischen Gesellschaft</orgName>
+                    <resp>Herausgabe</resp>
+                </respStmt>
+                <idno>SSRQ-SZ-I_I-1.X-1</idno>
+                <idno type="uuid">${uuid}</idno>
+            </seriesStmt>
+            <sourceDesc>
+                <listWit>
+                    <witness n="A" xml:id="id-ssrq-${uuid}">
+                        <msDesc>
+                            <msIdentifier>
+                                <settlement xml:lang="de" ref=""/>
+                                <repository xml:lang="de"/>
+                                <idno xml:lang="de"/>
+                            </msIdentifier>
+                            <head/>
+                            <msContents>
+                                <summary xml:lang="de">
+                                    <p/>
+                                </summary>
+                                <msItem>
+                                    <textLang xml:lang="de"/>
+                                </msItem>
+                            </msContents>
+                            <physDesc>
+                                <objectDesc>
+                                    <supportDesc>
+                                        <support>
+                                            <material type="paper"/>
+                                        </support>
+                                        <extent>
+                                            <dimensions type="leaves">
+                                                <width quantity="" unit="cm"/>
+                                                <height quantity="" unit="cm"/>
+                                            </dimensions>
+                                        </extent>
+                                        <foliation>
+                                            <p/>
+                                        </foliation>
+                                        <condition agent="">
+                                            <p/>
+                                        </condition>
+                                    </supportDesc>
+                                </objectDesc>
+                                <bindingDesc>
+                                    <p/>
+                                </bindingDesc>
+                                <sealDesc>
+                                    <seal condition="" n=""/>
+                                </sealDesc>
+                            </physDesc>
+                            <history>
+                                <origin>
+                                    <origDate type="document" calendar="" when-custom=""/>
+                                </origin>
+                            </history>
+                            <additional>
+                                <listBibl type="">
+                                    <bibl/>
+                                </listBibl>
+                            </additional>
+                        </msDesc>
+                    </witness>
+                    <witness n="B" xml:id="id-ssrq-${uuid}">
+                        <msDesc>
+                            <msIdentifier>
+                                <settlement xml:lang="de" ref=""/>
+                                <repository xml:lang="de"/>
+                                <idno xml:lang="de"/>
+                            </msIdentifier>
+                            <msContents>
+                                <summary xml:lang="de">
+                                    <p/>
+                                </summary>
+                                <msItem>
+                                    <textLang xml:lang="de"/>
+                                </msItem>
+                            </msContents>
+                            <physDesc>
+                                <objectDesc>
+                                    <supportDesc>
+                                        <support>
+                                            <material type="paper"/>
+                                        </support>
+                                        <extent>
+                                            <dimensions type="leaves">
+                                                <width quantity="" unit="cm"/>
+                                                <height quantity="" unit="cm"/>
+                                            </dimensions>
+                                        </extent>
+                                        <foliation>
+                                            <p/>
+                                        </foliation>
+                                        <condition agent="">
+                                            <p/>
+                                        </condition>
+                                    </supportDesc>
+                                </objectDesc>
+                                <bindingDesc>
+                                    <p/>
+                                </bindingDesc>
+                                <sealDesc>
+                                    <seal condition="" n=""/>
+                                </sealDesc>
+                            </physDesc>
+                            <history>
+                                <origin>
+                                    <origDate type="document" calendar="" when-custom=""/>
+                                </origin>
+                            </history>
+                            <additional>
+                                <listBibl type="">
+                                    <bibl/>
+                                </listBibl>
+                            </additional>
+                        </msDesc>
+                    </witness>
+                </listWit>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>
+                    <ref target="https://p.ssrq-sds-fds.ch/guidelines/transcription"/>
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text type="transcript">
+        <body>
+            <div>
+                <pb n=""/>
+                <head type="title"/>
+                <p>
+                    <lb/>
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>

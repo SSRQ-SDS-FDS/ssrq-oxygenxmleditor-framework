@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xml:lang="de" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>V. Abteilung: Die Rechtsquellen des Kantons Schwyz, Erster Teil: Die Rechtsquellen der Abtei Einsiedeln, Band 1: Die allgemeinden
+                Rechtsquellen des Klosters Einsiedeln</title>
+                <editor>
+                    <persName>Larissa Achermann</persName>
+                </editor>
+                <editor>
+                    <persName>Silvia Stamm</persName>
+                </editor>
+                <respStmt>
+                     <!--Informationen hier ergänzen-->
+                    <persName/>
+                    <resp>Transkription</resp>
+                    <resp>XML-Codierung der Transkription</resp>
+                </respStmt>
+                <respStmt>
+                    <persName>Pascale Sutter</persName>
+                    <resp>Qualitätskontrolle</resp>
+                </respStmt>
+                <respStmt>
+                    <orgName>Klosterarchiv Einsiedeln</orgName>
+                    <resp>Erstellung Faksimile</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>SSRQ-SDS-FDS</publisher>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <seriesStmt>
+                <title>Sammlung Schweizerischer Rechtsquellen</title>
+                <respStmt>
+                    <orgName>Rechtsquellenstiftung der Schweizerischen Juristischen Gesellschaft</orgName>
+                    <resp>Herausgabe</resp>
+                </respStmt>
+                <idno>SSRQ-SZ-I_I-1.X-1</idno>
+                <idno type="uuid">${uuid}</idno>
+            </seriesStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <settlement ref="loc000085" xml:lang="de">Klosterarchiv Einsiedeln</settlement>
+                        <repository xml:lang="de">Klosterarchiv Einsiedeln</repository>
+                        <idno xml:lang="de">                            <!--Stellenangabe--></idno>
+                    </msIdentifier>
+                    <head/>
+                    <msContents>
+                        <summary xml:lang="de">
+                            <p/>
+                        </summary>
+                        <msItem>
+                            <textLang xml:lang="de"/>
+                        </msItem>
+                    </msContents>
+                    <physDesc>
+                        <objectDesc>
+                            <supportDesc>
+                                <support>
+                                    <material type="paper"/>
+                                </support>
+                                <extent>
+                                    <dimensions type="leaves">
+                                        <width quantity="32.5" unit="cm"/>
+                                        <height quantity="21.5" unit="cm"/>
+                                    </dimensions>
+                                </extent>
+                            </supportDesc>
+                        </objectDesc>
+                        <bindingDesc>
+                            <p>
+                                Eintrag
+                            </p>
+                        </bindingDesc>
+                    </physDesc>
+                    <history>
+                        <origin>
+                            <origDate calendar="gregorian" from-custom="1604-01-01" to-custom="1604-12-31" type="document"/>
+                            <origPlace type="document">
+                                 <!--Ausstellungsort-->
+                            </origPlace>
+                        </origin>
+                    </history>
+                    <additional>
+                        <listBibl type="literature">
+                            <bibl><ref>Aerni 1974</ref></bibl>
+                        </listBibl>
+                    </additional>
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>
+                    <ref target="https://p.ssrq-sds-fds.ch/guidelines/transcription"/>
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+    </teiHeader>
+    <text type="transcript">
+        <body>
+            <div>
+                <pb n=""/>
+                <head type="title"/>
+                <p>
+                    <lb/>
+                </p>
+            </div>
+        </body>
+    </text>
+</TEI>
