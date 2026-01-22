@@ -5,7 +5,7 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-             <title>X. Abteilung: Die Rechtsquellen des Kantons Solothurn, 1. Teil: Stadtrechte 
+             <title>X. Abteilung: Die Rechtsquellen des Kantons Solothurn, 1. Teil: Stadtrechte
                  (Stadt und Territorialstaat Solothurn), 3. Band: Das Solothurner Stadtrecht von 1604</title>
             <editor>
                 <persName>Rebekka Schifferle</persName>
@@ -46,7 +46,7 @@
                <msIdentifier>
                    <settlement xml:lang="de" ref="loc000738">Solothurn</settlement>
                     <repository xml:lang="de">Staatsarchiv Solothurn</repository>
-                   <idno xml:lang="de">StASO P Stadtrecht Bd. 3, fol. <!--Stellenangabe--></idno>
+                   <idno xml:lang="de">StASO CR-001/001</idno>
                </msIdentifier>
                <head/>
                <msContents>
@@ -61,12 +61,12 @@
                   <objectDesc>
                      <supportDesc>
                         <support>
-                           <material type="paper"/>
+                           <material type="parchment"/>
                         </support>
                         <extent>
                            <dimensions type="leaves">
-                              <width quantity="32.5" unit="cm"/>
-                              <height quantity="21.5" unit="cm"/>
+                              <width quantity="20.5" unit="cm"/>
+                              <height quantity="28.5" unit="cm"/>
                            </dimensions>
                         </extent>
                      </supportDesc>
@@ -79,7 +79,7 @@
                </physDesc>
                <history>
                   <origin>
-                      <origDate calendar="gregorian" from-custom="1604-01-01" to-custom="1604-12-31" type="document"/>
+                      <origDate calendar="gregorian" when-custom="1604-06-24" type="document"/>
                       <origPlace type="document" ref="loc000738">Solothurn</origPlace>
                   </origin>
                </history>
