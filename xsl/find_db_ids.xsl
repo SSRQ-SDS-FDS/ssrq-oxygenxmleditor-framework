@@ -9,9 +9,8 @@
     <xsl:param name="documentSystemID" as="xs:string"/>
     <xsl:param name="contextElementXPathExpression" as="xs:string"/>
     
-    <!-- ToDo: API-URL tauschen, sobald Editio online ist! -->
     <xsl:param name="api-base-url" as="xs:string"
-        select="'https://staging.editio.ssrq-online.ch/api/v1/entities'"/>
+        select="'https://editio.ssrq-online.ch/api/v1/entities'"/>
     
     <xsl:template name="start">
         <xsl:variable name="document" select="doc($documentSystemID)"/>
