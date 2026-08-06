@@ -5,8 +5,10 @@
     <teiHeader>
         <fileDesc>
             <titleStmt>
-                <title>XII. Abteilung: Die Rechtsquellen des Kantons Schaffhausen, Erster Teil: Stadtrechte von Schaffhausen und Stein am Rhein, 2. Reihe:
-                Stadt und Territorialstaat Schaffhausen, Band 3: Platzhalter. </title>
+                <title>XII. Abteilung: Die Rechtsquellen des Kantons Schaffhausen, 
+                    Erster Teil: Stadtrechte von Schaffhausen und Stein am Rhein, 2. Reihe:
+                    Stadt und Territorialstaat Schaffhausen, Die Ratsprotokolle der Stadt 
+                    Stein am Rhein von 1465 bis 1546</title>
                 <editor>
                     <persName>Claudia Sutter</persName>
                 </editor>
@@ -20,12 +22,14 @@
                     <resp>Qualitätskontrolle</resp>
                 </respStmt>
                 <respStmt>
-                    <orgName>Stadtarchiv Stein am Rhein</orgName>
+                    <orgName>GBL Gubler im Auftrag Stadtarchiv Stein am Rhein</orgName>
                     <resp>Erstellung Faksimile</resp>
                 </respStmt>
             </titleStmt>
             <publicationStmt>
-                <publisher>SSRQ-SDS-FDS</publisher> <date type="electronic" when-custom="0000-01-01"/> <date type="print" when-custom="0000-01-01"/>
+                <publisher>SSRQ-SDS-FDS</publisher> 
+                <date type="electronic" when-custom="0000-01-01"/> 
+                <date type="print" when-custom="0000-01-01"/>
                 <availability>
                     <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
                         Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
@@ -44,9 +48,9 @@
             <sourceDesc>
                 <msDesc>
                     <msIdentifier>
-                        <settlement ref="" xml:lang="de"/>
-                        <repository xml:lang="de"/>
-                        <idno xml:lang="de"/>
+                        <settlement ref="loc007335" xml:lang="de">Stein am Rhein</settlement>
+                        <repository xml:lang="de">Stadtarchiv Stein am Rhein</repository>
+                        <idno xml:lang="de">StadtA StaR A RP 1 (1465–1477), fol. </idno>
                     </msIdentifier>
                     <head/>
                     <msContents>
@@ -65,35 +69,32 @@
                                 </support>
                                 <extent>
                                     <dimensions type="leaves">
-                                        <width quantity="unknown" unit="unknown"/>
-                                        <height quantity="unknown" unit="unknown"/>
+                                        <width quantity="24" unit="cm"/>
+                                        <height quantity="32" unit="cm"/>
                                     </dimensions>
                                 </extent>
                                 <foliation>
-                                    <p/>
+                                    <p>moderne Foliierung</p>
                                 </foliation>
-                                <condition agent="">
-                                    <p/>
+                                <condition agent="water">
+                                    <p>Wasserflecken</p>
                                 </condition>
                             </supportDesc>
                         </objectDesc>
                         <bindingDesc>
-                            <p/>
+                            <p>Eintrag</p>
                         </bindingDesc>
-                        <sealDesc>
-                            <seal condition="" n=""/>
-                        </sealDesc>
                     </physDesc>
                     <history>
                         <origin>
-                            <origDate calendar="" type="document" when-custom=""/>
+                            <origDate calendar="julian" type="document" when-custom=""/>
                         </origin>
                     </history>
-                    <additional>
+                    <!--<additional>
                         <listBibl type="">
                             <bibl/>
                         </listBibl>
-                    </additional>
+                    </additional>-->
                 </msDesc>
             </sourceDesc>
         </fileDesc>
@@ -107,7 +108,7 @@
         <profileDesc>
             <textClass>
                 <keywords>
-                    <term ref=""/>
+                    <term ref="key000363">Ratsprotokoll</term>
                 </keywords>
             </textClass>
         </profileDesc>
@@ -115,6 +116,7 @@
     <text type="transcript">
         <body>
             <div>
+                <pb n="" facs=""/>
                 <p>
                     <lb/>
                 </p>
