@@ -6,9 +6,9 @@
         <fileDesc>
             <titleStmt>
                 <title>XII. Abteilung: Die Rechtsquellen des Kantons Schaffhausen, 
-                    Erster Teil: Stadtrechte von Schaffhausen und Stein am Rhein, 2. Reihe:
-                    Stadt und Territorialstaat Schaffhausen, Die Ratsprotokolle der Stadt 
-                    Stein am Rhein von 1465 bis 1546</title>
+                    Erster Teil: Stadtrechte von Schaffhausen und Stein am Rhein, 
+                    2. Reihe: Stadt und Territorialstaat Stein am Rhein, Band 3: Die 
+                    Ratsprotokolle der Stadt Stein am Rhein von 1465 bis 1546</title>
                 <editor>
                     <persName>Claudia Sutter</persName>
                 </editor>
@@ -22,7 +22,7 @@
                     <resp>Qualitätskontrolle</resp>
                 </respStmt>
                 <respStmt>
-                    <orgName>GBL Gubler im Auftrag Stadtarchiv Stein am Rhein</orgName>
+                    <orgName>Stadtarchiv Stein am Rhein</orgName>
                     <resp>Erstellung Faksimile</resp>
                 </respStmt>
             </titleStmt>
@@ -73,12 +73,7 @@
                                         <height quantity="32" unit="cm"/>
                                     </dimensions>
                                 </extent>
-                                <foliation>
-                                    <p>moderne Foliierung</p>
-                                </foliation>
-                                <condition agent="water">
-                                    <p>Wasserflecken</p>
-                                </condition>
+                                <condition agent="water"/>
                             </supportDesc>
                         </objectDesc>
                         <bindingDesc>
@@ -108,7 +103,7 @@
         <profileDesc>
             <textClass>
                 <keywords>
-                    <term ref="key000363">Ratsprotokoll</term>
+                    <term ref=""></term>
                 </keywords>
             </textClass>
         </profileDesc>
