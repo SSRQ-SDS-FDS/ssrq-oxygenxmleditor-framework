@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://schema.ssrq-sds-fds.ch/latest/TEI_Schema.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xml:lang="de" xmlns="http://www.tei-c.org/ns/1.0">
+    <teiHeader>
+        <fileDesc>
+            <titleStmt>
+                <title>XII. Abteilung: Die Rechtsquellen des Kantons Schaffhausen, 
+                    Erster Teil: Stadtrechte von Schaffhausen und Stein am Rhein, 
+                    2. Reihe: Stadt und Territorialstaat Stein am Rhein, Band 3: Die 
+                    Ratsprotokolle der Stadt Stein am Rhein von 1465 bis 1546</title>
+                <editor>
+                    <persName>
+                        <forename>Claudia</forename>
+                        <surname>Sutter</surname>
+                    </persName>
+                </editor>
+                <respStmt>
+                    <persName>
+                        <forename>Claudia</forename>
+                        <surname>Sutter</surname>
+                    </persName>
+                    <resp>Transkription</resp>
+                    <resp>XML-Codierung der Transkription</resp>
+                </respStmt>
+                <respStmt>
+                    <persName>
+                        <forename>Pascale</forename>
+                        <surname>Sutter</surname>
+                    </persName>
+                    <resp>Qualitätskontrolle</resp>
+                </respStmt>
+                <respStmt>
+                    <orgName>Stadtarchiv Stein am Rhein</orgName>
+                    <resp>Erstellung Faksimile</resp>
+                </respStmt>
+            </titleStmt>
+            <publicationStmt>
+                <publisher>SSRQ-SDS-FDS</publisher> 
+                <date type="electronic" when-custom="0000-01-01"/> 
+                <date type="print" when-custom="0000-01-01"/>
+                <availability>
+                    <licence target="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                        Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)
+                    </licence>
+                </availability>
+            </publicationStmt>
+            <seriesStmt>
+                <title>Sammlung Schweizerischer Rechtsquellen</title>
+                <respStmt>
+                    <orgName>Rechtsquellenstiftung der Schweizerischen Juristischen Gesellschaft</orgName>
+                    <resp>Herausgabe</resp>
+                </respStmt>
+                <idno>SSRQ-SH-II_3-0-1</idno>
+                <idno type="uuid">${uuid}</idno>
+            </seriesStmt>
+            <sourceDesc>
+                <msDesc>
+                    <msIdentifier>
+                        <settlement ref="loc007335" xml:lang="de">Stein am Rhein</settlement>
+                        <repository xml:lang="de">Stadtarchiv Stein am Rhein</repository>
+                        <idno xml:lang="de">StadtA StaR A RP 1 (1465–1477), fol. </idno>
+                    </msIdentifier>
+                    <head/>
+                    <msContents>
+                        <summary xml:lang="de">
+                            <p/>
+                        </summary>
+                        <msItem>
+                            <textLang xml:lang="de"/>
+                        </msItem>
+                    </msContents>
+                    <history>
+                        <origin>
+                            <origDate calendar="julian" type="document" when-custom=""/>
+                        </origin>
+                    </history>
+                    <!--<additional>
+                        <listBibl type="">
+                            <bibl/>
+                        </listBibl>
+                    </additional>-->
+                </msDesc>
+            </sourceDesc>
+        </fileDesc>
+        <encodingDesc>
+            <editorialDecl>
+                <p>
+                    <ref target="https://p.ssrq-sds-fds.ch/guidelines/transcription"/>
+                </p>
+            </editorialDecl>
+        </encodingDesc>
+        <profileDesc>
+            <textClass>
+                <keywords>
+                    <term ref=""></term>
+                </keywords>
+            </textClass>
+        </profileDesc>
+    </teiHeader>
+    <text type="collection">
+        <body>
+            <bibl><ref target="urn:ssrq:SSRQ-SH-II_3-XYZ.1-1">SSRQ-SH-II_3-XYZ.1-1</ref></bibl>
+            <bibl><ref target="urn:ssrq:SSRQ-SH-II_3-XYZ.2-1">SSRQ-SH-II_3-XYZ.2-1</ref></bibl>
+        </body>
+    </text>
+</TEI>
