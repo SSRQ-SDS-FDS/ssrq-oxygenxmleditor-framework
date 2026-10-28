@@ -9,23 +9,41 @@
                Die Rechtsquellen der Abtei St. Gallen, 1. Reihe: Die Herrschaft des Abtes von
                St. Gallen, Band 1: Die Rechtsquellen der weltlichen Amtleute des Klosters St. Gallen</title>
             <editor>
-               <persName>Michael Nadig</persName>
+               <persName>
+                   <forename>Michael</forename>
+                   <surname>Nadig</surname>
+               </persName>
             </editor>
             <editor>
-               <persName>Anina Steinmann</persName>
+               <persName>
+                   <forename>Anina</forename> 
+                   <surname>Steinmann</surname>
+               </persName>
             </editor>
             <respStmt>
-               <persName/>
+               <persName>
+                   <forename></forename>
+                   <surname></surname>
+               </persName>
                <resp>Transkription</resp>
                <resp>XML-Codierung der Transkription</resp>
             </respStmt>
             <respStmt>
-               <persName>Michael Nadig</persName>
-               <persName>Anina Steinmann</persName>
+               <persName>
+                   <forename>Michael</forename>
+                   <surname>Nadig</surname>
+               </persName>
+               <persName>
+                   <forename>Anina</forename>
+                   <surname>Steinmann</surname>
+               </persName>
                <resp>Erstellung Faksimile</resp>
             </respStmt>
             <respStmt>
-               <persName>Pascale Sutter</persName>
+               <persName>
+                   <forename>Pascale</forename>
+                   <surname>Sutter</surname>
+               </persName>
                <resp>Qualitätskontrolle</resp>
             </respStmt>
          </titleStmt>

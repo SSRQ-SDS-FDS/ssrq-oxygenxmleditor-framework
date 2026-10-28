@@ -9,25 +9,45 @@
                     Neuchâtel, Tome 5<pc>:</pc> Principauté de Neuchâtel<pc>:</pc> Les sources du
                     droit du gouvernement à distance 1707-1729</title>
                 <editor>
-                    <persName>Arnaud Besson</persName>
+                    <persName>
+                        <forename>Arnaud</forename>
+                        <surname>Besson</surname>
+                    </persName>
                 </editor>
                 <editor>
-                    <persName>Elane Panaget</persName>
+                    <persName>
+                        <forename>Elane</forename>
+                        <surname>Panaget</surname>
+                     </persName>
                 </editor>
                 <editor>
-                    <persName>Boris Siegfried</persName>
+                    <persName>
+                        <forename>Boris</forename>
+                        <surname>Siegfried</surname></persName>
                 </editor>
                 <editor>
-                    <persName>Adrien Wyssbrod</persName>
+                    <persName>
+                        <forname>Adrien</forname>
+                        <surname>Wyssbrod</surname>
+                    </persName>
                 </editor>
                 <respStmt>
-                    <persName/><!-- à renseigner -->
+                    <persName>
+                        <forename></forename>
+                        <surname></surname>
+                    </persName><!-- à renseigner -->
                     <resp>Transcription</resp>
                     <resp>Encodage XML de la transcription</resp>
                 </respStmt>
                 <respStmt>
-                    <persName/><!-- à renseigner -->
-                    <persName>Pascale Sutter</persName>
+                    <persName>
+                        <forename></forename>
+                        <surname></surname>
+                    </persName><!-- à renseigner -->
+                    <persName>
+                        <forename>Pascale</forename>
+                        <surname>Sutter</surname>
+                    </persName>
                     <resp>Contrôle de qualité</resp>
                 </respStmt>
             </titleStmt>

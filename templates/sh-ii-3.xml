@@ -10,15 +10,24 @@
                     2. Reihe: Stadt und Territorialstaat Stein am Rhein, Band 3: Die 
                     Ratsprotokolle der Stadt Stein am Rhein von 1465 bis 1546</title>
                 <editor>
-                    <persName>Claudia Sutter</persName>
+                    <persName>
+                        <forename>Claudia</forename>
+                        <surname>Sutter</surname>
+                    </persName>
                 </editor>
                 <respStmt>
-                    <persName>Claudia Sutter</persName>
+                    <persName>
+                        <forename>Claudia</forename>
+                        <surname>Sutter</surname>
+                    </persName>
                     <resp>Transkription</resp>
                     <resp>XML-Codierung der Transkription</resp>
                 </respStmt>
                 <respStmt>
-                    <persName>Pascale Sutter</persName>
+                    <persName>
+                        <forename>Pascale</forename>
+                        <surname>Sutter</surname>
+                    </persName>
                     <resp>Qualitätskontrolle</resp>
                 </respStmt>
                 <respStmt>
