@@ -8,15 +8,24 @@
              <title>X. Abteilung: Die Rechtsquellen des Kantons Solothurn, 1. Teil: Stadtrechte
                  (Stadt und Territorialstaat Solothurn), 3. Band: Das Solothurner Stadtrecht von 1604</title>
             <editor>
-                <persName>Rebekka Schifferle</persName>
+                <persName>
+                    <forename>Rebekka</forename>
+                    <surname>Schifferle</surname>
+                </persName>
             </editor>
             <respStmt>
-                <persName>Rebekka Schifferle</persName>
+                <persName>
+                    <forename>Rebekka</forename>
+                    <surname>Schifferle</surname>
+                </persName>
                 <resp>Transkription</resp>
                 <resp>XML-Codierung der Transkription</resp>
             </respStmt>
             <respStmt>
-               <persName>Pascale Sutter</persName>
+                <persName>
+                    <forename>Pascale</forename>
+                    <surname>Sutter</surname>
+                </persName>
                <resp>Qualitätskontrolle</resp>
             </respStmt>
              <respStmt>

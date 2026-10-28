@@ -8,19 +8,34 @@
                 <title>XXII<hi rend="sup">e</hi> partie<pc>:</pc> Les sources du droit 
                     du canton de Genève, Tome 5<pc>:</pc> De 1701 à 1798</title>
                 <editor>
-                    <persName>Alice Bairoch de Sainte-Marie</persName>
+                    <persName>
+                        <forename>Alice</forename>
+                        <surname>Bairoch de Sainte-Marie</surname>
+                    </persName>
                 </editor>
                 <editor>
-                    <persName>Marco Cicchini</persName>
+                    <persName>
+                        <forename>Marco</forename>
+                        <surname>Cicchini</surname>
+                    </persName>
                 </editor>
                 <respStmt>
-                    <persName/>
+                    <persName>
+                        <forename></forename>
+                        <surname></surname>
+                    </persName>
                     <resp>Transcription</resp>
                     <resp>Encodage XML de la transcription</resp>
                 </respStmt>
                 <respStmt>
-                    <persName/>
-                    <persName>Pascale Sutter</persName>
+                    <persName>
+                        <forename></forename>
+                        <surname></surname>
+                    </persName>
+                    <persName>
+                        <forename>Pascale</forename>
+                        <surname>Sutter</surname>
+                    </persName>
                     <resp>Contrôle de qualité</resp>
                 </respStmt>
                 <respStmt>

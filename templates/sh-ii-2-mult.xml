@@ -9,15 +9,24 @@
                 Stadt und Territorialstaat Schaffhausen, Band 2: Die Rechtsquellen von Stein am Rhein vom Loskauf der Stadt (1457) bis zur Reformation.
                 </title>
                 <editor>
-                    <persName>Roman Sigg</persName>
+                    <persName>
+                        <forename>Roman</forename>
+                        <surname>Sigg</surname>
+                    </persName>
                 </editor>
                 <respStmt>
-                    <persName>Roman Sigg</persName>
+                    <persName>
+                        <forename>Roman</forename>
+                        <surname>Sigg</surname>
+                    </persName>
                     <resp>Transkription</resp>
                     <resp>XML-Codierung der Transkription</resp>
                 </respStmt>
                 <respStmt>
-                    <persName>Pascale Sutter</persName>
+                    <persName>
+                        <forename>Pascale</forename>
+                        <surname>Sutter</surname>
+                    </persName>
                     <resp>Qualitätskontrolle</resp>
                 </respStmt>
                 <respStmt>

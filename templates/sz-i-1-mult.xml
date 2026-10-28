@@ -8,19 +8,31 @@
                 <title>V. Abteilung: Die Rechtsquellen des Kantons Schwyz, Erster Teil: Die Rechtsquellen der Abtei Einsiedeln, Band 1: Die allgemeinden
                 Rechtsquellen des Klosters Einsiedeln</title>
                 <editor>
-                    <persName>Larissa Achermann</persName>
+                    <persName>
+                        <forename>Larissa</forename>
+                        <surname>Achermann</surname>
+                    </persName>
                 </editor>
                 <editor>
-                    <persName>Silvia Stamm</persName>
+                    <persName>
+                        <forename>Silvia</forename>
+                        <surname>Stamm</surname>
+                    </persName>
                 </editor>
                 <respStmt>
                      <!--Informationen hier ergänzen-->
-                    <persName/>
+                    <persName>
+                        <forename></forename>
+                        <surname></surname>
+                    </persName>
                     <resp>Transkription</resp>
                     <resp>XML-Codierung der Transkription</resp>
                 </respStmt>
                 <respStmt>
-                    <persName>Pascale Sutter</persName>
+                    <persName>
+                        <forename>Pascale</forename>
+                        <surname>Sutter</surname>
+                    </persName>
                     <resp>Qualitätskontrolle</resp>
                 </respStmt>
                 <respStmt>
